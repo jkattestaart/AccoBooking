@@ -1,0 +1,56 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.ToolbarView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+  xmlns:cal="http://www.caliburnproject.org"
+  xmlns:cocktail="clr-namespace:Cocktail;assembly=Cocktail.SL"
+    xmlns:common="http://accobooking.ideablade.com/common"
+  mc:Ignorable="d" 
+  d:DesignHeight="300" 
+  d:DesignWidth="400">
+
+  <UserControl.Resources>
+    <common:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    <common:HorizontalAlignmentConverter x:Key="HorizontalAlignmentConverter" />
+    <common:BoolToOrientationConverter x:Key="BoolToOrientationConverter" />
+    <cocktail:PathToImageSourceConverter x:Key="PathToImageSourceConverter" />
+  </UserControl.Resources>
+
+  <Grid 
+    x:Name="LayoutRoot" 
+    Background="Transparent">
+
+    <ItemsControl 
+      ItemsSource="{Binding Actions}"
+      Visibility="{Binding IsVisible, 
+                           Converter={StaticResource BoolToVisibilityConverter}, Mode=TwoWay}">
+
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel 
+            Background="Transparent" 
+            Orientation="Horizontal" 
+            HorizontalAlignment="{Binding HorizontalAlignment, 
+                                          Converter={StaticResource HorizontalAlignmentConverter}}"/>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <!-- Jan dit zo laten sommige labels zijn langer 
+               Begrijpt Jan niet. Margin was 0,0,10,0
+               Ik wil de toolbarbuttons tegen elkaar.
+               Width is Auto -->
+          <c1:C1ToolbarButton
+            cal:Message.Attach="Execute"
+            Content="{Binding Label}" 
+            Margin="0"/>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+
+    </ItemsControl>
+  </Grid>
+</UserControl>

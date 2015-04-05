@@ -1,0 +1,1149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lab_ACCO_NOT_VISIBLE_GUESTS" xml:space="preserve">
+    <value>Not visible for guests</value>
+  </data>
+  <data name="lab_ACCO_VISIBLE_GUESTS" xml:space="preserve">
+    <value>Visible for guests</value>
+  </data>
+  <data name="lab_ADDRESS" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="lab_BANK" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="lab_BANK_ACCOUNT" xml:space="preserve">
+    <value>Bankaccount</value>
+  </data>
+  <data name="mes_BUSY" xml:space="preserve">
+    <value>Please wait..</value>
+  </data>
+  <data name="lab_COUNTRY" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="lab_EMAIL" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="lab_LANGUAGE" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lab_USER_NAME" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="lab_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lab_OWNER_ID" xml:space="preserve">
+    <value>Identification</value>
+  </data>
+  <data name="lab_PASSWORD" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lab_PHONE" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="tit_UPDATE_SETTINGS" xml:space="preserve">
+    <value>Update settings</value>
+  </data>
+  <data name="but_ADD" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="but_APPLY_PATTERN" xml:space="preserve">
+    <value>Apply pattern</value>
+  </data>
+  <data name="but_CONFIRM" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="but_DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="but_DOWNLOAD_BOOKINGS" xml:space="preserve">
+    <value>Download bookings</value>
+  </data>
+  <data name="but_EXPIRE" xml:space="preserve">
+    <value>Expire</value>
+  </data>
+  <data name="but_LOGIN" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="but_MAIL" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="but_MOVE_DOWN" xml:space="preserve">
+    <value>Move down</value>
+  </data>
+  <data name="but_MOVE_UP" xml:space="preserve">
+    <value>Move up</value>
+  </data>
+  <data name="but_REMOVE" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="but_SAVE_SEQUENCE" xml:space="preserve">
+    <value>Save seq</value>
+  </data>
+  <data name="but_SEND" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="but_BOOK" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="but_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="but_CLEAR" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="but_NEXT_YEAR" xml:space="preserve">
+    <value>Next year</value>
+  </data>
+  <data name="but_PREVIOUS_YEAR" xml:space="preserve">
+    <value>Previous year</value>
+  </data>
+  <data name="but_PROPOSE" xml:space="preserve">
+    <value>Propose</value>
+  </data>
+  <data name="but_SAVE" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="but_SEARCH" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="but_SUBSCRIBE" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="lab_ADD" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="lab_ARRIVAL" xml:space="preserve">
+    <value>Arrival</value>
+  </data>
+  <data name="lab_ARRIVE_AFTER" xml:space="preserve">
+    <value>Arrive</value>
+  </data>
+  <data name="lab_CANCEL_ADMINISTRATION_COSTS" xml:space="preserve">
+    <value>Cancel administration costs</value>
+  </data>
+  <data name="lab_CURRENCY" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="lab_DAYS_BEFORE_ARRIVAL" xml:space="preserve">
+    <value>Days before arrival</value>
+  </data>
+  <data name="lab_DEFAULT_BOOKED" xml:space="preserve">
+    <value>Default booked</value>
+  </data>
+  <data name="lab_DEFAULT_PERIOD" xml:space="preserve">
+    <value>Default period</value>
+  </data>
+  <data name="lab_DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="lab_DEPARTURE" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="lab_DEPARTURE_BEFORE" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="lab_DEPOSIT" xml:space="preserve">
+    <value>Deposit</value>
+  </data>
+  <data name="lab_DESCRIPTION" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lab_EXPIRE_RESERVATION_AFTER" xml:space="preserve">
+    <value>Expire reservation after</value>
+  </data>
+  <data name="lab_IS_BOOKED" xml:space="preserve">
+    <value>Booked</value>
+  </data>
+  <data name="lab_IS_AVAILABLE_PER_WEEK" xml:space="preserve">
+    <value>Available per week</value>
+  </data>
+  <data name="lab_LOCATION" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="lab_MAXIMAL_STAY" xml:space="preserve">
+    <value>Maximal stay</value>
+  </data>
+  <data name="lab_NIGHTS" xml:space="preserve">
+    <value>Nights</value>
+  </data>
+  <data name="lab_PAY_DEPOSIT_BACK_AFTER" xml:space="preserve">
+    <value>Pay deposit back after</value>
+  </data>
+  <data name="lab_PERIOD" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="lab_PRICE" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="lab_RENT" xml:space="preserve">
+    <value>Rent</value>
+  </data>
+  <data name="lab_RENT_PER_NIGHT" xml:space="preserve">
+    <value>Rent per night</value>
+  </data>
+  <data name="lab_RENT_TO_PAY" xml:space="preserve">
+    <value>Rent to pay</value>
+  </data>
+  <data name="lab_START_CALENDAR_WITH" xml:space="preserve">
+    <value>Start calendar with</value>
+  </data>
+  <data name="lab_UNIT" xml:space="preserve">
+    <value>Per</value>
+  </data>
+  <data name="lab_WEBSITE" xml:space="preserve">
+    <value>Website</value>
+    <comment>URL for website</comment>
+  </data>
+  <data name="mes_SUBSCRIBE" xml:space="preserve">
+    <value>Your account is being created...</value>
+  </data>
+  <data name="tit_ADD_AVAILABLE_PERIOD" xml:space="preserve">
+    <value>Add special available period</value>
+  </data>
+  <data name="tit_CREATE_AVAILABILITY" xml:space="preserve">
+    <value>Create availability</value>
+  </data>
+  <data name="tit_DISPLAY_AVAILABILITY" xml:space="preserve">
+    <value>Availability</value>
+  </data>
+  <data name="tit_UPDATE_RENT" xml:space="preserve">
+    <value>Update rent</value>
+  </data>
+  <data name="uni_DAYS" xml:space="preserve">
+    <value>days</value>
+    <comment>unit</comment>
+  </data>
+  <data name="uni_NIGHTS" xml:space="preserve">
+    <value>nights</value>
+  </data>
+  <data name="uni_PERCENTAGE" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="lab_ACCO" xml:space="preserve">
+    <value>Accommodation</value>
+  </data>
+  <data name="lab_ADDITIONS" xml:space="preserve">
+    <value>Additions</value>
+  </data>
+  <data name="lab_ADDRESSE" xml:space="preserve">
+    <value>Addresse</value>
+  </data>
+  <data name="lab_ADULTS" xml:space="preserve">
+    <value>Adults</value>
+  </data>
+  <data name="lab_AFTER_BOOKING" xml:space="preserve">
+    <value>After booking</value>
+  </data>
+  <data name="lab_AMOUNT" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="lab_ARRIVAL_FROM" xml:space="preserve">
+    <value>Arrival from</value>
+  </data>
+  <data name="lab_BEFORE_ARRIVAL" xml:space="preserve">
+    <value>Before arrival</value>
+  </data>
+  <data name="lab_CHILDREN" xml:space="preserve">
+    <value>Children</value>
+  </data>
+  <data name="lab_CONTENT" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="lab_CONTEXT" xml:space="preserve">
+    <value>Context</value>
+  </data>
+  <data name="lab_DONE" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="lab_DUE" xml:space="preserve">
+    <value>Due</value>
+  </data>
+  <data name="lab_FIXED_AMOUNT" xml:space="preserve">
+    <value>Fixed amount</value>
+  </data>
+  <data name="lab_FIXED_DATE" xml:space="preserve">
+    <value>Fixed date</value>
+  </data>
+  <data name="lab_FLOW_WITH_MILESTONE" xml:space="preserve">
+    <value>Flow with milestone</value>
+  </data>
+  <data name="lab_GUEST" xml:space="preserve">
+    <value>Guest</value>
+  </data>
+  <data name="lab_INCLUDE_ADDITIONS_IN_LAST_PAYMENT" xml:space="preserve">
+    <value>Include additions in last payment</value>
+  </data>
+  <data name="lab_INCLUDE_CLOSED_BOOKINGS" xml:space="preserve">
+    <value>Include closed bookings</value>
+  </data>
+  <data name="lab_INCLUDE_DEPOSIT_IN_LAST_PAYMENT" xml:space="preserve">
+    <value>Include deposit in last payment</value>
+  </data>
+  <data name="lab_INCLUDE_EXPIRED_BOOKINGS" xml:space="preserve">
+    <value>Include expired bookings</value>
+  </data>
+  <data name="lab_MILESTONE" xml:space="preserve">
+    <value>Milestone</value>
+  </data>
+  <data name="lab_NOTES" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="lab_OFFSET" xml:space="preserve">
+    <value>Offset</value>
+  </data>
+  <data name="lab_PAID_BY_GUEST" xml:space="preserve">
+    <value>Paid by guest</value>
+  </data>
+  <data name="lab_PAID_BY_OWNER" xml:space="preserve">
+    <value>Paid by owner</value>
+  </data>
+  <data name="lab_PAY_PATTERN" xml:space="preserve">
+    <value>Pay pattern</value>
+  </data>
+  <data name="lab_PERCENTAGE" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="lab_PETS" xml:space="preserve">
+    <value>Pets</value>
+  </data>
+  <data name="lab_RELATIVE_AMOUNT" xml:space="preserve">
+    <value>Calculated amount</value>
+  </data>
+  <data name="lab_SCHEDULED_FOR_GUEST" xml:space="preserve">
+    <value>Scheduled for guest</value>
+  </data>
+  <data name="lab_SCHEDULED_FOR_OWNER" xml:space="preserve">
+    <value>Scheduled for owner</value>
+  </data>
+  <data name="lab_STANDARD_ADDITION" xml:space="preserve">
+    <value>Standard addition</value>
+  </data>
+  <data name="lab_STATUS" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lab_SUBJECT" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="lab_TEMPLATE" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="lab_TO" xml:space="preserve">
+    <value>to</value>
+    <comment>context Arrival from ... to ...</comment>
+  </data>
+  <data name="lab_TOTAL" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="lab_TOTAL_PLUS_DEPOSIT" xml:space="preserve">
+    <value>Total plus deposit</value>
+  </data>
+  <data name="mes_EXTRA_ACCO" xml:space="preserve">
+    <value>Extra accommodation for your account is being created...</value>
+  </data>
+  <data name="mes_REMOVE_ACCO" xml:space="preserve">
+    <value>Accommodation is being removed...</value>
+  </data>
+  <data name="tit_EXTRA_ACCO" xml:space="preserve">
+    <value>Extra accommodation</value>
+  </data>
+  <data name="tit_MAIL_PREVIEW" xml:space="preserve">
+    <value>Mail preview</value>
+  </data>
+  <data name="tit_REMINDERS" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="tit_SEARCH_BOOKING" xml:space="preserve">
+    <value>Search booking</value>
+  </data>
+  <data name="tit_UPDATE_BOOKING" xml:space="preserve">
+    <value>Update booking</value>
+  </data>
+  <data name="wat_ACCO_ARRIVE_AFTER" xml:space="preserve">
+    <value>how late can the guests arrive?</value>
+  </data>
+  <data name="wat_ACCO_CURRENCY" xml:space="preserve">
+    <value>currency in which amounts are expressed</value>
+  </data>
+  <data name="wat_ACCO_DEPARTURE_BEFORE" xml:space="preserve">
+    <value>how late do the guests have  to leave?</value>
+  </data>
+  <data name="wat_ACCO_DESCRIPTION" xml:space="preserve">
+    <value>name of the accommodation</value>
+  </data>
+  <data name="wat_ACCO_LOCATION" xml:space="preserve">
+    <value>location of your accommodation</value>
+  </data>
+  <data name="wat_ACCO_OWN_WEBSITE" xml:space="preserve">
+    <value>website for your accommodation</value>
+  </data>
+  <data name="wat_ACCO_REMINDER_DESCRIPTION" xml:space="preserve">
+    <value>what do you have to do?</value>
+  </data>
+  <data name="wat_ADDRESSE" xml:space="preserve">
+    <value>for who is this e-mail?</value>
+  </data>
+  <data name="wat_BOOKING_REMINDER_DESCRIPTION" xml:space="preserve">
+    <value>what do you have to do?</value>
+  </data>
+  <data name="wat_CONTENT" xml:space="preserve">
+    <value>e-mail content</value>
+  </data>
+  <data name="wat_EXTRA_ACCO" xml:space="preserve">
+    <value>name of the extra accommodation</value>
+  </data>
+  <data name="wat_GUEST_ADDRESS_1" xml:space="preserve">
+    <value>street name and street number</value>
+  </data>
+  <data name="wat_GUEST_ADDRESS_2" xml:space="preserve">
+    <value>postal code and city</value>
+  </data>
+  <data name="wat_GUEST_ADDRESS_3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="wat_GUEST_BANK" xml:space="preserve">
+    <value>Bank Identifier Code</value>
+  </data>
+  <data name="wat_GUEST_BANK_ACCOUNT" xml:space="preserve">
+    <value>International Bank Account Number</value>
+  </data>
+  <data name="wat_GUEST_EMAIL" xml:space="preserve">
+    <value>e-mail address</value>
+  </data>
+  <data name="wat_GUEST_NAME" xml:space="preserve">
+    <value>name of the main guest</value>
+  </data>
+  <data name="wat_GUEST_PHONE" xml:space="preserve">
+    <value>phone number</value>
+  </data>
+  <data name="wat_OWNER_ADDRESS_1" xml:space="preserve">
+    <value>your street name and street number</value>
+  </data>
+  <data name="wat_OWNER_ADDRESS_2" xml:space="preserve">
+    <value>your postal code and city</value>
+  </data>
+  <data name="wat_OWNER_ADDRESS_3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="wat_OWNER_BANK" xml:space="preserve">
+    <value>your Bank Identifier Code</value>
+  </data>
+  <data name="wat_OWNER_BANK_ACCOUNT" xml:space="preserve">
+    <value>your International Bank Account Number</value>
+  </data>
+  <data name="wat_OWNER_EMAIL" xml:space="preserve">
+    <value>your e-mail address</value>
+  </data>
+  <data name="wat_OWNER_NAME" xml:space="preserve">
+    <value>your name</value>
+  </data>
+  <data name="wat_OWNER_PHONE" xml:space="preserve">
+    <value>your phone number</value>
+  </data>
+  <data name="wat_USER_NAME" xml:space="preserve">
+    <value>name to login Acco Booking</value>
+  </data>
+  <data name="wat_PAY_PATTERN_DESCRIPTION" xml:space="preserve">
+    <value>purpose of the pay pattern</value>
+  </data>
+  <data name="wat_SUBJECT" xml:space="preserve">
+    <value>subject of the e-mail</value>
+  </data>
+  <data name="tit_WELCOME" xml:space="preserve">
+    <value>Acco Booking</value>
+  </data>
+  <data name="mes_NO_RECORD_AVAILABLE" xml:space="preserve">
+    <value>No record available</value>
+  </data>
+  <data name="but_ALL_LEFT" xml:space="preserve">
+    <value>All Left</value>
+  </data>
+  <data name="but_ALL_RIGHT" xml:space="preserve">
+    <value>All Right</value>
+  </data>
+  <data name="but_BACK" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="but_BOTTOM" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="but_DOWN" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="but_EDIT" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="but_LEFT" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="but_REFRESH" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="but_RIGHT" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="but_TOP" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="but_UP" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="lab_AVAILABLE_PERIOD" xml:space="preserve">
+    <value>Available period</value>
+  </data>
+  <data name="mes_CANCEL" xml:space="preserve">
+    <value>There are unsaved changes. Are you sure you want to cancel?</value>
+  </data>
+  <data name="mes_DELETE" xml:space="preserve">
+    <value>Are you sure you want to delete {0}?"</value>
+  </data>
+  <data name="mes_DISCARD_CHANGES" xml:space="preserve">
+    <value>There are unsaved changes. Refreshing the data will discard all unsaved changes.</value>
+  </data>
+  <data name="mes_SAVE_CHANGES" xml:space="preserve">
+    <value>There are unsaved changes. Would you like to save your changes?</value>
+  </data>
+  <data name="mes_TEMPLATE_PROPOSE" xml:space="preserve">
+    <value>Cannot select a template for propose</value>
+  </data>
+  <data name="mes_TERMINATE_SUBSCRIBTION" xml:space="preserve">
+    <value>This is the last accomodation, terminate the subscribtion?</value>
+  </data>
+  <data name="mes_TOTAL_100PCT" xml:space="preserve">
+    <value>Total must be 100 %</value>
+  </data>
+  <data name="tab_ACCOMMODATION" xml:space="preserve">
+    <value>Accommodation</value>
+  </data>
+  <data name="tab_ADDITION" xml:space="preserve">
+    <value>Addition</value>
+  </data>
+  <data name="tab_BOOKING" xml:space="preserve">
+    <value>Booking</value>
+  </data>
+  <data name="tab_CANCEL_CONDITION" xml:space="preserve">
+    <value>Cancel condition</value>
+  </data>
+  <data name="tab_DEFAULT_RENT" xml:space="preserve">
+    <value>Default Rent</value>
+  </data>
+  <data name="tab_OWNER" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="tab_PATTERN" xml:space="preserve">
+    <value>Pattern</value>
+  </data>
+  <data name="tab_PAYMENTS" xml:space="preserve">
+    <value>Payments</value>
+  </data>
+  <data name="tab_PAY_PATTERN" xml:space="preserve">
+    <value>Pay Pattern</value>
+  </data>
+  <data name="tab_REMINDER" xml:space="preserve">
+    <value>Reminder</value>
+  </data>
+  <data name="but_LOGOFF" xml:space="preserve">
+    <value>Log Off</value>
+  </data>
+  <data name="but_UPDATE_BOOKING" xml:space="preserve">
+    <value>Update booking</value>
+  </data>
+  <data name="lab_IS_COMPLETE" xml:space="preserve">
+    <value>Is complete</value>
+  </data>
+  <data name="mes_APPLY_PAY_PATTERN" xml:space="preserve">
+    <value>The booking amount is not exactly scheduled. Apply pay pattern to re-create schedule</value>
+  </data>
+  <data name="mes_CONCURRENCY_ERROR" xml:space="preserve">
+    <value>Another user has previously saved the current record.</value>
+  </data>
+  <data name="mes_LOAD_GLOBAL_CACHE_FAILED" xml:space="preserve">
+    <value>Failed to load global entity cache. Try again!</value>
+  </data>
+  <data name="mes_NO_DEFAULT_WORKSPACE" xml:space="preserve">
+    <value>No workspace marked as default.</value>
+  </data>
+  <data name="mes_NO_LANGUAGE_SELECTED" xml:space="preserve">
+    <value>No language selected</value>
+  </data>
+  <data name="mes_NO_TEMPLATE" xml:space="preserve">
+    <value>There is no template for: {0}</value>
+  </data>
+  <data name="mes_NO_TEMPLATE_SELECTED" xml:space="preserve">
+    <value>No template selected</value>
+  </data>
+  <data name="ws_ADD_ACCO" xml:space="preserve">
+    <value>Add acco</value>
+  </data>
+  <data name="ws_CHECK_REMINDER" xml:space="preserve">
+    <value>Check reminder</value>
+  </data>
+  <data name="ws_COUNTRY" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="ws_CREATE_AVAILABILITY" xml:space="preserve">
+    <value>Create availability</value>
+  </data>
+  <data name="ws_CREATE_BOOKING" xml:space="preserve">
+    <value>Create booking</value>
+  </data>
+  <data name="ws_DISPLAY_AVAILABILITY" xml:space="preserve">
+    <value>Availability</value>
+  </data>
+  <data name="ws_FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="ws_HOME" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ws_INFORMATION" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="ws_LANGUAGE" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="ws_LICENSE_TERMS" xml:space="preserve">
+    <value>License terms</value>
+  </data>
+  <data name="ws_MAIL_TEMPLATE" xml:space="preserve">
+    <value>Mail template</value>
+  </data>
+  <data name="ws_PERIOD_UNIT" xml:space="preserve">
+    <value>Period unit</value>
+  </data>
+  <data name="ws_REMOVE_ACCO" xml:space="preserve">
+    <value>Remove acco</value>
+  </data>
+  <data name="ws_SEARCH_BOOKING" xml:space="preserve">
+    <value>Search booking</value>
+  </data>
+  <data name="ws_SUBSCRIBE" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="ws_SYSTEM_CODE" xml:space="preserve">
+    <value>System code</value>
+  </data>
+  <data name="ws_SYSTEM_GROUP" xml:space="preserve">
+    <value>System group</value>
+  </data>
+  <data name="ws_UPDATE_RENT" xml:space="preserve">
+    <value>Update price</value>
+  </data>
+  <data name="ws_UPDATE_SETTINGS" xml:space="preserve">
+    <value>Update settings</value>
+  </data>
+  <data name="but_LOGIN_GUEST" xml:space="preserve">
+    <value>Read further...</value>
+  </data>
+  <data name="but_NO" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="but_YES" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="but_OK" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="lab_REMEMBER_SETTINGS" xml:space="preserve">
+    <value>Remember Settings</value>
+  </data>
+  <data name="lab_RESETEMAILACCOUNT" xml:space="preserve">
+    <value>Reset e-mail account</value>
+  </data>
+  <data name="pub_PRICE_3" xml:space="preserve">
+    <value>The first three months are free</value>
+  </data>
+  <data name="mes_BOOKING_CANCELLED" xml:space="preserve">
+    <value>Cancelled booking cannot be modified</value>
+  </data>
+  <data name="mes_BOOKING_EXPIRED" xml:space="preserve">
+    <value>Expired booking cannot be modified</value>
+  </data>
+  <data name="mes_CANCEL_BOOKING" xml:space="preserve">
+    <value>Are you sure to cancel the booking?</value>
+  </data>
+  <data name="ws_HELPDESK" xml:space="preserve">
+    <value>Helpdesk</value>
+  </data>
+  <data name="ws_VIDEO" xml:space="preserve">
+    <value>Help video's </value>
+  </data>
+  <data name="pub_HELPDESK_1" xml:space="preserve">
+    <value>Please, send your question or remarkto the helpdesk</value>
+  </data>
+  <data name="pub_SUPPLIER_CONTACT" xml:space="preserve">
+    <value>Helpdesk@AccoBooking.com</value>
+  </data>
+  <data name="tit_VIDEO" xml:space="preserve">
+    <value>Help video's</value>
+  </data>
+  <data name="ws_PUBLIC" xml:space="preserve">
+    <value>Public pages</value>
+  </data>
+  <data name="lab_ELECTRICITY" xml:space="preserve">
+    <value>Electricity</value>
+  </data>
+  <data name="lab_GAS" xml:space="preserve">
+    <value>Gas</value>
+  </data>
+  <data name="lab_IS_PAID_FROM_DEPOSIT" xml:space="preserve">
+    <value>Paid from deposit</value>
+  </data>
+  <data name="lab_WATER" xml:space="preserve">
+    <value>Water</value>
+  </data>
+  <data name="lab_USAGE" xml:space="preserve">
+    <value>Usage</value>
+  </data>
+  <data name="lab_CORRECTION" xml:space="preserve">
+    <value>To clear with deposit</value>
+  </data>
+  <data name="lab_WEEK_EXCHANGE_DAY" xml:space="preserve">
+    <value>Week exchange day</value>
+  </data>
+  <data name="lab_OPTIONAL_WEEK_EXCHANGE_DAY" xml:space="preserve">
+    <value>Optional week exchange day</value>
+  </data>
+  <data name="lab_YEAR" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="tab_RENT" xml:space="preserve">
+    <value>Rent</value>
+  </data>
+  <data name="tab_SEASON" xml:space="preserve">
+    <value>Seasons</value>
+  </data>
+  <data name="lab_COLOR" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="lab_END" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="lab_START" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="lab_MINIMAL_NIGHTS" xml:space="preserve">
+    <value>Minimum nights</value>
+  </data>
+  <data name="lab_MINIMAL_WEEKS" xml:space="preserve">
+    <value>Minimum weeks</value>
+  </data>
+  <data name="lab_RENT_PER_NIGHT_WEEK" xml:space="preserve">
+    <value>Rent per night week</value>
+  </data>
+  <data name="lab_RENT_PER_NIGHT_WEEKEND" xml:space="preserve">
+    <value>Rent per night weekend</value>
+  </data>
+  <data name="lab_RENT_PER_THREE_WEEKS" xml:space="preserve">
+    <value>Rent per three weeks</value>
+  </data>
+  <data name="lab_RENT_PER_TWO_WEEKS" xml:space="preserve">
+    <value>Rent per two weeks</value>
+  </data>
+  <data name="lab_RENT_PER_WEEK" xml:space="preserve">
+    <value>Rent per week</value>
+  </data>
+  <data name="lab_RENT_PER_WEEKEND" xml:space="preserve">
+    <value>Rent per weekend</value>
+  </data>
+  <data name="lab_USED" xml:space="preserve">
+    <value>Used</value>
+  </data>
+  <data name="lab_BASE_RENT" xml:space="preserve">
+    <value>Base rent</value>
+  </data>
+  <data name="lab_IS_AVAILABLE_PER_NIGHT" xml:space="preserve">
+    <value>Available per night</value>
+  </data>
+  <data name="lab_IS_AVAILABLE_PER_WEEKEND" xml:space="preserve">
+    <value>Available per weekend</value>
+  </data>
+  <data name="lab_RENT_PER_MIDWEEK" xml:space="preserve">
+    <value>Rent per midweek</value>
+  </data>
+  <data name="lab_COLOR_BLOCKED" xml:space="preserve">
+    <value>Color blocked</value>
+  </data>
+  <data name="lab_COLOR_ONLINE" xml:space="preserve">
+    <value>Color online</value>
+  </data>
+  <data name="lab_COLOR_OWNER" xml:space="preserve">
+    <value>Color owner</value>
+  </data>
+  <data name="mes_RENT_INUSE_SEASONS" xml:space="preserve">
+    <value>Rent is in use for a season </value>
+  </data>
+  <data name="mes_RENT_IS_BASERENT" xml:space="preserve">
+    <value>Rent is base rent</value>
+  </data>
+  <data name="lab_END_DATE" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="lab_START_DATE" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="tab_SPECIAL_OFFER" xml:space="preserve">
+    <value>Special Offer</value>
+  </data>
+  <data name="tab_TRUSTEE" xml:space="preserve">
+    <value>Trustee</value>
+  </data>
+  <data name="tit_SELECT_DEPARTURE" xml:space="preserve">
+    <value>Select departure</value>
+  </data>
+  <data name="but_NEXT_PERIOD" xml:space="preserve">
+    <value>Next period</value>
+  </data>
+  <data name="but_PREVIOUS_PERIOD" xml:space="preserve">
+    <value>Previous period</value>
+  </data>
+  <data name="tab_BLOCK" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="tab_GUEST" xml:space="preserve">
+    <value>Guests</value>
+  </data>
+  <data name="ws_BLOCK_PERIOD" xml:space="preserve">
+    <value>Block Period</value>
+  </data>
+  <data name="lab_SEND_WEEKLY_REMINDERS" xml:space="preserve">
+    <value>Send weekly reminders</value>
+  </data>
+  <data name="but_COPY" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="lab_BIRTHDATE" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="lab_GENDER" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="lab_IDENTITY_DOCUMENT" xml:space="preserve">
+    <value>Identity document</value>
+  </data>
+  <data name="wat_IDENTITY_DOCUMENT" xml:space="preserve">
+    <value>identity document number</value>
+  </data>
+  <data name="lab_COPY" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="lab_FROM_ACCO" xml:space="preserve">
+    <value>From accommodation</value>
+  </data>
+  <data name="lab_TO_ACCO" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="ws_COPY_ACCO" xml:space="preserve">
+    <value>Copy acco</value>
+  </data>
+  <data name="ws_COPY_RENT" xml:space="preserve">
+    <value>Copy rent</value>
+  </data>
+  <data name="lab_SAVE_LOGIN" xml:space="preserve">
+    <value>Save login on this computer</value>
+  </data>
+  <data name="pub_SLOGAN" xml:space="preserve">
+    <value>Acco Booking makes small scale rental a piece of cake</value>
+  </data>
+  <data name="pub_HELPDESK_2" xml:space="preserve">
+    <value>You will receive a reaction in a day</value>
+  </data>
+  <data name="pub_PRICE_1" xml:space="preserve">
+    <value>The Acco Booking costs 45 euro per year</value>
+  </data>
+  <data name="pub_PRICE_2" xml:space="preserve">
+    <value>Each extra accommodation costs 15 euro per year</value>
+  </data>
+  <data name="pub_CONTACT_LABEL" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="pub_DISCOUNT_1" xml:space="preserve">
+    <value>Try Acco Booking</value>
+  </data>
+  <data name="pub_LICENSE_1" xml:space="preserve">
+    <value>Download licenseterms</value>
+  </data>
+  <data name="pub_MANUAL_1" xml:space="preserve">
+    <value>Download manual </value>
+  </data>
+  <data name="pub_SUBSCIBE_1" xml:space="preserve">
+    <value>Please subscribe</value>
+  </data>
+  <data name="pub_SUBSCIBE_2" xml:space="preserve">
+    <value>The first three months are free, no obligations</value>
+  </data>
+  <data name="lab_TRUSTEE" xml:space="preserve">
+    <value>Trustee</value>
+  </data>
+  <data name="lab_IS_ACTIVE" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="pub_DISCOUNT_2" xml:space="preserve">
+    <value>The first three months are for free!</value>
+  </data>
+  <data name="ws_APPLY_PAYMENTS" xml:space="preserve">
+    <value>Apply payments</value>
+  </data>
+  <data name="ws_ARRIVAL_GUESTS" xml:space="preserve">
+    <value>Arrival guests</value>
+  </data>
+  <data name="ws_BOOKING" xml:space="preserve">
+    <value>Booking</value>
+  </data>
+  <data name="ws_DEPARTURE_GUESTS" xml:space="preserve">
+    <value>Departure guests</value>
+  </data>
+  <data name="ws_FINAL_STATEMENT" xml:space="preserve">
+    <value>Final statement</value>
+  </data>
+  <data name="ws_HOME_RENTAL" xml:space="preserve">
+    <value>Home rental</value>
+  </data>
+  <data name="ws_RATES" xml:space="preserve">
+    <value>Rates</value>
+  </data>
+  <data name="ws_SEASON_AND_PRICES" xml:space="preserve">
+    <value>Season and prices</value>
+  </data>
+  <data name="lab_END_DATE_SPECIAL_OFFER" xml:space="preserve">
+    <value>Display end date</value>
+  </data>
+  <data name="lab_START_DATE_SPECIAL_OFFER" xml:space="preserve">
+    <value>Display start date</value>
+  </data>
+  <data name="lab_PASSWORD_HELP" xml:space="preserve">
+    <value>The password must contain at least 8 characters and include an uppercase, lower case and special character</value>
+  </data>
+  <data name="lab_PROVIDER" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="lab_CURRENT_ARRIVAL" xml:space="preserve">
+    <value>Current arrival</value>
+  </data>
+  <data name="tit_SELECT_ARRIVAL" xml:space="preserve">
+    <value>Select arrival</value>
+  </data>
+  <data name="lab_STATE_ARRIVAL" xml:space="preserve">
+    <value>Arrival state</value>
+  </data>
+  <data name="lab_STATE_DEPARTURE" xml:space="preserve">
+    <value>Departure state</value>
+  </data>
+  <data name="lab_ACCO_TYPE" xml:space="preserve">
+    <value>Accommodation type</value>
+  </data>
+  <data name="lab_HOME_CONTACT" xml:space="preserve">
+    <value>Home contact</value>
+  </data>
+  <data name="wat_HOME_CONTACT" xml:space="preserve">
+    <value>home phone number</value>
+  </data>
+  <data name="lab_BOOKED_ONLINE" xml:space="preserve">
+    <value>Booked online</value>
+  </data>
+  <data name="lab_LATITUDE" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="lab_LONGITUDE" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="wat_ACCO_ADDRESS_1" xml:space="preserve">
+    <value>street name and street number</value>
+  </data>
+  <data name="wat_ACCO_ADDRESS_2" xml:space="preserve">
+    <value>postal code and city</value>
+  </data>
+  <data name="wat_ACCO_ADDRESS_3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="wat_LATITUDE" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="wat_LONGITUDE" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="pub_ADMINISTRATION_STRUCTURE_1" xml:space="preserve">
+    <value>• Solid booking administration</value>
+  </data>
+  <data name="pub_ADMINISTRATION_STRUCTURE_2" xml:space="preserve">
+    <value>• Less mistakes</value>
+  </data>
+  <data name="pub_ADMINISTRATION_STRUCTURE_3" xml:space="preserve">
+    <value>• Pay patterns (early booking, last-minute)</value>
+  </data>
+  <data name="pub_ADMINISTRATION_STRUCTURE_4" xml:space="preserve">
+    <value>• Automatic reminders</value>
+  </data>
+  <data name="pub_ADMINISTRATION_STRUCTURE_5" xml:space="preserve">
+    <value>• E-mail templates</value>
+  </data>
+  <data name="pub_ADMINISTRATION_STRUCTURE_6" xml:space="preserve">
+    <value>• Bookings are stored in a secure database</value>
+  </data>
+  <data name="pub_ADMINISTRATION_STRUCTURE_7" xml:space="preserve">
+    <value>• Never double booked</value>
+  </data>
+  <data name="pub_ADMINISTRATION_STRUCTURE_8" xml:space="preserve">
+    <value>• More accommodations possible</value>
+  </data>
+  <data name="pub_BOOK_ONLINE_1" xml:space="preserve">
+    <value>• Place a calendar on your website</value>
+  </data>
+  <data name="pub_BOOK_ONLINE_2" xml:space="preserve">
+    <value>• Guests like to book online</value>
+  </data>
+  <data name="pub_BOOK_ONLINE_3" xml:space="preserve">
+    <value>• The calendar is always up to date</value>
+  </data>
+  <data name="pub_BOOK_ONLINE_4" xml:space="preserve">
+    <value>• Give your website a relyable look </value>
+  </data>
+  <data name="pub_BOOK_ONLINE_5" xml:space="preserve">
+    <value>• Clear price structure, no surprises afterwards</value>
+  </data>
+  <data name="but_COORDINATES" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="lab_ZOOM" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="but_SELECT_FILE" xml:space="preserve">
+    <value>Select file</value>
+  </data>
+  <data name="lab_ATTACHMENT" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="lab_MAP_LOCATION" xml:space="preserve">
+    <value>Hyperlink location</value>
+  </data>
+  <data name="tit_BLOCK" xml:space="preserve">
+    <value>Work with blocked periods</value>
+  </data>
+  <data name="wat_MAP_LOCATION" xml:space="preserve">
+    <value>hyperlink to the location in the map</value>
+  </data>
+  <data name="lab_BOOKER" xml:space="preserve">
+    <value>Booker</value>
+  </data>
+  <data name="lab_OWNER" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+</root>

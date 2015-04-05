@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9b878e4d6f343a49a354d497529e23b" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="DomainModel.AccoAddition" Width="1.5" PointX="7.5" PointY="65.125" />
+        <EntityTypeShape EntityType="DomainModel.AccoAdditionDescription" Width="1.5" PointX="7.625" PointY="35.25" />
+        <EntityTypeShape EntityType="DomainModel.AccoCancelCondition" Width="1.5" PointX="7.5" PointY="55.375" />
+        <EntityTypeShape EntityType="DomainModel.AccoNotification" Width="1.5" PointX="10.5" PointY="26.75" />
+        <EntityTypeShape EntityType="DomainModel.AccoOwner" Width="1.5" PointX="3" PointY="27.25" />
+        <EntityTypeShape EntityType="DomainModel.AccoPayPattern" Width="1.5" PointX="7.5" PointY="16.875" />
+        <EntityTypeShape EntityType="DomainModel.AccoPayPatternPayment" Width="1.5" PointX="9.75" PointY="17.125" />
+        <EntityTypeShape EntityType="DomainModel.AccoReminder" Width="1.5" PointX="7.5" PointY="46.75" />
+        <EntityTypeShape EntityType="DomainModel.AccoRent" Width="1.5" PointX="7.5" PointY="59.5" />
+        <EntityTypeShape EntityType="DomainModel.AccoSeason" Width="1.5" PointX="9.75" PointY="43.5" />
+        <EntityTypeShape EntityType="DomainModel.AccoSpecialOffer" Width="1.5" PointX="8.5" PointY="31.625" />
+        <EntityTypeShape EntityType="DomainModel.AccoTrustee" Width="1.5" PointX="5.25" PointY="53.25" />
+        <EntityTypeShape EntityType="DomainModel.BookingAddition" Width="1.5" PointX="13.75" PointY="49" />
+        <EntityTypeShape EntityType="DomainModel.BookingCancelCondition" Width="1.5" PointX="13.75" PointY="44.125" />
+        <EntityTypeShape EntityType="DomainModel.BookingGuest" Width="1.5" PointX="13.75" PointY="32.375" />
+        <EntityTypeShape EntityType="DomainModel.BookingPayment" Width="1.5" PointX="13.75" PointY="27.625" />
+        <EntityTypeShape EntityType="DomainModel.BookingReminder" Width="1.5" PointX="13.75" PointY="38.375" />
+        <EntityTypeShape EntityType="DomainModel.Country" Width="1.5" PointX="0.75" PointY="28.75" />
+        <EntityTypeShape EntityType="DomainModel.Language" Width="1.5" PointX="0.75" PointY="34.5" />
+        <EntityTypeShape EntityType="DomainModel.MailTemplate" Width="1.5" PointX="0.75" PointY="39.75" />
+        <EntityTypeShape EntityType="DomainModel.Sequence" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DomainModel.sysdiagram" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DomainModel.SystemCode" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="DomainModel.SystemGroup" Width="1.5" PointX="0.75" PointY="1.25" />
+        <AssociationConnector Association="DomainModel.FK_AccoAdditionDescription_AccoAddition" />
+        <AssociationConnector Association="DomainModel.FK_BookingAddition_AccoAddition" />
+        <AssociationConnector Association="DomainModel.FK_AccoAdditionDescription_Language" />
+        <AssociationConnector Association="DomainModel.FK_BookingCancelCondition_AccoCancelCondition" />
+        <AssociationConnector Association="DomainModel.FK_AccoNotification_AccoOwner" />
+        <AssociationConnector Association="DomainModel.FK_AccoOwner_AccoCountry" />
+        <AssociationConnector Association="DomainModel.FK_AccoOwner_AccoLanguage" />
+        <AssociationConnector Association="DomainModel.FK_Trustee_AccoOwner" />
+        <AssociationConnector Association="DomainModel.FK_AccoPayPatternPayment_AccoPayPattern" />
+        <AssociationConnector Association="DomainModel.FK_BookingReminder_AccoReminder" />
+        <AssociationConnector Association="DomainModel.FK_AccoSeason_AccoRent" />
+        <AssociationConnector Association="DomainModel.FK_SpecialOffer_Language" />
+        <AssociationConnector Association="DomainModel.FK_SystemCode_SystemGroup" />
+        <EntityTypeShape EntityType="DomainModel.Currency" Width="1.5" PointX="3.375" PointY="5.75" />
+        <EntityTypeShape EntityType="DomainModel.AccoDescription" Width="1.5" PointX="7.875" PointY="28.375" />
+        <AssociationConnector Association="DomainModel.FK_AccoDescription_Language" />
+        <EntityTypeShape EntityType="DomainModel.Booking" Width="1.5" PointX="11" PointY="31" />
+        <AssociationConnector Association="DomainModel.FK_AccoNotification_Booking" />
+        <AssociationConnector Association="DomainModel.FK_Booking_Country" />
+        <AssociationConnector Association="DomainModel.FK_Booking_Language" />
+        <AssociationConnector Association="DomainModel.FK_BookingAddition_Booking" />
+        <AssociationConnector Association="DomainModel.FK_BookingCancelCondition_Booking" />
+        <AssociationConnector Association="DomainModel.FK_BookingGuest_Booking" />
+        <AssociationConnector Association="DomainModel.FK_BookingPayment_Booking" />
+        <AssociationConnector Association="DomainModel.FK_BookingReminder_Booking" />
+        <EntityTypeShape EntityType="DomainModel.AccoAttachment" Width="1.5" PointX="7.875" PointY="25" />
+        <EntityTypeShape EntityType="DomainModel.Acco" Width="1.5" PointX="5.5" PointY="25.375" />
+        <AssociationConnector Association="DomainModel.FK_Acco_AccoOwner" />
+        <AssociationConnector Association="DomainModel.FK_Acco_AccoPayPattern" />
+        <AssociationConnector Association="DomainModel.FK_Acco_AccoRent" />
+        <AssociationConnector Association="DomainModel.FK_Acco_Country" />
+        <AssociationConnector Association="DomainModel.FK_AccoAddition_Acco" />
+        <AssociationConnector Association="DomainModel.FK_AccoAttachment_Acco" />
+        <AssociationConnector Association="DomainModel.FK_AccoCancelCondition_Acco" />
+        <AssociationConnector Association="DomainModel.FK_AccoDescription_Acco" />
+        <AssociationConnector Association="DomainModel.FK_AccoNotification_Acco" />
+        <AssociationConnector Association="DomainModel.FK_AccoPayPattern_Acco" />
+        <AssociationConnector Association="DomainModel.FK_AccoReminder_Acco" />
+        <AssociationConnector Association="DomainModel.FK_AccoRent_Acco" />
+        <AssociationConnector Association="DomainModel.FK_AccoSeason_Acco" />
+        <AssociationConnector Association="DomainModel.FK_Booking_Acco" />
+        <AssociationConnector Association="DomainModel.FK_SpecialOffer_Acco" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

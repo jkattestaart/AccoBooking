@@ -1,0 +1,165 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.Booking.BookingPaymentListView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+  xmlns:common="http://accobooking.ideablade.com/common"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+  xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+  mc:Ignorable="d"
+  d:DesignHeight="300" 
+  d:DesignWidth="400">
+
+
+  <UserControl.Resources>
+    <common:BoolToVisibilityConverter x:Key="VisibilityConverter" />
+    <common:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+    <common:DateConverter x:Key="DateConverter" />
+    <common:DecimalConverter x:Key="DecimalConverter" />
+  </UserControl.Resources>
+
+  <toolkit:BusyIndicator 
+    IsBusy="{Binding Busy.IsBusy}">
+
+    <Grid 
+    x:Name="LayoutRoot"
+    HorizontalAlignment="Left"
+    Background="Transparent">
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="120" />
+        <ColumnDefinition Width="120" />
+        <ColumnDefinition Width="120"/>
+      </Grid.ColumnDefinitions>
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <c1:C1ToolbarButton
+        Grid.Row="0"
+        Grid.Column="2"
+        Margin="10,10,0,0"
+        x:Name="Add"
+        Content="{Binding Path=AccoBooking.but_ADD, 
+                          Source={StaticResource AccoBookingResources}}"
+        HorizontalAlignment="Left"
+        />
+
+      <ItemsControl
+        Grid.Row="1"
+        Grid.ColumnSpan="3"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Stretch"
+        ItemsSource="{Binding Payments}">
+
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <Grid 
+            Margin="0"
+            Background="Transparent">
+
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="120"/>
+              </Grid.ColumnDefinitions>
+
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+
+              <c1:C1DatePicker 
+                Margin="3"
+                Width="100"
+                HorizontalAlignment="Right"
+                SelectedDate="{Binding Item.Due,
+                                       ValidatesOnDataErrors=True,
+                                       ValidatesOnExceptions=True,
+                                       UpdateSourceTrigger=PropertyChanged,
+                                       Mode=TwoWay}"/>
+
+              <c1:C1NumericBox
+                Grid.Column="1"
+                Margin="3"
+                Width="100"
+                ShowButtons="True"
+                Increment="10"
+                Format="N2"
+                Value="{Binding Item.Amount,
+                                ValidatesOnDataErrors=True,
+                                ValidatesOnExceptions=True,
+                                Mode=TwoWay}"
+                />
+              
+              <c1:C1ToolbarButton
+                Grid.Column="2" 
+                Margin="10,3,3,3"
+                HorizontalAlignment="Left"
+                cal:Message.Attach="Delete($dataContext)"
+                Content="{Binding Path=AccoBooking.but_DELETE, 
+                                  Source={StaticResource AccoBookingResources}}"
+                IsEnabled="{Binding CanDelete}" 
+                />
+
+            </Grid>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+
+      <Grid 
+      Grid.Row="2"
+      Grid.ColumnSpan="3"
+      Background="Transparent">
+
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="120" />
+          <ColumnDefinition Width="120" />
+          <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+          HorizontalAlignment="Right" 
+          Margin="0,0,3,0"
+          Text="{Binding Path=AccoBooking.lab_TOTAL, 
+                         Source={StaticResource AccoBookingResources}}" 
+          VerticalAlignment="Center" 
+          Visibility="{Binding TotalVisible, Converter={StaticResource VisibilityConverter}}" 
+          />
+
+        <c1:C1NumericBox 
+          Grid.Column="1"
+          Margin="10,3,25,3"
+        
+          ShowButtons="False"
+          IsTabStop="False"
+          Format="N2"
+          Visibility="{Binding TotalVisible, Converter={StaticResource VisibilityConverter}}"
+          Value="{Binding Total,
+                          ValidatesOnDataErrors=True,
+                          ValidatesOnExceptions=True,
+                          Mode=TwoWay}"
+          />
+
+        <sdk:Label 
+          x:Name ="PaidStatus"
+          Grid.Column="2" 
+          Margin="10,3,3,3"
+          HorizontalAlignment="Left"
+          />
+      </Grid>
+
+    </Grid>
+
+  </toolkit:BusyIndicator>
+</UserControl>

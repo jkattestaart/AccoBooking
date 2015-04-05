@@ -1,0 +1,62 @@
+<UserControl 
+  x:Class="AccoBooking.Views.Acco.AccoAdditionDescriptionListView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:common="http://accobooking.ideablade.com/common"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  d:DataContext="{Binding Source={StaticResource ViewModelLocator},
+                          Path=AccoAdditionDescriptionListView}"
+  d:DesignHeight="492"
+  d:DesignWidth="741"
+  mc:Ignorable="d">
+
+ <Grid 
+    x:Name="LayoutRoot"
+    HorizontalAlignment="Left"
+    Background="Transparent">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+
+    <ListBox 
+      Grid.Row="1"
+      Width="500"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Stretch"
+      BorderBrush="Transparent"
+      ItemsSource="{Binding AccoAdditionDescriptions}">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+           <sdk:Label 
+              Grid.Column="0"
+              Content="{Binding Item.LanguageDescription}"/>
+
+            <c1:C1MaskedTextBox 
+              Grid.Column="1" 
+              Grid.ColumnSpan="2"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Center"
+              Text="{Binding Item.Description, 
+                             ValidatesOnDataErrors=True, 
+                             ValidatesOnExceptions=True, 
+                             UpdateSourceTrigger=PropertyChanged, 
+                             Mode=TwoWay}" />
+            
+          </Grid>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ListBox>
+  </Grid>
+</UserControl>

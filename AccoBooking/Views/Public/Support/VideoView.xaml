@@ -1,0 +1,177 @@
+﻿<UserControl
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:converters="http://accobooking.ideablade.com/common"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  x:Class="AccoBooking.Views.VideoView"
+  d:DesignHeight="519"
+  d:DesignWidth="799"
+  mc:Ignorable="d">
+
+
+  <ScrollViewer
+    BorderThickness="0"
+    HorizontalScrollBarVisibility="Disabled"
+    VerticalScrollBarVisibility="Auto">
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="50" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="50" />
+      </Grid.ColumnDefinitions>
+
+      <StackPanel
+        Grid.Column="1"
+        HorizontalAlignment="Left"
+        Orientation="Vertical">
+
+        <TextBlock
+          FontSize="26"
+          TextWrapping="Wrap"
+          Text="{Binding Path=AccoBooking.tit_VIDEO, 
+                         Source={StaticResource AccoBookingResources}}" />
+
+        <c1:C1UniformGrid 
+          Margin="0,30,0,0"
+          Columns="4"
+          Rows="5">
+        
+          <StackPanel>
+            <Image
+              Source="/AccoBooking;component/Assets/Videos/accommodatie.jpg" />
+            <HyperlinkButton
+              Margin="0,10,0,0"
+              NavigateUri="https://www.youtube.com/watch?v=avjCSmaODhc" 
+              TargetName="_blank"
+              Content="{Binding Path=AccoBooking.pub_VIDEO_ACCO_BOOKING_2_MINUTES, 
+                                Source={StaticResource AccoBookingResources}}"/>
+          </StackPanel>
+
+          <StackPanel>
+            <Image
+              Source="/AccoBooking;component/Assets/Videos/aanmelden.jpg" />
+            <HyperlinkButton
+              Margin="0,10,0,0"
+              NavigateUri="https://www.youtube.com/watch?v=tgbaPcNjNqw" 
+              TargetName="_blank"
+              Content="{Binding Path=AccoBooking.pub_VIDEO_SUBSCRIBE, 
+                                Source={StaticResource AccoBookingResources}}"/>
+          </StackPanel>
+
+          <StackPanel>
+            <Image
+              Source="/AccoBooking;component/Assets/Videos/accommodatie.jpg" />
+            <HyperlinkButton
+              Margin="0,10,0,0"
+              NavigateUri="https://www.youtube.com/watch?v=lVikxk4EkoA" 
+              TargetName="_blank"
+              Content="{Binding Path=AccoBooking.pub_VIDEO_UPDATE_ACCO, 
+                                Source={StaticResource AccoBookingResources}}"/>
+          </StackPanel>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=04gdKD_Yrx4" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_UPDATE_STANDARD_PRICE, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=Lz_z7KutA-I" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_CREATE_AVAILABLE_PERIODS, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=j3WJ9kf029A" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_UPDATE_RENT, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=eA03m0-fqlU" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_PROPOSE_AVAILABLE_PERIOD, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=xy_75vID1R0" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_UPDATE_EXTRA, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=Z2KvkxDJh8Y" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_CREATE_BOOKING, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=B5fWhBLiXBg" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_CONFIRM_BOOKING, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=kdrHtI9sAaU" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_UPDATE_BOOKING, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=ryUqNMY23H8" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_PROCES_PAYMENT, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=2R_o7TooRKg" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_CHECK_REMINDERS, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=F9SG2prG7ic" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_EXPORT_BOOKINGS, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=FcrMB4A6MI0" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_ADD_EXTRA_ACCO, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=vskLTkVslIo" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_UPDATE_PAY_PATTERN, 
+                            Source={StaticResource AccoBookingResources}}"/>
+
+          <HyperlinkButton
+          Margin="0,10,0,0"
+          NavigateUri="https://www.youtube.com/watch?v=9gd75cbA0dA" 
+          TargetName="_blank"
+          Content="{Binding Path=AccoBooking.pub_VIDEO_CANCEL_BOOKING, 
+                            Source={StaticResource AccoBookingResources}}"/>
+        </c1:C1UniformGrid>
+      </StackPanel>
+    </Grid>
+  </ScrollViewer>
+
+</UserControl>

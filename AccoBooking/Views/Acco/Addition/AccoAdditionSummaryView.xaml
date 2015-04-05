@@ -1,0 +1,136 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.Acco.AccoAdditionSummaryView"
+  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:common="http://accobooking.ideablade.com/common"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  d:DesignHeight="358"
+  d:DesignWidth="751"
+  mc:Ignorable="d">
+
+  <Grid 
+    x:Name="LayoutRoot" 
+    Background="Transparent">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="270" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+
+    <sdk:Label 
+      Grid.Row="0"
+      VerticalAlignment="Top"
+      Margin="3,10,3,3"
+      Content="{Binding Path=AccoBooking.lab_DESCRIPTION, 
+                        Source={StaticResource AccoBookingResources}}"/>
+
+    <c1:C1DataGrid
+      Grid.Row="0"
+      Grid.Column="1"
+      Grid.ColumnSpan="2"
+      HorizontalAlignment="Left"
+      MinHeight="150"
+      Margin="3,3,3,10"
+      ItemsSource="{Binding Entity.AccoAdditionDescriptions}"
+      SelectedItem="{Binding CurrentItem, 
+                             Mode=TwoWay}" CanUserEditRows="True">
+
+      <c1:C1DataGrid.Columns>
+        <c1:DataGridTextColumn 
+          Binding="{Binding LanguageDescription, 
+                            Mode=OneWay}" 
+          IsReadOnly="True"
+          Header="{Binding Path=AccoBooking.lab_LANGUAGE, 
+                           Source={StaticResource AccoBookingResources}}" 
+          Width="270"/>
+
+        <c1:DataGridTextColumn 
+          Binding="{Binding Description, 
+                            Mode=TwoWay}" 
+          Header="{Binding Path=AccoBooking.lab_DESCRIPTION, 
+                           Source={StaticResource AccoBookingResources}}" 
+          Width="270"/>
+
+      </c1:C1DataGrid.Columns>
+
+    </c1:C1DataGrid>
+
+
+    <sdk:Label 
+      Grid.Row="1" 
+      Content="{Binding Path=AccoBooking.lab_PRICE, 
+                        Source={StaticResource AccoBookingResources}}"/>
+
+    <StackPanel
+      Grid.Row="1" 
+      Grid.Column="1"
+      Orientation="Horizontal">
+
+      <c1:C1NumericBox 
+        Width="100"
+        ShowButtons="True"
+        Increment="1"
+        Format="N2"
+        VerticalAlignment="Center"
+        Value="{Binding Entity.Price, 
+                         ValidatesOnDataErrors=True, 
+                         ValidatesOnExceptions=True, 
+                         UpdateSourceTrigger=PropertyChanged, 
+                         Mode=TwoWay}"/>
+      <sdk:Label 
+        Content="{Binding Entity.Acco.CurrencyDescription}" 
+        HorizontalAlignment="Left" 
+        Margin="10,3,3,3" 
+        VerticalAlignment="Center"/>
+      
+    </StackPanel>
+
+    <sdk:Label 
+      Grid.Row="2" 
+      Content="{Binding Path=AccoBooking.lab_UNIT, 
+                        Source={StaticResource AccoBookingResources}}"/>
+
+    <ContentControl  
+      Grid.Row="2" 
+      Grid.Column="1" 
+      x:Name="UnitList"
+      MinHeight="24"
+      Margin="3"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Center"/>
+
+    <CheckBox 
+      Content="{Binding Path=AccoBooking.lab_DEFAULT_BOOKED, 
+                        Source={StaticResource AccoBookingResources}}" 
+      IsChecked="{Binding Entity.IsDefaultBooked, 
+                          Mode=TwoWay}" 
+      Grid.Column="1" 
+      Grid.Row="3" 
+      Margin="3,3,0,3" />
+
+    <CheckBox 
+      Grid.Row="4" 
+      Grid.Column="1"
+      Content="{Binding Path=AccoBooking.lab_IS_PAID_FROM_DEPOSIT, 
+                        Source={StaticResource AccoBookingResources}}"
+      IsChecked="{Binding Entity.IsPaidFromDeposit, 
+                          Mode=TwoWay}" 
+      Margin="3,3,0,3" 
+      HorizontalAlignment="Left"
+      VerticalAlignment="Center"/>
+
+
+  </Grid>
+</UserControl>

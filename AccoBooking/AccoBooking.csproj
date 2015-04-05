@@ -1,0 +1,1302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD6E0F30-F43E-44C8-A030-CC0F2B19E052}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccoBooking</RootNamespace>
+    <AssemblyName>AccoBooking</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>nl,de,fr</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>AccoBooking.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>AccoBooking.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SkipPostSharp>True</SkipPostSharp>
+    <BaseOutputPath>Bin</BaseOutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)</IntermediateOutputPath>
+    <OutputPath>$(BaseOutputPath)\$(Configuration)</OutputPath>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\TempHire\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Fakestore|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;FAKESTORE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>Bin\Debug\TempHire.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <NoConfig>true</NoConfig>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Demo|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Demo\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;DEMO</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>Bin\Debug\TempHire.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <NoConfig>true</NoConfig>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Silverlight.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Binding.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DataGrid.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DateTimeEditors.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Extended.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Imaging.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Maps.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.RichTextBox.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.RichTextBox.Toolbar.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.SpellChecker.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Toolbar.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Uploader.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Zip.5, Version=5.0.20142.409, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="Caliburn.Micro, Version=2.0.1.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Caliburn.Micro.Core.2.0.1\lib\sl5\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform">
+      <HintPath>..\packages\Caliburn.Micro.2.0.1\lib\sl5\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Cocktail.SL, Version=2.5.0.0, Culture=neutral, PublicKeyToken=7d8c7326b555a04a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.Cocktail.2.5.0\lib\sl50\Cocktail.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="Cocktail.Utils.SL, Version=2.5.0.0, Culture=neutral, PublicKeyToken=7d8c7326b555a04a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.Cocktail.Utils.2.5.0\lib\sl50\Cocktail.Utils.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBlade.Core.SL, Version=7.2.5.0, Culture=neutral, PublicKeyToken=287b5094865421c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.DevForce.Core.7.2.5\lib\sl50\IdeaBlade.Core.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBlade.EntityModel.SL, Version=7.2.5.0, Culture=neutral, PublicKeyToken=287b5094865421c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.DevForce.Core.7.2.5\lib\sl50\IdeaBlade.EntityModel.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBlade.Linq.SL, Version=7.2.5.0, Culture=neutral, PublicKeyToken=287b5094865421c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.DevForce.Core.7.2.5\lib\sl50\IdeaBlade.Linq.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBlade.Validation.SL, Version=7.2.5.0, Culture=neutral, PublicKeyToken=287b5094865421c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.DevForce.Core.7.2.5\lib\sl50\IdeaBlade.Validation.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CompilerServices.AsyncTargetingPack.Silverlight5">
+      <HintPath>..\packages\Microsoft.CompilerServices.AsyncTargetingPack.1.0.0\lib\sl50\Microsoft.CompilerServices.AsyncTargetingPack.Silverlight5.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.ComponentModel.Composition, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition.Initialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.1.4\lib\sl5\System.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Navigation, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Toolkit">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.2.0.1\lib\sl5\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Authentication\AccoBookingAuthenticationService.cs" />
+    <Compile Include="EntityManagerDelegate.cs" />
+    <Compile Include="EntityManagerProviderFactory.cs" />
+    <Compile Include="GlobalCache.cs" />
+    <Compile Include="Resources\AccoBooking.Designer.cs">
+      <DependentUpon>AccoBooking.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Resources\AccoBooking.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccoBooking.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AccoBooking.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccoBooking.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AccoBookingResources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SyncInterceptor.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AccoDescriptionItemViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AccoDescriptionListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\Subscribe\CopyAccommodationViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\TrusteeManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\SpecialOfferManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\SeasonManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\RentManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\Calender\SelectDepartureCalenderViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\Calender\SelectDepartureListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\DepartureSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\DepartureDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\DepartureManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\DepartureSummaryViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\NewBookingFomDepartureViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\SelectDepartureViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Block\BlockDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Block\BlockManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Block\BlockSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Block\BlockSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Rent\CopyAccoRentViewModel.cs" />
+    <Compile Include="ViewModels\Acco\SpecialOffer\AccoSpecialOfferSearchTop2ViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Trustee\AccoTrusteeDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Trustee\AccoTrusteeManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Trustee\AccoTrusteeSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Trustee\AccoTrusteeSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\SpecialOffer\AccoSpecialOfferDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\SpecialOffer\AccoSpecialOfferManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\SpecialOffer\AccoSpecialOfferSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\SpecialOffer\AccoSpecialOfferSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Season\AccoSeasonDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Season\AccoSeasonListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Season\AccoSeasonManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Season\AccoSeasonSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Season\AccoSeasonSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Rent\AccoRentDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Rent\AccoRentListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Rent\AccoRentManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Rent\AccoRentSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Rent\AccoRentSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\SelectDepartures\SearchDeparturesViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\GuestManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\SelectBookingViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Guest\BookingGuestDetailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Guest\BookingGuestManagementViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Guest\BookingGuestSearchViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Guest\BookingGuestSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Trustee\BookingTrusteeMainDetailSectionViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Trustee\BookingTrusteeManagementViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Trustee\BookingTrusteeSearchViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Trustee\BookingTrusteeDetailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Trustee\BookingTrusteeSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Trustee\SearchBookingTrusteeViewModel.cs" />
+    <Compile Include="ViewModels\General\Currency\CurrencyListViewModel.cs" />
+    <Compile Include="ViewModels\MainMenuViewModel.cs" />
+    <Compile Include="ViewModels\SubMenuViewModel.cs" />
+    <Compile Include="ViewModels\Public\Support\HelpdeskViewModel.cs" />
+    <Compile Include="ViewModels\Public\Home\HomeRentalViewModel.cs" />
+    <Compile Include="ViewModels\Public\PublicViewModel.cs" />
+    <Compile Include="ViewModels\Public\Support\SupportViewModel.cs" />
+    <Compile Include="ViewModels\Public\Support\VideoViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AccoDetailViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\Acco\Accommodation\AccoListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AccoManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AccommodationDetailSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AccoOwnerMainDetailSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AccoSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AccoSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\AdditionManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\BookingDetailSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\BookingSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Accommodation\CancelConditionManagementSectionViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\Acco\Accommodation\PayPatternManagementSectionViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\Acco\Accommodation\ReminderManagementSectionViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\Acco\Addition\AccoAdditionDescriptionItemViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Addition\AccoAdditionDescriptionListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Addition\AccoAdditionDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Addition\AccoAdditionListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Addition\AccoAdditionManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Addition\AccoAdditionSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Addition\AccoAdditionSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\Calender\AccoAvailablePeriodCalenderViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Availability\Calender\AccoAvailablePeriodListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\CancelCondition\AccoCancelConditionDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\CancelCondition\AccoCancelConditionManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\CancelCondition\AccoCancelConditionSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\CancelCondition\AccoCancelConditionSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\AccoOwnerSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\License\AccoLicenseDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\License\AccoLicenseManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\License\AccoLicenseSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\License\AccoLicenseSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\MailSettingsViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\Subscribe\AccoSubscribeViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\Subscribe\ExtraAccoSubscribeViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Owner\Subscribe\RemoveAccoSubscribeViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\AccoPayPatternDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\AccoPayPatternListViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\AccoPayPatternManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\AccoPayPatternPaymentSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\AccoPayPatternSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\AccoPayPatternSectionViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\AccoPayPatternSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\Payment\AccoPayPatternPaymentDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\Payment\AccoPayPatternPaymentManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\Payment\AccoPayPatternPaymentSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\PayPattern\Payment\AccoPayPatternPaymentSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Reminder\AccoReminderDetailViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Reminder\AccoReminderManagementViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Reminder\AccoReminderSearchViewModel.cs" />
+    <Compile Include="ViewModels\Acco\Reminder\AccoReminderSummaryViewModel.cs" />
+    <Compile Include="ViewModels\BaseDetailViewModel.cs" />
+    <Compile Include="ViewModels\BaseListViewModel.cs" />
+    <Compile Include="ViewModels\BaseManagementViewModel.cs" />
+    <Compile Include="ViewModels\BaseMasterViewModel.cs" />
+    <Compile Include="ViewModels\BaseScreen.cs" />
+    <Compile Include="ViewModels\BaseSearchViewModel.cs" />
+    <Compile Include="ViewModels\BaseSectionViewModel.cs" />
+    <Compile Include="ViewModels\BaseSelectionListsViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Addition\BookingAdditionDetailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Addition\BookingAdditionManagementViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Addition\BookingAdditionSearchViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Addition\BookingAdditionSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\AdditionManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\CreateBookingDetailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\BookingDetailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\BookingMainDetailSectionViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\BookingManagementViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\BookingSearchViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\BookingSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\CreateBookingViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\PaymentManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\ReminderManagementSectionViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\SearchBookingViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Booking\UpdateBookingViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Mail\BookingMailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Mail\PreviewMailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Mail\ProposeViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Mail\SendMailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Mail\SendMailWizardViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Payment\BookingPaymentItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Payment\BookingPaymentListViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Payment\BookingPaymentSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Reminder\BookingReminderDetailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Reminder\BookingReminderManagementViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Reminder\BookingReminderSearchViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Reminder\BookingReminderSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Reminder\Check\CheckRemindersDetailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Reminder\Check\CheckRemindersManagementViewModel.cs" />
+    <Compile Include="ViewModels\Booking\Reminder\Check\CheckRemindersSearchViewModel.cs" />
+    <Compile Include="ViewModels\General\Country\CountryDetailViewModel.cs" />
+    <Compile Include="ViewModels\General\Country\CountryListViewModel.cs" />
+    <Compile Include="ViewModels\General\Country\CountryManagementViewModel.cs" />
+    <Compile Include="ViewModels\General\Country\CountrySearchViewModel.cs" />
+    <Compile Include="ViewModels\General\Country\CountrySummaryViewModel.cs" />
+    <Compile Include="ViewModels\General\Language\LanguageDetailViewModel.cs" />
+    <Compile Include="ViewModels\General\Language\LanguageListViewModel.cs" />
+    <Compile Include="ViewModels\General\Language\LanguageManagementViewModel.cs" />
+    <Compile Include="ViewModels\General\Language\LanguageSearchViewModel.cs" />
+    <Compile Include="ViewModels\General\Language\LanguageSummaryViewModel.cs" />
+    <Compile Include="ViewModels\General\Language\SupportedLanguageListViewModel.cs" />
+    <Compile Include="ViewModels\General\MailTemplate\MailTagListViewModel.cs" />
+    <Compile Include="ViewModels\General\MailTemplate\MailTemplateDetailViewModel.cs" />
+    <Compile Include="ViewModels\General\MailTemplate\MailTemplateListViewModel.cs" />
+    <Compile Include="ViewModels\General\MailTemplate\MailTemplateManagementViewModel.cs" />
+    <Compile Include="ViewModels\General\MailTemplate\MailTemplateSearchViewModel.cs" />
+    <Compile Include="ViewModels\General\MailTemplate\MailTemplateSectionViewModel.cs" />
+    <Compile Include="ViewModels\General\MailTemplate\MailTemplateSummaryViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemCode\SystemCodeDetailViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemCode\SystemCodeListViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemCode\SystemCodeManagementViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemCode\SystemCodeControlViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemCode\SystemCodeSearchViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemCode\SystemCodeSummaryViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemGroup\SystemGroupCodesSectionViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemGroup\SystemGroupDetailViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemGroup\SystemGroupMainSectionViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemGroup\SystemGroupManagementViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemGroup\SystemGroupMasterViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemGroup\SystemGroupSearchViewModel.cs" />
+    <Compile Include="ViewModels\General\SystemGroup\SystemGroupSummaryViewModel.cs" />
+    <Compile Include="ViewModels\Public\Support\FAQViewModel.cs" />
+    <Compile Include="ViewModels\Public\Tarieven\LicenseTermsViewModel.cs" />
+    <Compile Include="ViewModels\Public\Home\HomeViewModel.cs" />
+    <Compile Include="ViewModels\IBaseDetailSection.cs" />
+    <Compile Include="ViewModels\IMenu.cs" />
+    <Compile Include="ViewModels\IToolbar.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\Public\Tarieven\TarievenViewModel.cs" />
+    <Compile Include="ViewModels\Public\Tarieven\TarievenDetailViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\Login\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ToolbarViewModel.cs" />
+    <Compile Include="Views\Booking\Booking\BookingSearchView.xaml.cs">
+      <DependentUpon>BookingSearchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Booking\Booking\SelectBookingView.xaml.cs">
+      <DependentUpon>SelectBookingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Booking\Mail\PreviewMailView.xaml.cs">
+      <DependentUpon>PreviewMailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Booking\Trustee\BookingTrusteeSearchView.xaml.cs">
+      <DependentUpon>BookingTrusteeSearchView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.SL\Common.SL.csproj">
+      <Project>{3d676816-91a4-4b53-877e-95fe5b348480}</Project>
+      <Name>Common.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel.SL\DomainModel.SL.csproj">
+      <Project>{77A1A2B1-66E8-4141-8405-87AB13775FB8}</Project>
+      <Name>DomainModel.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainServices.SL\DomainServices.SL.csproj">
+      <Project>{dd374d18-bed3-42b6-8795-efeef3752c0c}</Project>
+      <Name>DomainServices.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Security.SL\Security.SL.csproj">
+      <Project>{DD97F37C-E978-4483-B0BC-CFC49940B560}</Project>
+      <Name>Security.SL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\add.png" />
+    <Resource Include="Assets\Images\all-left.png" />
+    <Resource Include="Assets\Images\all-right.png" />
+    <Resource Include="Assets\Images\Available-Booked.png" />
+    <Resource Include="Assets\Images\Available-None.png" />
+    <Resource Include="Assets\Images\Booked-Available.png" />
+    <Resource Include="Assets\Images\Booked-None.png" />
+    <Resource Include="Assets\Images\bottom.png" />
+    <Resource Include="Assets\Images\cancel.png" />
+    <Resource Include="Assets\Images\down.png" />
+    <Resource Include="Assets\Images\left.png" />
+    <Resource Include="Assets\Images\None-Available.png" />
+    <Resource Include="Assets\Images\None-Booked.png" />
+    <Resource Include="Assets\Images\ok.png" />
+    <Resource Include="Assets\Images\refresh.png" />
+    <Resource Include="Assets\Images\remove.png" />
+    <Resource Include="Assets\Images\right.png" />
+    <Resource Include="Assets\Images\top.png" />
+    <Resource Include="Assets\Images\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Styles\MonthDeparture.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewModels\AccoDescriptionListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Owner\Subscribe\CopyAccommodationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\TrusteeManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\SpecialOfferManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\SeasonManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\RentManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\SelectDepartures\Calender\SelectDepartureCalenderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\SelectDepartures\Calender\SelectDepartureListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\SelectDepartures\DepartureSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\SelectDepartures\DepartureDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\SelectDepartures\DepartureManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\SelectDepartures\DepartureSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\SelectDepartures\NewBookingFromDepartureView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\SelectDepartures\SelectDepartureView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Block\BlockDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Block\BlockManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Block\BlockSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Block\BlockSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Rent\CopyAccoRentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\SpecialOffer\AccoSpecialOfferSearchTop2View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Trustee\AccoTrusteeDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Trustee\AccoTrusteeManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Trustee\AccoTrusteeSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Trustee\AccoTrusteeSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\SpecialOffer\AccoSpecialOfferDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\SpecialOffer\AccoSpecialOfferManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\SpecialOffer\AccoSpecialOfferSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\SpecialOffer\AccoSpecialOfferSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Rent\AccoRentDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Rent\AccoRentListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Rent\AccoRentManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Rent\AccoRentSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Rent\AccoRentSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Season\AccoSeasonDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Season\AccoSeasonListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Season\AccoSeasonManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Season\AccoSeasonSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Season\AccoSeasonSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\GuestManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\SelectBookingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Booking\Guest\BookingGuestDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Guest\BookingGuestManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Guest\BookingGuestSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Guest\BookingGuestSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Mail\PreviewMailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Booking\Trustee\BookingTrusteeMainDetailSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Trustee\BookingTrusteeManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Trustee\BookingTrusteeSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Trustee\BookingTrusteeDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Trustee\BookingTrusteeSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Trustee\SearchBookingTrusteeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Currency\CurrencyListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainMenuView .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SubMenuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\Support\HelpdeskView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\Home\HomeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\PublicView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\Support\SupportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\Support\VideoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\AccoDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\AccoManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\AccommodationDetailSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\AccoOwnerMainDetailSectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\AccoSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\AccoSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\AdditionManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\BookingDetailSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\BookingSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\CancelConditionManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\PayPatternManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\ReminderManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Addition\AccoAdditionDescriptionListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Addition\AccoAdditionDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Addition\AccoAdditionListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Addition\AccoAdditionManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Addition\AccoAdditionSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Addition\AccoAdditionSummaryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Acco\Availability\Calender\AccoAvailablePeriodCalenderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Availability\Calender\AccoAvailablePeriodListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\CancelCondition\AccoCancelConditionDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\CancelCondition\AccoCancelConditionManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\CancelCondition\AccoCancelConditionSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\CancelCondition\AccoCancelConditionSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Owner\AccoOwnerSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Owner\License\AccoLicenseSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Owner\MailSettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Owner\Subscribe\AccoSubscribeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Owner\Subscribe\ExtraAccoSubscribeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Owner\Subscribe\RemoveAccoSubscribeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\AccoPayPatternDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\AccoPayPatternListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\AccoPayPatternManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\AccoPayPatternPaymentSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\AccoPayPatternSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\AccoPayPatternSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\AccoPayPatternSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\Payment\AccoPayPatternPaymentDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\Payment\AccoPayPatternPaymentManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\Payment\AccoPayPatternPaymentSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\PayPattern\Payment\AccoPayPatternPaymentSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Reminder\AccoReminderDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Reminder\AccoReminderManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Reminder\AccoReminderSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Reminder\AccoReminderSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Addition\BookingAdditionDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Addition\BookingAdditionManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Addition\BookingAdditionSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Addition\BookingAdditionSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\AdditionManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\BookingDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\BookingMainDetailSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\BookingManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\BookingSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\BookingSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\CreateBookingDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\CreateBookingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\PaymentManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\ReminderManagementSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\SearchBookingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Booking\UpdateBookingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Mail\BookingMailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Mail\ProposeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Mail\SendMailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Mail\SendMailWizardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Payment\BookingPaymentListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Payment\BookingPaymentSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Reminder\BookingReminderDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Reminder\BookingReminderManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Reminder\BookingReminderSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Reminder\BookingReminderSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Reminder\Check\CheckRemindersDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Reminder\Check\CheckRemindersManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Booking\Reminder\Check\CheckRemindersSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Country\CountryDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Country\CountryListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Country\CountryManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Country\CountrySearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Country\CountrySummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Language\LanguageDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Language\LanguageListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Language\LanguageManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Language\LanguageSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Language\LanguageSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Language\SupportedLanguageListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\MailTemplate\MailTagListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\MailTemplate\MailTemplateDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\MailTemplate\MailTemplateListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\MailTemplate\MailTemplateManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\MailTemplate\MailTemplateSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\MailTemplate\MailTemplateSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\MailTemplate\MailTemplateSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemCode\SystemCodeControlView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemCode\SystemCodeDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemCode\SystemCodeListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemCode\SystemCodeManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemCode\SystemCodeSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemCode\SystemCodeSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemGroup\SystemGroupCodesSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemGroup\SystemGroupControlView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemGroup\SystemGroupDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemGroup\SystemGroupMainSectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemGroup\SystemGroupManagementView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemGroup\SystemGroupSearchView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\SystemGroup\SystemGroupSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\Tarieven\LicenseTermsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\Support\FAQView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ItemSelectorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Public\Tarieven\TarievenView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\Tarieven\TarievenDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RichTextBoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ToolbarView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Styles\Styles.Silverlight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Styles\Month.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\MonthAvailability.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acco\Accommodation\AccoListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Public\Home\HomeRentalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Login\LoginView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ShellView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AccoBooking.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccoBooking.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccoBooking.nl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccoBooking.nl.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccoBooking.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccoBooking.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\AccoBookingLogo30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\acrobat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\GettingStarted200.JPG" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\Videos\aanmelden.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Videos\accommodatie.jpg" />
+    <Resource Include="Assets\Videos\annuleren.jpg" />
+    <Resource Include="Assets\Videos\beschikbaarheid.jpg" />
+    <Resource Include="Assets\Videos\betaalschema.jpg" />
+    <Resource Include="Assets\Videos\betaling.jpg" />
+    <Resource Include="Assets\Videos\bevestiging.jpg" />
+    <Resource Include="Assets\Videos\boeking.jpg" />
+    <Resource Include="Assets\Videos\export.jpg" />
+    <Resource Include="Assets\Videos\extraaccommodatie.jpg" />
+    <Resource Include="Assets\Videos\extras.jpg" />
+    <Resource Include="Assets\Videos\herinneringen.jpg" />
+    <Resource Include="Assets\Videos\nieuweboeking.jpg" />
+    <Resource Include="Assets\Videos\prijzen.jpg" />
+    <Resource Include="Assets\Videos\standaardprijs.jpg" />
+    <Resource Include="Assets\Images\NorthSea.jpg" />
+    <Resource Include="Assets\Images\Pool.JPG" />
+    <Resource Include="Assets\Images\Suriname.JPG" />
+    <Resource Include="Assets\Images\Tenerife.jpg" />
+    <Resource Include="Assets\Images\Calendar.jpg" />
+    <Resource Include="Assets\Images\Structure.JPG" />
+    <Resource Include="Assets\Images\Helpdesk.JPG" />
+    <Resource Include="Assets\Images\Manual.JPG" />
+    <Resource Include="Assets\Images\License.JPG" />
+    <Resource Include="Assets\Images\Subscribe.JPG" />
+    <Resource Include="Assets\Images\Discount.JPG" />
+    <Resource Include="Assets\Images\Tarif.JPG" />
+    <Resource Include="Assets\MailTemplates\de\PeriodAvailable.html" />
+    <Resource Include="Assets\MailTemplates\en\PeriodAvailable.html" />
+    <Resource Include="Assets\MailTemplates\nl\PeriodAvailable.html" />
+    <Resource Include="Assets\MailTemplates\nl\Reservation.html" />
+    <Resource Include="Assets\MailTemplates\de\Reservation.html" />
+    <Resource Include="Assets\MailTemplates\de\Confirmation.html" />
+    <Resource Include="Assets\MailTemplates\de\PaymentReminder.html" />
+    <Resource Include="Assets\MailTemplates\de\PaymentReceived.html" />
+    <Resource Include="Assets\MailTemplates\de\Arrival.html" />
+    <Resource Include="Assets\MailTemplates\de\Departure.html" />
+    <Resource Include="Assets\MailTemplates\de\Cancellation.html" />
+    <Resource Include="Assets\MailTemplates\en\Reservation.html" />
+    <Resource Include="Assets\MailTemplates\en\Confirmation.html" />
+    <Resource Include="Assets\MailTemplates\en\PaymentReminder.html" />
+    <Resource Include="Assets\MailTemplates\en\PaymentReceived.html" />
+    <Resource Include="Assets\MailTemplates\en\Arrival.html" />
+    <Resource Include="Assets\MailTemplates\en\Departure.html" />
+    <Resource Include="Assets\MailTemplates\en\Cancellation.html" />
+    <Resource Include="Assets\MailTemplates\nl\Confirmation.html" />
+    <Resource Include="Assets\MailTemplates\nl\PaymentReminder.html" />
+    <Resource Include="Assets\MailTemplates\nl\PaymentReceived.html" />
+    <Resource Include="Assets\MailTemplates\nl\Arrival.html" />
+    <Resource Include="Assets\MailTemplates\nl\Departure.html" />
+    <Resource Include="Assets\MailTemplates\nl\Cancellation.html" />
+    <Resource Include="Assets\MailTemplates\de\Expiration.html" />
+    <Resource Include="Assets\MailTemplates\en\Expiration.html" />
+    <Resource Include="Assets\MailTemplates\nl\Expiration.html" />
+    <Content Include="Assets\Videos\voorstel.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

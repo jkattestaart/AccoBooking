@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77A1A2B1-66E8-4141-8405-87AB13775FB8}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DomainModel</RootNamespace>
+    <AssemblyName>DomainModel.SL</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <SupportedCultures>nl,de,fr</SupportedCultures>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <BaseOutputPath>Bin</BaseOutputPath>
+    <OutputPath>$(BaseOutputPath)\$(Configuration)</OutputPath>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\TempHire\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <SkipPostSharp>True</SkipPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Fakestore|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>Bin\Debug\DomainModel.SL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <NoConfig>true</NoConfig>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Demo|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Demo\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>Bin.SL\Debug\DomainModel.SL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <NoConfig>true</NoConfig>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cocktail.Utils.SL, Version=2.5.0.0, Culture=neutral, PublicKeyToken=7d8c7326b555a04a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.Cocktail.Utils.2.5.0\lib\sl50\Cocktail.Utils.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBlade.Aop.SL, Version=7.2.5.0, Culture=neutral, PublicKeyToken=287b5094865421c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.DevForce.Aop.7.2.5\lib\sl50\IdeaBlade.Aop.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBlade.Core.SL, Version=6.1.9.0, Culture=neutral, PublicKeyToken=287b5094865421c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.DevForce.Core.7.2.5\lib\sl50\IdeaBlade.Core.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBlade.EntityModel.SL, Version=6.1.9.0, Culture=neutral, PublicKeyToken=287b5094865421c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.DevForce.Core.7.2.5\lib\sl50\IdeaBlade.EntityModel.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBlade.Validation.SL, Version=6.1.9.0, Culture=neutral, PublicKeyToken=287b5094865421c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IdeaBlade.DevForce.Core.7.2.5\lib\sl50\IdeaBlade.Validation.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CompilerServices.AsyncTargetingPack.Silverlight5, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.CompilerServices.AsyncTargetingPack.1.0.0\lib\sl50\Microsoft.CompilerServices.AsyncTargetingPack.Silverlight5.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="PostSharp, Version=3.1.57.3, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PostSharp.3.1.57\lib\portable-windows8+net40+sl5+wp8+wpa81\PostSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.Composition.Initialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\DomainModel\AccoBooking.cs">
+      <Link>AccoBooking.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\AccoBooking.IB.Designer.cs">
+      <Link>AccoBooking.IB.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\AccoResource.Designer.cs">
+      <Link>AccoResource.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\AccoResource.fr.Designer.cs">
+      <Link>AccoResource.fr.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\AccoResource.nl.Designer.cs">
+      <Link>AccoResource.nl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\EntityBase.cs">
+      <Link>EntityBase.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\IHasRoot.cs">
+      <Link>IHasRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoAdditionDescriptionListItem.cs">
+      <Link>Projections\AccoAdditionDescriptionListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoAdditionListItem.cs">
+      <Link>Projections\AccoAdditionListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoCancelConditionListItem.cs">
+      <Link>Projections\AccoCancelConditionListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoCancelConditionPercentageListItem.cs">
+      <Link>Projections\AccoCancelConditionPercentageListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoDescriptionListItem.cs">
+      <Link>Projections\AccoDescriptionListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoListItem.cs">
+      <Link>Projections\AccoListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoNotificationListItem.cs">
+      <Link>Projections\AccoNotificationListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoOwnerListItem.cs">
+      <Link>Projections\AccoOwnerListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoPayPatternListItem.cs">
+      <Link>Projections\AccoPayPatternListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoPayPatternPaymentListItem.cs">
+      <Link>Projections\AccoPayPatternPaymentListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoReminderListItem.cs">
+      <Link>Projections\AccoReminderListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoRentListItem.cs">
+      <Link>Projections\AccoRentListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoSeasonListItem.cs">
+      <Link>Projections\AccoSeasonListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoSpecialOfferListItem.cs">
+      <Link>Projections\AccoSpecialOfferListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AccoTrusteeListItem.cs">
+      <Link>Projections\AccoTrusteeListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\AvailableDepartureListItem.cs">
+      <Link>Projections\AvailableDepartureListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\BlockListItem.cs">
+      <Link>Projections\BlockListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\BookingAdditionListItem.cs">
+      <Link>Projections\BookingAdditionListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\BookingCancelConditionListItem.cs">
+      <Link>Projections\BookingCancelConditionListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\BookingGuestListItem.cs">
+      <Link>Projections\BookingGuestListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\BookingListItem.cs">
+      <Link>Projections\BookingListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\BookingPaymentListItem.cs">
+      <Link>Projections\BookingPaymentListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\BookingReminderListItem.cs">
+      <Link>Projections\BookingReminderListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\BookingToDoListItem.cs">
+      <Link>Projections\BookingToDoListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\CountryListItem.cs">
+      <Link>Projections\CountryListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\CurrencyListItem.cs">
+      <Link>Projections\CurrencyListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\LanguageListItem.cs">
+      <Link>Projections\LanguageListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\ListItemBase.cs">
+      <Link>Projections\ListItemBase.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\MailTemplateListItem.cs">
+      <Link>Projections\MailTemplateListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\SequenceListItem.cs">
+      <Link>Projections\SequenceListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\SystemCodeListItem.cs">
+      <Link>Projections\SystemCodeListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\Projections\SystemGroupListItem.cs">
+      <Link>Projections\SystemGroupListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\DomainModel\SessionManager.cs">
+      <Link>SessionManager.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\DomainModel\AccoResource.fr.resx">
+      <Link>AccoResource.fr.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\DomainModel\AccoResource.nl.resx">
+      <Link>AccoResource.nl.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\DomainModel\AccoResource.resx">
+      <Link>AccoResource.resx</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="..\packages\PostSharp.3.1.57\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.3.1.57\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\packages\PostSharp.3.1.57\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\packages\PostSharp.3.1.57\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

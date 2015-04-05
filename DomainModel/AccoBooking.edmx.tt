@@ -1,0 +1,12 @@
+<#@ template  language="C#" debug="true" hostSpecific="true" #>
+<#@ output extension=".ReadMe" #>
+<#@ Assembly Name="IdeaBlade.VisualStudio.OM.CodeGenerator.EF5.dll" #>
+<#@ import namespace="IdeaBlade.VisualStudio.OM.CodeGenerator" #>
+<#
+	// Source for this file located at: C:\USERS\JOHN\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\12.0\EXTENSIONS\WUUJP20W.AH4\DomainModelTemplate.tt
+	// AccoBooking.edmx  <--- This is needed so that "Transform Related Text Templates On Save" works correctly.
+	var template = new DomainModelTemplate(this);
+	template.Generate();
+#>
+<#+ 
+#>

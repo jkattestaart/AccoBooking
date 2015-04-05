@@ -1,0 +1,76 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.Acco.BlockSearchView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  xmlns:common="http://accobooking.ideablade.com/common"
+  
+  d:DesignHeight="410"
+  d:DesignWidth="900"
+  mc:Ignorable="d">
+
+  <Grid 
+    x:Name="LayoutRoot" 
+    Background="Transparent">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+
+    <toolkit:BusyIndicator 
+      Grid.Row="0" 
+      IsBusy="{Binding Busy.IsBusy}">
+
+      <toolkit:BusyIndicator.BusyContent>
+        <TextBlock Text="{Binding Path=AccoBooking.mes_BUSY, 
+                                  Source={StaticResource AccoBookingResources}}" />
+      </toolkit:BusyIndicator.BusyContent>
+
+      <c1:C1DataGrid
+        Margin="3"
+        MinHeight="200"
+        ItemsSource="{Binding Items}"
+        SelectedItem="{Binding CurrentItem, 
+                               Mode=TwoWay}"
+        common:DoubleClickEvent.AttachAction="DoubleClicked">
+
+        <c1:C1DataGrid.Columns>
+
+          <c1:DataGridDateTimeColumn 
+            Format="d"
+            Binding="{Binding Arrival, 
+                              Mode=OneWay}" 
+            Header="{Binding Path=AccoBooking.lab_START, 
+                             Source={StaticResource AccoBookingResources}}" 
+            Width="80"/>
+
+
+          <c1:DataGridDateTimeColumn
+            Format="d"
+            Binding="{Binding Departure, 
+                              Mode=OneWay}" 
+            Header="{Binding Path=AccoBooking.lab_END, 
+                             Source={StaticResource AccoBookingResources}}" 
+            Width="80"/>
+
+          <c1:DataGridTextColumn
+            Binding="{Binding Notes, 
+                              Mode=OneWay}" 
+            Header="{Binding Path=AccoBooking.lab_NOTES, 
+                             Source={StaticResource AccoBookingResources}}" 
+            Width="400"/>
+
+        </c1:C1DataGrid.Columns>
+
+      </c1:C1DataGrid>
+
+    </toolkit:BusyIndicator>
+  </Grid>
+</UserControl>

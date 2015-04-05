@@ -1,0 +1,141 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.Acco.AccoSeasonSummaryView"
+  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+  xmlns:cal="http://www.caliburnproject.org"
+  xmlns:interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+  d:DesignHeight="358"
+  d:DesignWidth="751"
+  mc:Ignorable="d">
+
+  <Grid 
+    x:Name="LayoutRoot" 
+    Background="Transparent">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="270" />
+    </Grid.ColumnDefinitions>
+
+    <sdk:Label
+      Grid.Row="0"
+      Content="{Binding Path=AccoBooking.lab_DESCRIPTION, 
+                        Source={StaticResource AccoBookingResources}}"
+      />
+
+    <c1:C1MaskedTextBox
+      Grid.Row="0" 
+      Grid.Column="1" 
+      Text="{Binding Entity.Description, 
+                    ValidatesOnDataErrors=True, 
+                    ValidatesOnExceptions=True, 
+                    UpdateSourceTrigger=PropertyChanged, 
+                    Mode=TwoWay}" 
+      />
+
+    <sdk:Label 
+      Grid.Row="1" 
+      Content="{Binding Path=AccoBooking.lab_YEAR, 
+                        Source={StaticResource AccoBookingResources}}"  
+      />
+
+    <c1:C1NumericBox 
+      Grid.Row="1"
+      Grid.Column="1"
+      Width="80" 
+      ShowButtons="True" 
+      HorizontalAlignment="left"
+      Value="{Binding Path=Entity.SeasonYear,
+                      ValidatesOnDataErrors=True, 
+                      ValidatesOnExceptions=True, 
+                      UpdateSourceTrigger=PropertyChanged, 
+                      Mode=TwoWay}"
+      />
+
+    <sdk:Label 
+      Grid.Row="2" 
+      Content="{Binding Path=AccoBooking.lab_START, 
+                        Source={StaticResource AccoBookingResources}}"  />
+
+    <c1:C1DatePicker 
+      Grid.Row="2"
+      Grid.Column="1"
+      Width="100"
+      HorizontalAlignment="Left"
+      IsReadOnly="{Binding IsReadOnly}"
+      
+      SelectedDate="{Binding Entity.SeasonStart, 
+                             ValidatesOnDataErrors=True,
+                             ValidatesOnExceptions=True,
+                             UpdateSourceTrigger=PropertyChanged,
+                             Mode=TwoWay}"
+      >
+      <interactivity:Interaction.Triggers>
+        <interactivity:EventTrigger EventName="KeyDown">
+          <cal:ActionMessage MethodName="KeyDown">
+            <cal:Parameter Value="$eventArgs" />
+          </cal:ActionMessage>
+        </interactivity:EventTrigger>
+        <interactivity:EventTrigger EventName="MouseLeave">
+          <cal:ActionMessage MethodName="MouseLeave">
+            <cal:Parameter Value="$eventArgs" />
+          </cal:ActionMessage>
+        </interactivity:EventTrigger>
+        <interactivity:EventTrigger EventName="SelectedDateChanged">
+          <cal:ActionMessage MethodName="SelectedDateChanged">
+            <cal:Parameter Value="$eventArgs" />
+          </cal:ActionMessage>
+        </interactivity:EventTrigger>
+      </interactivity:Interaction.Triggers>
+    </c1:C1DatePicker>
+
+    <sdk:Label 
+      Grid.Row="3" 
+      Content="{Binding Path=AccoBooking.lab_END, 
+                        Source={StaticResource AccoBookingResources}}"  
+      />
+
+    <c1:C1DatePicker 
+      Grid.Row="3"
+      Grid.Column="1"
+      Width="100"
+      HorizontalAlignment="Left"
+      IsReadOnly="{Binding IsReadOnly}"
+      SelectedDate="{Binding Entity.SeasonEnd, 
+                             ValidatesOnDataErrors=True,
+                             ValidatesOnExceptions=True,
+                             UpdateSourceTrigger=PropertyChanged,
+                             Mode=TwoWay}"
+      />
+
+    <sdk:Label 
+      Grid.Row="4" 
+      Content="{Binding Path=AccoBooking.lab_RENT, 
+                        Source={StaticResource AccoBookingResources}}"  
+      />
+
+    <ContentControl  
+      Grid.Row="4" 
+      Grid.Column="1" 
+      x:Name="RentList"
+      Margin="3"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Center"
+      />
+    
+  </Grid>
+</UserControl>

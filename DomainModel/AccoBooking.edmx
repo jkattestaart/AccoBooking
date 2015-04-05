@@ -1,0 +1,3026 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Acco">
+          <Key>
+            <PropertyRef Name="AccoId" />
+          </Key>
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="AccoOwnerId" Type="int" Nullable="false" />
+          <Property Name="DefaultPayPatternId" Type="int" />
+          <Property Name="DefaultPeriodUnitId" Type="int" />
+          <Property Name="Address1" Type="nvarchar(max)" />
+          <Property Name="Address2" Type="nvarchar(max)" />
+          <Property Name="Address3" Type="nvarchar(max)" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="Latitude" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="Longitude" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="MapLocation" Type="nvarchar(max)" />
+          <Property Name="OwnWebsite" Type="nvarchar" MaxLength="50" />
+          <Property Name="DaysToPayDepositBackAfterDeparture" Type="int" Nullable="false" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Location" Type="nvarchar(max)" />
+          <Property Name="AccoType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ArriveAfter" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DepartureBefore" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DaysToExpire" Type="int" Nullable="false" />
+          <Property Name="StartWeekdayCalendar" Type="nvarchar" MaxLength="50" />
+          <Property Name="Deposit" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="CancelAdministrationCosts" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="LicenceExpiration" Type="datetime" />
+          <Property Name="LastLogin" Type="datetime" />
+          <Property Name="ColorOwner" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorBlock" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorOnline" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaseRentId" Type="int" />
+          <Property Name="SendWeeklyReminders" Type="bit" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="AccoAddition">
+          <Key>
+            <PropertyRef Name="AccoAdditionId" />
+          </Key>
+          <Property Name="AccoAdditionId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsDefaultBooked" Type="bit" Nullable="false" />
+          <Property Name="IsPaidFromDeposit" Type="bit" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="AccoAdditionDescription">
+          <Key>
+            <PropertyRef Name="AccoAdditionDescriptionId" />
+          </Key>
+          <Property Name="AccoAdditionDescriptionId" Type="int" Nullable="false" />
+          <Property Name="AccoAdditionId" Type="int" Nullable="false" />
+          <Property Name="LanguageId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="AccoAttachment">
+          <Key>
+            <PropertyRef Name="AccoAttachmentId" />
+          </Key>
+          <Property Name="AccoAttachmentId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccoCancelCondition">
+          <Key>
+            <PropertyRef Name="AccoCancelConditionId" />
+          </Key>
+          <Property Name="AccoCancelConditionId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="DaysBeforeArrival" Type="int" Nullable="false" />
+          <Property Name="RentPercentageToPay" Type="int" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="AccoDescription">
+          <Key>
+            <PropertyRef Name="AccoDescriptionId" />
+          </Key>
+          <Property Name="AccoDescriptionId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="LanguageId" Type="int" Nullable="false" />
+          <Property Name="PropertyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccoNotification">
+          <Key>
+            <PropertyRef Name="AccoNotificationId" />
+          </Key>
+          <Property Name="AccoNotificationId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="AccoOwnerId" Type="int" Nullable="false" />
+          <Property Name="BookingId" Type="int" />
+          <Property Name="NoticationType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NotificationDate" Type="datetime" Nullable="false" />
+          <Property Name="IsNotified" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ExpirationDate" Type="datetime" Nullable="false" />
+          <Property Name="DaystoExpire" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccoOwner">
+          <Key>
+            <PropertyRef Name="AccoOwnerId" />
+          </Key>
+          <Property Name="AccoOwnerId" Type="int" Nullable="false" />
+          <Property Name="LanguageId" Type="int" Nullable="false" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PublicName" Type="nvarchar(max)" />
+          <Property Name="PublicEmail" Type="nvarchar(max)" />
+          <Property Name="PublicPhone" Type="nvarchar(max)" />
+          <Property Name="PublicAddress1" Type="nvarchar(max)" />
+          <Property Name="PublicAddress2" Type="nvarchar(max)" />
+          <Property Name="PublicAddress3" Type="nvarchar(max)" />
+          <Property Name="PublicCountryId" Type="int" />
+          <Property Name="PublicBank" Type="nvarchar" MaxLength="50" />
+          <Property Name="PublicBankAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="AccoPayPattern">
+          <Key>
+            <PropertyRef Name="AccoPayPatternId" />
+          </Key>
+          <Property Name="AccoPayPatternId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="IsAdditionInLastPayment" Type="bit" Nullable="false" />
+          <Property Name="IsDepositInLastPayment" Type="bit" Nullable="false" />
+          <Property Name="DaysBeforeArrival" Type="int" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="AccoPayPatternPayment">
+          <Key>
+            <PropertyRef Name="AccoPayPatternPaymentId" />
+          </Key>
+          <Property Name="AccoPayPatternPaymentId" Type="int" Nullable="false" />
+          <Property Name="AccoPayPatternId" Type="int" Nullable="false" />
+          <Property Name="DaysToPayAfterBooking" Type="int" Nullable="false" />
+          <Property Name="DaysToPayBeforeArrival" Type="int" Nullable="false" />
+          <Property Name="PaymentAmount" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="PaymentPercentage" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="AccoReminder">
+          <Key>
+            <PropertyRef Name="AccoReminderId" />
+          </Key>
+          <Property Name="AccoReminderId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Milestone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Offset" Type="int" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="AccoRent">
+          <Key>
+            <PropertyRef Name="AccoRentId" />
+          </Key>
+          <Property Name="AccoRentId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsAvailablePerNight" Type="bit" Nullable="false" />
+          <Property Name="RentPerNight" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="MinimalNights" Type="int" Nullable="false" />
+          <Property Name="IsAvailablePerWeekend" Type="bit" Nullable="false" />
+          <Property Name="RentPerWeekend" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="RentPerMidweek" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="IsAvailablePerWeek" Type="bit" Nullable="false" />
+          <Property Name="RentPerWeek" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="MinimalWeeks" Type="int" Nullable="false" />
+          <Property Name="WeekExchangeDay" Type="nvarchar" MaxLength="50" />
+          <Property Name="OptionalWeekExchangeDay" Type="nvarchar" MaxLength="50" />
+          <Property Name="Color" Type="nvarchar" MaxLength="50" />
+          <Property Name="RentYear" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccoSeason">
+          <Key>
+            <PropertyRef Name="AccoSeasonId" />
+          </Key>
+          <Property Name="AccoSeasonId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SeasonYear" Type="int" Nullable="false" />
+          <Property Name="SeasonStart" Type="datetime" Nullable="false" />
+          <Property Name="SeasonEnd" Type="datetime" Nullable="false" />
+          <Property Name="AccoRentId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccoSpecialOffer">
+          <Key>
+            <PropertyRef Name="AccoSpecialOfferId" />
+          </Key>
+          <Property Name="AccoSpecialOfferId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="LanguageId" Type="int" Nullable="false" />
+          <Property Name="SpecialOfferStart" Type="datetime" Nullable="false" />
+          <Property Name="SpecialOfferEnd" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccoTrustee">
+          <Key>
+            <PropertyRef Name="AccoTrusteeId" />
+          </Key>
+          <Property Name="AccoTrusteeId" Type="int" Nullable="false" />
+          <Property Name="AccoOwnerId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="BookingId" />
+          </Key>
+          <Property Name="BookingId" Type="int" Nullable="false" />
+          <Property Name="AccoId" Type="int" Nullable="false" />
+          <Property Name="Booked" Type="datetime" Nullable="false" />
+          <Property Name="IsBookedOnline" Type="bit" Nullable="false" />
+          <Property Name="Confirmed" Type="datetime" />
+          <Property Name="Arrival" Type="datetime" Nullable="false" />
+          <Property Name="Departure" Type="datetime" Nullable="false" />
+          <Property Name="Adults" Type="int" Nullable="false" />
+          <Property Name="Children" Type="int" Nullable="false" />
+          <Property Name="Pets" Type="int" Nullable="false" />
+          <Property Name="Additions" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="Usage" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="Rent" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="Deposit" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="DaysToPayDepositBackAfterDeparture" Type="int" Nullable="false" />
+          <Property Name="CancelAdministrationCosts" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StatusUpdate" Type="datetime" Nullable="false" />
+          <Property Name="IsConfirmed" Type="bit" Nullable="false" />
+          <Property Name="IsAmountExactlyScheduled" Type="bit" Nullable="false" />
+          <Property Name="ArrivalGas" Type="decimal" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="ArrivalWater" Type="decimal" Precision="8" Scale="4" Nullable="false" />
+          <Property Name="ArrivalElectricity" Type="decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="DepartureGas" Type="decimal" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="DepartureWater" Type="decimal" Precision="8" Scale="4" Nullable="false" />
+          <Property Name="DepartureElectricity" Type="decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="IsBlock" Type="bit" Nullable="false" />
+          <Property Name="BookingColor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Booker" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BookerLanguageId" Type="int" Nullable="false" />
+          <Property Name="BookerEmail" Type="nvarchar(max)" />
+          <Property Name="BookerPhone" Type="nvarchar(max)" />
+          <Property Name="BookerMobile" Type="nvarchar(max)" />
+          <Property Name="BookerAddress1" Type="nvarchar(max)" />
+          <Property Name="BookerAddress2" Type="nvarchar(max)" />
+          <Property Name="BookerAddress3" Type="nvarchar(max)" />
+          <Property Name="BookerCountryId" Type="int" Nullable="false" />
+          <Property Name="BookerLatitude" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="BookerLongitude" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="BookerBank" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookerBankAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomeContact" Type="nvarchar(max)" />
+          <Property Name="RegistrationNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="BookingAddition">
+          <Key>
+            <PropertyRef Name="BookingAdditionId" />
+          </Key>
+          <Property Name="BookingAdditionId" Type="int" Nullable="false" />
+          <Property Name="BookingId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="AccoAdditionId" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="IsPaidFromDeposit" Type="bit" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="BookingCancelCondition">
+          <Key>
+            <PropertyRef Name="BookingCancelConditionId" />
+          </Key>
+          <Property Name="BookingCancelConditionId" Type="int" Nullable="false" />
+          <Property Name="BookingId" Type="int" Nullable="false" />
+          <Property Name="AccoCancelConditionId" Type="int" />
+          <Property Name="DaysBeforArrival" Type="int" Nullable="false" />
+          <Property Name="RentPercentageToPay" Type="int" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="BookingGuest">
+          <Key>
+            <PropertyRef Name="BookingGuestId" />
+          </Key>
+          <Property Name="BookingGuestId" Type="int" Nullable="false" />
+          <Property Name="BookingId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Address1" Type="nvarchar(max)" />
+          <Property Name="Address2" Type="nvarchar(max)" />
+          <Property Name="Address3" Type="nvarchar(max)" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="IdentityDocument" Type="nvarchar" MaxLength="50" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="BookingPayment">
+          <Key>
+            <PropertyRef Name="BookingPaymentId" />
+          </Key>
+          <Property Name="BookingPaymentId" Type="int" Nullable="false" />
+          <Property Name="BookingId" Type="int" Nullable="false" />
+          <Property Name="IsPaymentByGuest" Type="bit" Nullable="false" />
+          <Property Name="IsScheduledPayment" Type="bit" Nullable="false" />
+          <Property Name="Due" Type="datetime" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+          <Property Name="IsPaid" Type="bit" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="BookingReminder">
+          <Key>
+            <PropertyRef Name="BookingReminderId" />
+          </Key>
+          <Property Name="BookingReminderId" Type="int" Nullable="false" />
+          <Property Name="BookingId" Type="int" Nullable="false" />
+          <Property Name="AccoReminderId" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Milestone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Offset" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="IsDue" Type="bit" Nullable="false" />
+          <Property Name="Due" Type="datetime" />
+          <Property Name="IsDone" Type="bit" Nullable="false" />
+          <Property Name="Done" Type="datetime" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CurrencyId" />
+          </Key>
+          <Property Name="CurrencyId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="CurrencyCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CurrencySign" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Name="LanguageId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="IsBaseLanguage" Type="bit" Nullable="false" />
+          <Property Name="ShortCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="MailTemplate">
+          <Key>
+            <PropertyRef Name="MailTemplateId" />
+          </Key>
+          <Property Name="MailTemplateId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MailContext" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TemplateType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="Sequence">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CurrentId" Type="int" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="SystemCode">
+          <Key>
+            <PropertyRef Name="CodeId" />
+          </Key>
+          <Property Name="CodeId" Type="int" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="DisplaySequence" Type="int" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <EntityType Name="SystemGroup">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedUser" Type="nvarchar(max)" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="ModifyUser" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="int" />
+        </EntityType>
+        <Association Name="FK_Acco_AccoOwner">
+          <End Role="AccoOwner" Type="Self.AccoOwner" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Acco" Type="Self.Acco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoOwner">
+              <PropertyRef Name="AccoOwnerId" />
+            </Principal>
+            <Dependent Role="Acco">
+              <PropertyRef Name="AccoOwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acco_AccoPayPattern">
+          <End Role="AccoPayPattern" Type="Self.AccoPayPattern" Multiplicity="0..1" />
+          <End Role="Acco" Type="Self.Acco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoPayPattern">
+              <PropertyRef Name="AccoPayPatternId" />
+            </Principal>
+            <Dependent Role="Acco">
+              <PropertyRef Name="DefaultPayPatternId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acco_AccoRent">
+          <End Role="AccoRent" Type="Self.AccoRent" Multiplicity="0..1" />
+          <End Role="Acco" Type="Self.Acco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoRent">
+              <PropertyRef Name="AccoRentId" />
+            </Principal>
+            <Dependent Role="Acco">
+              <PropertyRef Name="BaseRentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acco_Country">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="Acco" Type="Self.Acco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Acco">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoAddition_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoAddition" Type="Self.AccoAddition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoAddition">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoAdditionDescription_AccoAddition">
+          <End Role="AccoAddition" Type="Self.AccoAddition" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoAdditionDescription" Type="Self.AccoAdditionDescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoAddition">
+              <PropertyRef Name="AccoAdditionId" />
+            </Principal>
+            <Dependent Role="AccoAdditionDescription">
+              <PropertyRef Name="AccoAdditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoAdditionDescription_Language">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="AccoAdditionDescription" Type="Self.AccoAdditionDescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="AccoAdditionDescription">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoAttachment_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1" />
+          <End Role="AccoAttachment" Type="Self.AccoAttachment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoAttachment">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoCancelCondition_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoCancelCondition" Type="Self.AccoCancelCondition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoCancelCondition">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoDescription_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoDescription" Type="Self.AccoDescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoDescription">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoDescription_Language">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="AccoDescription" Type="Self.AccoDescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="AccoDescription">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoNotification_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1" />
+          <End Role="AccoNotification" Type="Self.AccoNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoNotification">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoNotification_AccoOwner">
+          <End Role="AccoOwner" Type="Self.AccoOwner" Multiplicity="1" />
+          <End Role="AccoNotification" Type="Self.AccoNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoOwner">
+              <PropertyRef Name="AccoOwnerId" />
+            </Principal>
+            <Dependent Role="AccoNotification">
+              <PropertyRef Name="AccoOwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoNotification_Booking">
+          <End Role="Booking" Type="Self.Booking" Multiplicity="0..1" />
+          <End Role="AccoNotification" Type="Self.AccoNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="AccoNotification">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoOwner_AccoCountry">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="AccoOwner" Type="Self.AccoOwner" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="AccoOwner">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoOwner_AccoLanguage">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="AccoOwner" Type="Self.AccoOwner" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="AccoOwner">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoPayPattern_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoPayPattern" Type="Self.AccoPayPattern" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoPayPattern">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoPayPatternPayment_AccoPayPattern">
+          <End Role="AccoPayPattern" Type="Self.AccoPayPattern" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoPayPatternPayment" Type="Self.AccoPayPatternPayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoPayPattern">
+              <PropertyRef Name="AccoPayPatternId" />
+            </Principal>
+            <Dependent Role="AccoPayPatternPayment">
+              <PropertyRef Name="AccoPayPatternId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoReminder_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoReminder" Type="Self.AccoReminder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoReminder">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoRent_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoRent" Type="Self.AccoRent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoRent">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoSeason_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoSeason" Type="Self.AccoSeason" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoSeason">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoSeason_AccoRent">
+          <End Role="AccoRent" Type="Self.AccoRent" Multiplicity="1" />
+          <End Role="AccoSeason" Type="Self.AccoSeason" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoRent">
+              <PropertyRef Name="AccoRentId" />
+            </Principal>
+            <Dependent Role="AccoSeason">
+              <PropertyRef Name="AccoRentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Country">
+          <End Role="Country" Type="Self.Country" Multiplicity="1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="BookerCountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Language">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="BookerLanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingAddition_AccoAddition">
+          <End Role="AccoAddition" Type="Self.AccoAddition" Multiplicity="0..1" />
+          <End Role="BookingAddition" Type="Self.BookingAddition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoAddition">
+              <PropertyRef Name="AccoAdditionId" />
+            </Principal>
+            <Dependent Role="BookingAddition">
+              <PropertyRef Name="AccoAdditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingAddition_Booking">
+          <End Role="Booking" Type="Self.Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BookingAddition" Type="Self.BookingAddition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingAddition">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingCancelCondition_AccoCancelCondition">
+          <End Role="AccoCancelCondition" Type="Self.AccoCancelCondition" Multiplicity="0..1" />
+          <End Role="BookingCancelCondition" Type="Self.BookingCancelCondition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoCancelCondition">
+              <PropertyRef Name="AccoCancelConditionId" />
+            </Principal>
+            <Dependent Role="BookingCancelCondition">
+              <PropertyRef Name="AccoCancelConditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingCancelCondition_Booking">
+          <End Role="Booking" Type="Self.Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BookingCancelCondition" Type="Self.BookingCancelCondition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingCancelCondition">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingGuest_Booking">
+          <End Role="Booking" Type="Self.Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BookingGuest" Type="Self.BookingGuest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingGuest">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingPayment_Booking">
+          <End Role="Booking" Type="Self.Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BookingPayment" Type="Self.BookingPayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingPayment">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingReminder_AccoReminder">
+          <End Role="AccoReminder" Type="Self.AccoReminder" Multiplicity="0..1" />
+          <End Role="BookingReminder" Type="Self.BookingReminder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoReminder">
+              <PropertyRef Name="AccoReminderId" />
+            </Principal>
+            <Dependent Role="BookingReminder">
+              <PropertyRef Name="AccoReminderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingReminder_Booking">
+          <End Role="Booking" Type="Self.Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BookingReminder" Type="Self.BookingReminder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingReminder">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SpecialOffer_Acco">
+          <End Role="Acco" Type="Self.Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoSpecialOffer" Type="Self.AccoSpecialOffer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoSpecialOffer">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SpecialOffer_Language">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="AccoSpecialOffer" Type="Self.AccoSpecialOffer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="AccoSpecialOffer">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemCode_SystemGroup">
+          <End Role="SystemGroup" Type="Self.SystemGroup" Multiplicity="1" />
+          <End Role="SystemCode" Type="Self.SystemCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemGroup">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="SystemCode">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trustee_AccoOwner">
+          <End Role="AccoOwner" Type="Self.AccoOwner" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AccoTrustee" Type="Self.AccoTrustee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoOwner">
+              <PropertyRef Name="AccoOwnerId" />
+            </Principal>
+            <Dependent Role="AccoTrustee">
+              <PropertyRef Name="AccoOwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Acco" EntityType="Self.Acco" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoAddition" EntityType="Self.AccoAddition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoAdditionDescription" EntityType="Self.AccoAdditionDescription" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoAttachment" EntityType="Self.AccoAttachment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoCancelCondition" EntityType="Self.AccoCancelCondition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoDescription" EntityType="Self.AccoDescription" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoNotification" EntityType="Self.AccoNotification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoOwner" EntityType="Self.AccoOwner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoPayPattern" EntityType="Self.AccoPayPattern" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoPayPatternPayment" EntityType="Self.AccoPayPatternPayment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoReminder" EntityType="Self.AccoReminder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoRent" EntityType="Self.AccoRent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoSeason" EntityType="Self.AccoSeason" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoSpecialOffer" EntityType="Self.AccoSpecialOffer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccoTrustee" EntityType="Self.AccoTrustee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Booking" EntityType="Self.Booking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookingAddition" EntityType="Self.BookingAddition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookingCancelCondition" EntityType="Self.BookingCancelCondition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookingGuest" EntityType="Self.BookingGuest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookingPayment" EntityType="Self.BookingPayment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookingReminder" EntityType="Self.BookingReminder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Currency" EntityType="Self.Currency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Language" EntityType="Self.Language" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MailTemplate" EntityType="Self.MailTemplate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sequence" EntityType="Self.Sequence" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemCode" EntityType="Self.SystemCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemGroup" EntityType="Self.SystemGroup" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Acco_AccoOwner" Association="Self.FK_Acco_AccoOwner">
+            <End Role="AccoOwner" EntitySet="AccoOwner" />
+            <End Role="Acco" EntitySet="Acco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acco_AccoPayPattern" Association="Self.FK_Acco_AccoPayPattern">
+            <End Role="AccoPayPattern" EntitySet="AccoPayPattern" />
+            <End Role="Acco" EntitySet="Acco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acco_AccoRent" Association="Self.FK_Acco_AccoRent">
+            <End Role="AccoRent" EntitySet="AccoRent" />
+            <End Role="Acco" EntitySet="Acco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acco_Country" Association="Self.FK_Acco_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Acco" EntitySet="Acco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoAddition_Acco" Association="Self.FK_AccoAddition_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoAddition" EntitySet="AccoAddition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoAdditionDescription_AccoAddition" Association="Self.FK_AccoAdditionDescription_AccoAddition">
+            <End Role="AccoAddition" EntitySet="AccoAddition" />
+            <End Role="AccoAdditionDescription" EntitySet="AccoAdditionDescription" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoAdditionDescription_Language" Association="Self.FK_AccoAdditionDescription_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="AccoAdditionDescription" EntitySet="AccoAdditionDescription" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoAttachment_Acco" Association="Self.FK_AccoAttachment_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoAttachment" EntitySet="AccoAttachment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoCancelCondition_Acco" Association="Self.FK_AccoCancelCondition_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoCancelCondition" EntitySet="AccoCancelCondition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoDescription_Acco" Association="Self.FK_AccoDescription_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoDescription" EntitySet="AccoDescription" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoDescription_Language" Association="Self.FK_AccoDescription_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="AccoDescription" EntitySet="AccoDescription" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoNotification_Acco" Association="Self.FK_AccoNotification_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoNotification" EntitySet="AccoNotification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoNotification_AccoOwner" Association="Self.FK_AccoNotification_AccoOwner">
+            <End Role="AccoOwner" EntitySet="AccoOwner" />
+            <End Role="AccoNotification" EntitySet="AccoNotification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoNotification_Booking" Association="Self.FK_AccoNotification_Booking">
+            <End Role="Booking" EntitySet="Booking" />
+            <End Role="AccoNotification" EntitySet="AccoNotification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoOwner_AccoCountry" Association="Self.FK_AccoOwner_AccoCountry">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="AccoOwner" EntitySet="AccoOwner" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoOwner_AccoLanguage" Association="Self.FK_AccoOwner_AccoLanguage">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="AccoOwner" EntitySet="AccoOwner" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoPayPattern_Acco" Association="Self.FK_AccoPayPattern_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoPayPattern" EntitySet="AccoPayPattern" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoPayPatternPayment_AccoPayPattern" Association="Self.FK_AccoPayPatternPayment_AccoPayPattern">
+            <End Role="AccoPayPattern" EntitySet="AccoPayPattern" />
+            <End Role="AccoPayPatternPayment" EntitySet="AccoPayPatternPayment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoReminder_Acco" Association="Self.FK_AccoReminder_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoReminder" EntitySet="AccoReminder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoRent_Acco" Association="Self.FK_AccoRent_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoRent" EntitySet="AccoRent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoSeason_Acco" Association="Self.FK_AccoSeason_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoSeason" EntitySet="AccoSeason" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoSeason_AccoRent" Association="Self.FK_AccoSeason_AccoRent">
+            <End Role="AccoRent" EntitySet="AccoRent" />
+            <End Role="AccoSeason" EntitySet="AccoSeason" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Acco" Association="Self.FK_Booking_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Country" Association="Self.FK_Booking_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Language" Association="Self.FK_Booking_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingAddition_AccoAddition" Association="Self.FK_BookingAddition_AccoAddition">
+            <End Role="AccoAddition" EntitySet="AccoAddition" />
+            <End Role="BookingAddition" EntitySet="BookingAddition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingAddition_Booking" Association="Self.FK_BookingAddition_Booking">
+            <End Role="Booking" EntitySet="Booking" />
+            <End Role="BookingAddition" EntitySet="BookingAddition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingCancelCondition_AccoCancelCondition" Association="Self.FK_BookingCancelCondition_AccoCancelCondition">
+            <End Role="AccoCancelCondition" EntitySet="AccoCancelCondition" />
+            <End Role="BookingCancelCondition" EntitySet="BookingCancelCondition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingCancelCondition_Booking" Association="Self.FK_BookingCancelCondition_Booking">
+            <End Role="Booking" EntitySet="Booking" />
+            <End Role="BookingCancelCondition" EntitySet="BookingCancelCondition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingGuest_Booking" Association="Self.FK_BookingGuest_Booking">
+            <End Role="Booking" EntitySet="Booking" />
+            <End Role="BookingGuest" EntitySet="BookingGuest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingPayment_Booking" Association="Self.FK_BookingPayment_Booking">
+            <End Role="Booking" EntitySet="Booking" />
+            <End Role="BookingPayment" EntitySet="BookingPayment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingReminder_AccoReminder" Association="Self.FK_BookingReminder_AccoReminder">
+            <End Role="AccoReminder" EntitySet="AccoReminder" />
+            <End Role="BookingReminder" EntitySet="BookingReminder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingReminder_Booking" Association="Self.FK_BookingReminder_Booking">
+            <End Role="Booking" EntitySet="Booking" />
+            <End Role="BookingReminder" EntitySet="BookingReminder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SpecialOffer_Acco" Association="Self.FK_SpecialOffer_Acco">
+            <End Role="Acco" EntitySet="Acco" />
+            <End Role="AccoSpecialOffer" EntitySet="AccoSpecialOffer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SpecialOffer_Language" Association="Self.FK_SpecialOffer_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="AccoSpecialOffer" EntitySet="AccoSpecialOffer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemCode_SystemGroup" Association="Self.FK_SystemCode_SystemGroup">
+            <End Role="SystemGroup" EntitySet="SystemGroup" />
+            <End Role="SystemCode" EntitySet="SystemCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trustee_AccoOwner" Association="Self.FK_Trustee_AccoOwner">
+            <End Role="AccoOwner" EntitySet="AccoOwner" />
+            <End Role="AccoTrustee" EntitySet="AccoTrustee" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DomainModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:ib12="http://www.ideablade.com/edm/2012">
+        <EntityContainer Name="AccoBookingEntities" annotation:LazyLoadingEnabled="true" ib12:DevForceEnabled="true" ib12:InjectedBaseType="EntityBase">
+          <EntitySet Name="AccoAdditions" EntityType="DomainModel.AccoAddition" />
+          <EntitySet Name="AccoAdditionDescriptions" EntityType="DomainModel.AccoAdditionDescription" />
+          <EntitySet Name="AccoCancelConditions" EntityType="DomainModel.AccoCancelCondition" />
+          <EntitySet Name="AccoNotifications" EntityType="DomainModel.AccoNotification" />
+          <EntitySet Name="AccoOwners" EntityType="DomainModel.AccoOwner" />
+          <EntitySet Name="AccoPayPatterns" EntityType="DomainModel.AccoPayPattern" />
+          <EntitySet Name="AccoPayPatternPayments" EntityType="DomainModel.AccoPayPatternPayment" />
+          <EntitySet Name="AccoReminders" EntityType="DomainModel.AccoReminder" />
+          <EntitySet Name="AccoRents" EntityType="DomainModel.AccoRent" />
+          <EntitySet Name="AccoSeasons" EntityType="DomainModel.AccoSeason" />
+          <EntitySet Name="AccoSpecialOffers" EntityType="DomainModel.AccoSpecialOffer" />
+          <EntitySet Name="AccoTrustees" EntityType="DomainModel.AccoTrustee" />
+          <EntitySet Name="BookingAdditions" EntityType="DomainModel.BookingAddition" />
+          <EntitySet Name="BookingCancelConditions" EntityType="DomainModel.BookingCancelCondition" />
+          <EntitySet Name="BookingGuests" EntityType="DomainModel.BookingGuest" />
+          <EntitySet Name="BookingPayments" EntityType="DomainModel.BookingPayment" />
+          <EntitySet Name="BookingReminders" EntityType="DomainModel.BookingReminder" />
+          <EntitySet Name="Countries" EntityType="DomainModel.Country" />
+          <EntitySet Name="Languages" EntityType="DomainModel.Language" />
+          <EntitySet Name="MailTemplates" EntityType="DomainModel.MailTemplate" />
+          <EntitySet Name="Sequences" EntityType="DomainModel.Sequence" />
+          <EntitySet Name="sysdiagrams" EntityType="DomainModel.sysdiagram" />
+          <EntitySet Name="SystemCodes" EntityType="DomainModel.SystemCode" />
+          <EntitySet Name="SystemGroups" EntityType="DomainModel.SystemGroup" />
+          <AssociationSet Name="FK_AccoAdditionDescription_AccoAddition" Association="DomainModel.FK_AccoAdditionDescription_AccoAddition">
+            <End Role="AccoAddition" EntitySet="AccoAdditions" />
+            <End Role="AccoAdditionDescription" EntitySet="AccoAdditionDescriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingAddition_AccoAddition" Association="DomainModel.FK_BookingAddition_AccoAddition">
+            <End Role="AccoAddition" EntitySet="AccoAdditions" />
+            <End Role="BookingAddition" EntitySet="BookingAdditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoAdditionDescription_Language" Association="DomainModel.FK_AccoAdditionDescription_Language">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="AccoAdditionDescription" EntitySet="AccoAdditionDescriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingCancelCondition_AccoCancelCondition" Association="DomainModel.FK_BookingCancelCondition_AccoCancelCondition">
+            <End Role="AccoCancelCondition" EntitySet="AccoCancelConditions" />
+            <End Role="BookingCancelCondition" EntitySet="BookingCancelConditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoNotification_AccoOwner" Association="DomainModel.FK_AccoNotification_AccoOwner">
+            <End Role="AccoOwner" EntitySet="AccoOwners" />
+            <End Role="AccoNotification" EntitySet="AccoNotifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoOwner_AccoCountry" Association="DomainModel.FK_AccoOwner_AccoCountry">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="AccoOwner" EntitySet="AccoOwners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoOwner_AccoLanguage" Association="DomainModel.FK_AccoOwner_AccoLanguage">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="AccoOwner" EntitySet="AccoOwners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trustee_AccoOwner" Association="DomainModel.FK_Trustee_AccoOwner">
+            <End Role="AccoOwner" EntitySet="AccoOwners" />
+            <End Role="AccoTrustee" EntitySet="AccoTrustees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoPayPatternPayment_AccoPayPattern" Association="DomainModel.FK_AccoPayPatternPayment_AccoPayPattern">
+            <End Role="AccoPayPattern" EntitySet="AccoPayPatterns" />
+            <End Role="AccoPayPatternPayment" EntitySet="AccoPayPatternPayments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingReminder_AccoReminder" Association="DomainModel.FK_BookingReminder_AccoReminder">
+            <End Role="AccoReminder" EntitySet="AccoReminders" />
+            <End Role="BookingReminder" EntitySet="BookingReminders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoSeason_AccoRent" Association="DomainModel.FK_AccoSeason_AccoRent">
+            <End Role="AccoRent" EntitySet="AccoRents" />
+            <End Role="AccoSeason" EntitySet="AccoSeasons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SpecialOffer_Language" Association="DomainModel.FK_SpecialOffer_Language">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="AccoSpecialOffer" EntitySet="AccoSpecialOffers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemCode_SystemGroup" Association="DomainModel.FK_SystemCode_SystemGroup">
+            <End Role="SystemGroup" EntitySet="SystemGroups" />
+            <End Role="SystemCode" EntitySet="SystemCodes" />
+          </AssociationSet>
+          <EntitySet Name="Currencies" EntityType="DomainModel.Currency" />
+          <EntitySet Name="AccoDescriptions" EntityType="DomainModel.AccoDescription" />
+          <AssociationSet Name="FK_AccoDescription_Language" Association="DomainModel.FK_AccoDescription_Language">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="AccoDescription" EntitySet="AccoDescriptions" />
+          </AssociationSet>
+          <EntitySet Name="Bookings" EntityType="DomainModel.Booking" />
+          <AssociationSet Name="FK_AccoNotification_Booking" Association="DomainModel.FK_AccoNotification_Booking">
+            <End Role="Booking" EntitySet="Bookings" />
+            <End Role="AccoNotification" EntitySet="AccoNotifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Country" Association="DomainModel.FK_Booking_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Language" Association="DomainModel.FK_Booking_Language">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingAddition_Booking" Association="DomainModel.FK_BookingAddition_Booking">
+            <End Role="Booking" EntitySet="Bookings" />
+            <End Role="BookingAddition" EntitySet="BookingAdditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingCancelCondition_Booking" Association="DomainModel.FK_BookingCancelCondition_Booking">
+            <End Role="Booking" EntitySet="Bookings" />
+            <End Role="BookingCancelCondition" EntitySet="BookingCancelConditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingGuest_Booking" Association="DomainModel.FK_BookingGuest_Booking">
+            <End Role="Booking" EntitySet="Bookings" />
+            <End Role="BookingGuest" EntitySet="BookingGuests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingPayment_Booking" Association="DomainModel.FK_BookingPayment_Booking">
+            <End Role="Booking" EntitySet="Bookings" />
+            <End Role="BookingPayment" EntitySet="BookingPayments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingReminder_Booking" Association="DomainModel.FK_BookingReminder_Booking">
+            <End Role="Booking" EntitySet="Bookings" />
+            <End Role="BookingReminder" EntitySet="BookingReminders" />
+          </AssociationSet>
+          <EntitySet Name="AccoAttachments" EntityType="DomainModel.AccoAttachment" />
+          <EntitySet Name="Accoes" EntityType="DomainModel.Acco" />
+          <AssociationSet Name="FK_Acco_AccoOwner" Association="DomainModel.FK_Acco_AccoOwner">
+            <End Role="AccoOwner" EntitySet="AccoOwners" />
+            <End Role="Acco" EntitySet="Accoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acco_AccoPayPattern" Association="DomainModel.FK_Acco_AccoPayPattern">
+            <End Role="AccoPayPattern" EntitySet="AccoPayPatterns" />
+            <End Role="Acco" EntitySet="Accoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acco_AccoRent" Association="DomainModel.FK_Acco_AccoRent">
+            <End Role="AccoRent" EntitySet="AccoRents" />
+            <End Role="Acco" EntitySet="Accoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acco_Country" Association="DomainModel.FK_Acco_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Acco" EntitySet="Accoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoAddition_Acco" Association="DomainModel.FK_AccoAddition_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoAddition" EntitySet="AccoAdditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoAttachment_Acco" Association="DomainModel.FK_AccoAttachment_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoAttachment" EntitySet="AccoAttachments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoCancelCondition_Acco" Association="DomainModel.FK_AccoCancelCondition_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoCancelCondition" EntitySet="AccoCancelConditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoDescription_Acco" Association="DomainModel.FK_AccoDescription_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoDescription" EntitySet="AccoDescriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoNotification_Acco" Association="DomainModel.FK_AccoNotification_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoNotification" EntitySet="AccoNotifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoPayPattern_Acco" Association="DomainModel.FK_AccoPayPattern_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoPayPattern" EntitySet="AccoPayPatterns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoReminder_Acco" Association="DomainModel.FK_AccoReminder_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoReminder" EntitySet="AccoReminders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoRent_Acco" Association="DomainModel.FK_AccoRent_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoRent" EntitySet="AccoRents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccoSeason_Acco" Association="DomainModel.FK_AccoSeason_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoSeason" EntitySet="AccoSeasons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Acco" Association="DomainModel.FK_Booking_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SpecialOffer_Acco" Association="DomainModel.FK_SpecialOffer_Acco">
+            <End Role="Acco" EntitySet="Accoes" />
+            <End Role="AccoSpecialOffer" EntitySet="AccoSpecialOffers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AccoAddition">
+          <Key>
+            <PropertyRef Name="AccoAdditionId" />
+          </Key>
+          <Property Name="AccoAdditionId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDefaultBooked" Type="Boolean" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoAdditionDescriptions" Relationship="DomainModel.FK_AccoAdditionDescription_AccoAddition" FromRole="AccoAddition" ToRole="AccoAdditionDescription" />
+          <NavigationProperty Name="BookingAdditions" Relationship="DomainModel.FK_BookingAddition_AccoAddition" FromRole="AccoAddition" ToRole="BookingAddition" />
+          <Property Name="IsPaidFromDeposit" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoAddition_Acco" FromRole="AccoAddition" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoAdditionDescription">
+          <Key>
+            <PropertyRef Name="AccoAdditionDescriptionId" />
+          </Key>
+          <Property Name="AccoAdditionDescriptionId" Type="Int32" Nullable="false" />
+          <Property Name="AccoAdditionId" Type="Int32" Nullable="false" />
+          <Property Name="LanguageId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoAddition" Relationship="DomainModel.FK_AccoAdditionDescription_AccoAddition" FromRole="AccoAdditionDescription" ToRole="AccoAddition" />
+          <NavigationProperty Name="Language" Relationship="DomainModel.FK_AccoAdditionDescription_Language" FromRole="AccoAdditionDescription" ToRole="Language" />
+        </EntityType>
+        <EntityType Name="AccoCancelCondition">
+          <Key>
+            <PropertyRef Name="AccoCancelConditionId" />
+          </Key>
+          <Property Name="AccoCancelConditionId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="DaysBeforeArrival" Type="Int32" Nullable="false" />
+          <Property Name="RentPercentageToPay" Type="Int32" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="BookingCancelConditions" Relationship="DomainModel.FK_BookingCancelCondition_AccoCancelCondition" FromRole="AccoCancelCondition" ToRole="BookingCancelCondition" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoCancelCondition_Acco" FromRole="AccoCancelCondition" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoNotification">
+          <Key>
+            <PropertyRef Name="AccoNotificationId" />
+          </Key>
+          <Property Name="AccoNotificationId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="AccoOwnerId" Type="Int32" Nullable="false" />
+          <Property Name="BookingId" Type="Int32" />
+          <Property Name="NoticationType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NotificationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsNotified" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExpirationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DaystoExpire" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AccoOwner" Relationship="DomainModel.FK_AccoNotification_AccoOwner" FromRole="AccoNotification" ToRole="AccoOwner" />
+          <NavigationProperty Name="Booking" Relationship="DomainModel.FK_AccoNotification_Booking" FromRole="AccoNotification" ToRole="Booking" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoNotification_Acco" FromRole="AccoNotification" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoOwner">
+          <Key>
+            <PropertyRef Name="AccoOwnerId" />
+          </Key>
+          <Property Name="AccoOwnerId" Type="Int32" Nullable="false" />
+          <Property Name="LanguageId" Type="Int32" Nullable="false" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PublicName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicCountryId" Type="Int32" />
+          <Property Name="PublicBank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PublicBankAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoNotifications" Relationship="DomainModel.FK_AccoNotification_AccoOwner" FromRole="AccoOwner" ToRole="AccoNotification" />
+          <NavigationProperty Name="Country" Relationship="DomainModel.FK_AccoOwner_AccoCountry" FromRole="AccoOwner" ToRole="Country" />
+          <NavigationProperty Name="Language" Relationship="DomainModel.FK_AccoOwner_AccoLanguage" FromRole="AccoOwner" ToRole="Language" />
+          <NavigationProperty Name="AccoTrustees" Relationship="DomainModel.FK_Trustee_AccoOwner" FromRole="AccoOwner" ToRole="AccoTrustee" />
+          <NavigationProperty Name="Accoes" Relationship="DomainModel.FK_Acco_AccoOwner" FromRole="AccoOwner" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoPayPattern">
+          <Key>
+            <PropertyRef Name="AccoPayPatternId" />
+          </Key>
+          <Property Name="AccoPayPatternId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsAdditionInLastPayment" Type="Boolean" Nullable="false" />
+          <Property Name="IsDepositInLastPayment" Type="Boolean" Nullable="false" />
+          <Property Name="DaysBeforeArrival" Type="Int32" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoPayPatternPayments" Relationship="DomainModel.FK_AccoPayPatternPayment_AccoPayPattern" FromRole="AccoPayPattern" ToRole="AccoPayPatternPayment" />
+          <NavigationProperty Name="Accoes" Relationship="DomainModel.FK_Acco_AccoPayPattern" FromRole="AccoPayPattern" ToRole="Acco" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoPayPattern_Acco" FromRole="AccoPayPattern" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoPayPatternPayment">
+          <Key>
+            <PropertyRef Name="AccoPayPatternPaymentId" />
+          </Key>
+          <Property Name="AccoPayPatternPaymentId" Type="Int32" Nullable="false" />
+          <Property Name="AccoPayPatternId" Type="Int32" Nullable="false" />
+          <Property Name="DaysToPayAfterBooking" Type="Int32" Nullable="false" />
+          <Property Name="DaysToPayBeforeArrival" Type="Int32" Nullable="false" />
+          <Property Name="PaymentAmount" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="PaymentPercentage" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoPayPattern" Relationship="DomainModel.FK_AccoPayPatternPayment_AccoPayPattern" FromRole="AccoPayPatternPayment" ToRole="AccoPayPattern" />
+        </EntityType>
+        <EntityType Name="AccoReminder">
+          <Key>
+            <PropertyRef Name="AccoReminderId" />
+          </Key>
+          <Property Name="AccoReminderId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Milestone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Offset" Type="Int32" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="BookingReminders" Relationship="DomainModel.FK_BookingReminder_AccoReminder" FromRole="AccoReminder" ToRole="BookingReminder" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoReminder_Acco" FromRole="AccoReminder" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoRent">
+          <Key>
+            <PropertyRef Name="AccoRentId" />
+          </Key>
+          <Property Name="AccoRentId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsAvailablePerNight" Type="Boolean" Nullable="false" />
+          <Property Name="RentPerNight" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="MinimalNights" Type="Int32" Nullable="false" />
+          <Property Name="IsAvailablePerWeekend" Type="Boolean" Nullable="false" />
+          <Property Name="RentPerWeekend" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="RentPerMidweek" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="IsAvailablePerWeek" Type="Boolean" Nullable="false" />
+          <Property Name="RentPerWeek" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="MinimalWeeks" Type="Int32" Nullable="false" />
+          <Property Name="WeekExchangeDay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OptionalWeekExchangeDay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RentYear" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="AccoSeasons" Relationship="DomainModel.FK_AccoSeason_AccoRent" FromRole="AccoRent" ToRole="AccoSeason" />
+          <NavigationProperty Name="Accoes" Relationship="DomainModel.FK_Acco_AccoRent" FromRole="AccoRent" ToRole="Acco" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoRent_Acco" FromRole="AccoRent" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoSeason">
+          <Key>
+            <PropertyRef Name="AccoSeasonId" />
+          </Key>
+          <Property Name="AccoSeasonId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SeasonYear" Type="Int32" Nullable="false" />
+          <Property Name="SeasonStart" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SeasonEnd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AccoRentId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AccoRent" Relationship="DomainModel.FK_AccoSeason_AccoRent" FromRole="AccoSeason" ToRole="AccoRent" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoSeason_Acco" FromRole="AccoSeason" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoSpecialOffer">
+          <Key>
+            <PropertyRef Name="AccoSpecialOfferId" />
+          </Key>
+          <Property Name="AccoSpecialOfferId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="LanguageId" Type="Int32" Nullable="false" />
+          <Property Name="SpecialOfferStart" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SpecialOfferEnd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Language" Relationship="DomainModel.FK_SpecialOffer_Language" FromRole="AccoSpecialOffer" ToRole="Language" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_SpecialOffer_Acco" FromRole="AccoSpecialOffer" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="AccoTrustee">
+          <Key>
+            <PropertyRef Name="AccoTrusteeId" />
+          </Key>
+          <Property Name="AccoTrusteeId" Type="Int32" Nullable="false" />
+          <Property Name="AccoOwnerId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AccoOwner" Relationship="DomainModel.FK_Trustee_AccoOwner" FromRole="AccoTrustee" ToRole="AccoOwner" />
+        </EntityType>
+        <EntityType Name="BookingAddition">
+          <Key>
+            <PropertyRef Name="BookingAdditionId" />
+          </Key>
+          <Property Name="BookingAdditionId" Type="Int32" Nullable="false" />
+          <Property Name="BookingId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="AccoAdditionId" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoAddition" Relationship="DomainModel.FK_BookingAddition_AccoAddition" FromRole="BookingAddition" ToRole="AccoAddition" />
+          <Property Name="IsPaidFromDeposit" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Booking" Relationship="DomainModel.FK_BookingAddition_Booking" FromRole="BookingAddition" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="BookingCancelCondition">
+          <Key>
+            <PropertyRef Name="BookingCancelConditionId" />
+          </Key>
+          <Property Name="BookingCancelConditionId" Type="Int32" Nullable="false" />
+          <Property Name="BookingId" Type="Int32" Nullable="false" />
+          <Property Name="AccoCancelConditionId" Type="Int32" />
+          <Property Name="DaysBeforArrival" Type="Int32" Nullable="false" />
+          <Property Name="RentPercentageToPay" Type="Int32" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoCancelCondition" Relationship="DomainModel.FK_BookingCancelCondition_AccoCancelCondition" FromRole="BookingCancelCondition" ToRole="AccoCancelCondition" />
+          <NavigationProperty Name="Booking" Relationship="DomainModel.FK_BookingCancelCondition_Booking" FromRole="BookingCancelCondition" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="BookingGuest">
+          <Key>
+            <PropertyRef Name="BookingGuestId" />
+          </Key>
+          <Property Name="BookingGuestId" Type="Int32" Nullable="false" />
+          <Property Name="BookingId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Precision="3" />
+          <Property Name="IdentityDocument" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="Booking" Relationship="DomainModel.FK_BookingGuest_Booking" FromRole="BookingGuest" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="BookingPayment">
+          <Key>
+            <PropertyRef Name="BookingPaymentId" />
+          </Key>
+          <Property Name="BookingPaymentId" Type="Int32" Nullable="false" />
+          <Property Name="BookingId" Type="Int32" Nullable="false" />
+          <Property Name="IsPaymentByGuest" Type="Boolean" Nullable="false" />
+          <Property Name="IsScheduledPayment" Type="Boolean" Nullable="false" />
+          <Property Name="Due" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="Booking" Relationship="DomainModel.FK_BookingPayment_Booking" FromRole="BookingPayment" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="BookingReminder">
+          <Key>
+            <PropertyRef Name="BookingReminderId" />
+          </Key>
+          <Property Name="BookingReminderId" Type="Int32" Nullable="false" />
+          <Property Name="BookingId" Type="Int32" Nullable="false" />
+          <Property Name="AccoReminderId" Type="Int32" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Milestone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Offset" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="IsDue" Type="Boolean" Nullable="false" />
+          <Property Name="Due" Type="DateTime" Precision="3" />
+          <Property Name="IsDone" Type="Boolean" Nullable="false" />
+          <Property Name="Done" Type="DateTime" Precision="3" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoReminder" Relationship="DomainModel.FK_BookingReminder_AccoReminder" FromRole="BookingReminder" ToRole="AccoReminder" />
+          <NavigationProperty Name="Booking" Relationship="DomainModel.FK_BookingReminder_Booking" FromRole="BookingReminder" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoOwners" Relationship="DomainModel.FK_AccoOwner_AccoCountry" FromRole="Country" ToRole="AccoOwner" />
+          <NavigationProperty Name="Bookings" Relationship="DomainModel.FK_Booking_Country" FromRole="Country" ToRole="Booking" />
+          <NavigationProperty Name="Accoes" Relationship="DomainModel.FK_Acco_Country" FromRole="Country" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Name="LanguageId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="IsBaseLanguage" Type="Boolean" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoAdditionDescriptions" Relationship="DomainModel.FK_AccoAdditionDescription_Language" FromRole="Language" ToRole="AccoAdditionDescription" />
+          <NavigationProperty Name="AccoOwners" Relationship="DomainModel.FK_AccoOwner_AccoLanguage" FromRole="Language" ToRole="AccoOwner" />
+          <NavigationProperty Name="AccoSpecialOffers" Relationship="DomainModel.FK_SpecialOffer_Language" FromRole="Language" ToRole="AccoSpecialOffer" />
+          <Property Name="ShortCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AccoDescriptions" Relationship="DomainModel.FK_AccoDescription_Language" FromRole="Language" ToRole="AccoDescription" />
+          <NavigationProperty Name="Bookings" Relationship="DomainModel.FK_Booking_Language" FromRole="Language" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="MailTemplate">
+          <Key>
+            <PropertyRef Name="MailTemplateId" />
+          </Key>
+          <Property Name="MailTemplateId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MailContext" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TemplateType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Sequence">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentId" Type="Int32" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SystemCode">
+          <Key>
+            <PropertyRef Name="CodeId" />
+          </Key>
+          <Property Name="CodeId" Type="Int32" Nullable="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="SystemGroup" Relationship="DomainModel.FK_SystemCode_SystemGroup" FromRole="SystemCode" ToRole="SystemGroup" />
+        </EntityType>
+        <EntityType Name="SystemGroup">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="SystemCodes" Relationship="DomainModel.FK_SystemCode_SystemGroup" FromRole="SystemGroup" ToRole="SystemCode" />
+        </EntityType>
+        <Association Name="FK_AccoAdditionDescription_AccoAddition">
+          <End Type="DomainModel.AccoAddition" Role="AccoAddition" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoAdditionDescription" Role="AccoAdditionDescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoAddition">
+              <PropertyRef Name="AccoAdditionId" />
+            </Principal>
+            <Dependent Role="AccoAdditionDescription">
+              <PropertyRef Name="AccoAdditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingAddition_AccoAddition">
+          <End Type="DomainModel.AccoAddition" Role="AccoAddition" Multiplicity="0..1" />
+          <End Type="DomainModel.BookingAddition" Role="BookingAddition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoAddition">
+              <PropertyRef Name="AccoAdditionId" />
+            </Principal>
+            <Dependent Role="BookingAddition">
+              <PropertyRef Name="AccoAdditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoAdditionDescription_Language">
+          <End Type="DomainModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="DomainModel.AccoAdditionDescription" Role="AccoAdditionDescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="AccoAdditionDescription">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingCancelCondition_AccoCancelCondition">
+          <End Type="DomainModel.AccoCancelCondition" Role="AccoCancelCondition" Multiplicity="0..1" />
+          <End Type="DomainModel.BookingCancelCondition" Role="BookingCancelCondition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoCancelCondition">
+              <PropertyRef Name="AccoCancelConditionId" />
+            </Principal>
+            <Dependent Role="BookingCancelCondition">
+              <PropertyRef Name="AccoCancelConditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoNotification_AccoOwner">
+          <End Type="DomainModel.AccoOwner" Role="AccoOwner" Multiplicity="1" />
+          <End Type="DomainModel.AccoNotification" Role="AccoNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoOwner">
+              <PropertyRef Name="AccoOwnerId" />
+            </Principal>
+            <Dependent Role="AccoNotification">
+              <PropertyRef Name="AccoOwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoOwner_AccoCountry">
+          <End Type="DomainModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="DomainModel.AccoOwner" Role="AccoOwner" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="AccoOwner">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoOwner_AccoLanguage">
+          <End Type="DomainModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="DomainModel.AccoOwner" Role="AccoOwner" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="AccoOwner">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trustee_AccoOwner">
+          <End Type="DomainModel.AccoOwner" Role="AccoOwner" Multiplicity="1" />
+          <End Type="DomainModel.AccoTrustee" Role="AccoTrustee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoOwner">
+              <PropertyRef Name="AccoOwnerId" />
+            </Principal>
+            <Dependent Role="AccoTrustee">
+              <PropertyRef Name="AccoOwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoPayPatternPayment_AccoPayPattern">
+          <End Type="DomainModel.AccoPayPattern" Role="AccoPayPattern" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoPayPatternPayment" Role="AccoPayPatternPayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoPayPattern">
+              <PropertyRef Name="AccoPayPatternId" />
+            </Principal>
+            <Dependent Role="AccoPayPatternPayment">
+              <PropertyRef Name="AccoPayPatternId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingReminder_AccoReminder">
+          <End Type="DomainModel.AccoReminder" Role="AccoReminder" Multiplicity="0..1" />
+          <End Type="DomainModel.BookingReminder" Role="BookingReminder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoReminder">
+              <PropertyRef Name="AccoReminderId" />
+            </Principal>
+            <Dependent Role="BookingReminder">
+              <PropertyRef Name="AccoReminderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoSeason_AccoRent">
+          <End Type="DomainModel.AccoRent" Role="AccoRent" Multiplicity="1" />
+          <End Type="DomainModel.AccoSeason" Role="AccoSeason" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoRent">
+              <PropertyRef Name="AccoRentId" />
+            </Principal>
+            <Dependent Role="AccoSeason">
+              <PropertyRef Name="AccoRentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SpecialOffer_Language">
+          <End Type="DomainModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="DomainModel.AccoSpecialOffer" Role="AccoSpecialOffer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="AccoSpecialOffer">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemCode_SystemGroup">
+          <End Type="DomainModel.SystemGroup" Role="SystemGroup" Multiplicity="1" />
+          <End Type="DomainModel.SystemCode" Role="SystemCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemGroup">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="SystemCode">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CurrencyId" />
+          </Key>
+          <Property Name="CurrencyId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="CurrencyCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencySign" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AccoDescription">
+          <Key>
+            <PropertyRef Name="AccoDescriptionId" />
+          </Key>
+          <Property Name="AccoDescriptionId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="LanguageId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Language" Relationship="DomainModel.FK_AccoDescription_Language" FromRole="AccoDescription" ToRole="Language" />
+          <Property Name="PropertyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoDescription_Acco" FromRole="AccoDescription" ToRole="Acco" />
+        </EntityType>
+        <Association Name="FK_AccoDescription_Language">
+          <End Type="DomainModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="DomainModel.AccoDescription" Role="AccoDescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="AccoDescription">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="BookingId" />
+          </Key>
+          <Property Name="BookingId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="Booked" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsBookedOnline" Type="Boolean" Nullable="false" />
+          <Property Name="Confirmed" Type="DateTime" Precision="3" />
+          <Property Name="Arrival" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Departure" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Adults" Type="Int32" Nullable="false" />
+          <Property Name="Children" Type="Int32" Nullable="false" />
+          <Property Name="Pets" Type="Int32" Nullable="false" />
+          <Property Name="Additions" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="Usage" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="Rent" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="Deposit" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="DaysToPayDepositBackAfterDeparture" Type="Int32" Nullable="false" />
+          <Property Name="CancelAdministrationCosts" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StatusUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="IsAmountExactlyScheduled" Type="Boolean" Nullable="false" />
+          <Property Name="ArrivalGas" Type="Decimal" Nullable="false" Precision="7" Scale="3" />
+          <Property Name="ArrivalWater" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+          <Property Name="ArrivalElectricity" Type="Decimal" Nullable="false" Precision="7" Scale="0" />
+          <Property Name="DepartureGas" Type="Decimal" Nullable="false" Precision="7" Scale="3" />
+          <Property Name="DepartureWater" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+          <Property Name="DepartureElectricity" Type="Decimal" Nullable="false" Precision="7" Scale="0" />
+          <Property Name="IsBlock" Type="Boolean" Nullable="false" />
+          <Property Name="BookingColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Booker" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookerLanguageId" Type="Int32" Nullable="false" />
+          <Property Name="BookerEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookerPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookerMobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookerAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookerAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookerAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookerCountryId" Type="Int32" Nullable="false" />
+          <Property Name="BookerBank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BookerBankAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HomeContact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoNotifications" Relationship="DomainModel.FK_AccoNotification_Booking" FromRole="Booking" ToRole="AccoNotification" />
+          <NavigationProperty Name="Country" Relationship="DomainModel.FK_Booking_Country" FromRole="Booking" ToRole="Country" />
+          <NavigationProperty Name="Language" Relationship="DomainModel.FK_Booking_Language" FromRole="Booking" ToRole="Language" />
+          <NavigationProperty Name="BookingAdditions" Relationship="DomainModel.FK_BookingAddition_Booking" FromRole="Booking" ToRole="BookingAddition" />
+          <NavigationProperty Name="BookingCancelConditions" Relationship="DomainModel.FK_BookingCancelCondition_Booking" FromRole="Booking" ToRole="BookingCancelCondition" />
+          <NavigationProperty Name="BookingGuests" Relationship="DomainModel.FK_BookingGuest_Booking" FromRole="Booking" ToRole="BookingGuest" />
+          <NavigationProperty Name="BookingPayments" Relationship="DomainModel.FK_BookingPayment_Booking" FromRole="Booking" ToRole="BookingPayment" />
+          <NavigationProperty Name="BookingReminders" Relationship="DomainModel.FK_BookingReminder_Booking" FromRole="Booking" ToRole="BookingReminder" />
+          <Property Name="BookerLatitude" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="BookerLongitude" Type="Decimal" Precision="12" Scale="7" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_Booking_Acco" FromRole="Booking" ToRole="Acco" />
+        </EntityType>
+        <Association Name="FK_AccoNotification_Booking">
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="0..1" />
+          <End Type="DomainModel.AccoNotification" Role="AccoNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="AccoNotification">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Country">
+          <End Type="DomainModel.Country" Role="Country" Multiplicity="1" />
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="BookerCountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Language">
+          <End Type="DomainModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="BookerLanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingAddition_Booking">
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.BookingAddition" Role="BookingAddition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingAddition">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingCancelCondition_Booking">
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.BookingCancelCondition" Role="BookingCancelCondition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingCancelCondition">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingGuest_Booking">
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.BookingGuest" Role="BookingGuest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingGuest">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingPayment_Booking">
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.BookingPayment" Role="BookingPayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingPayment">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingReminder_Booking">
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.BookingReminder" Role="BookingReminder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingId" />
+            </Principal>
+            <Dependent Role="BookingReminder">
+              <PropertyRef Name="BookingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AccoAttachment">
+          <Key>
+            <PropertyRef Name="AccoAttachmentId" />
+          </Key>
+          <Property Name="AccoAttachmentId" Type="Int32" Nullable="false" />
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Acco" Relationship="DomainModel.FK_AccoAttachment_Acco" FromRole="AccoAttachment" ToRole="Acco" />
+        </EntityType>
+        <EntityType Name="Acco">
+          <Key>
+            <PropertyRef Name="AccoId" />
+          </Key>
+          <Property Name="AccoId" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySequence" Type="Int32" Nullable="false" />
+          <Property Name="AccoOwnerId" Type="Int32" Nullable="false" />
+          <Property Name="DefaultPayPatternId" Type="Int32" />
+          <Property Name="DefaultPeriodUnitId" Type="Int32" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="Latitude" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="Longitude" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="MapLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OwnWebsite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DaysToPayDepositBackAfterDeparture" Type="Int32" Nullable="false" />
+          <Property Name="Currency" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AccoType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ArriveAfter" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DepartureBefore" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DaysToExpire" Type="Int32" Nullable="false" />
+          <Property Name="StartWeekdayCalendar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Deposit" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="CancelAdministrationCosts" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="LicenceExpiration" Type="DateTime" Precision="3" />
+          <Property Name="LastLogin" Type="DateTime" Precision="3" />
+          <Property Name="ColorOwner" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColorBlock" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColorOnline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaseRentId" Type="Int32" />
+          <Property Name="SendWeeklyReminders" Type="Boolean" Nullable="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Int32" />
+          <NavigationProperty Name="AccoOwner" Relationship="DomainModel.FK_Acco_AccoOwner" FromRole="Acco" ToRole="AccoOwner" />
+          <NavigationProperty Name="AccoPayPattern" Relationship="DomainModel.FK_Acco_AccoPayPattern" FromRole="Acco" ToRole="AccoPayPattern" />
+          <NavigationProperty Name="AccoRent" Relationship="DomainModel.FK_Acco_AccoRent" FromRole="Acco" ToRole="AccoRent" />
+          <NavigationProperty Name="Country" Relationship="DomainModel.FK_Acco_Country" FromRole="Acco" ToRole="Country" />
+          <NavigationProperty Name="AccoAdditions" Relationship="DomainModel.FK_AccoAddition_Acco" FromRole="Acco" ToRole="AccoAddition" />
+          <NavigationProperty Name="AccoAttachments" Relationship="DomainModel.FK_AccoAttachment_Acco" FromRole="Acco" ToRole="AccoAttachment" />
+          <NavigationProperty Name="AccoCancelConditions" Relationship="DomainModel.FK_AccoCancelCondition_Acco" FromRole="Acco" ToRole="AccoCancelCondition" />
+          <NavigationProperty Name="AccoDescriptions" Relationship="DomainModel.FK_AccoDescription_Acco" FromRole="Acco" ToRole="AccoDescription" />
+          <NavigationProperty Name="AccoNotifications" Relationship="DomainModel.FK_AccoNotification_Acco" FromRole="Acco" ToRole="AccoNotification" />
+          <NavigationProperty Name="AccoPayPatterns" Relationship="DomainModel.FK_AccoPayPattern_Acco" FromRole="Acco" ToRole="AccoPayPattern" />
+          <NavigationProperty Name="AccoReminders" Relationship="DomainModel.FK_AccoReminder_Acco" FromRole="Acco" ToRole="AccoReminder" />
+          <NavigationProperty Name="AccoRents" Relationship="DomainModel.FK_AccoRent_Acco" FromRole="Acco" ToRole="AccoRent" />
+          <NavigationProperty Name="AccoSeasons" Relationship="DomainModel.FK_AccoSeason_Acco" FromRole="Acco" ToRole="AccoSeason" />
+          <NavigationProperty Name="Bookings" Relationship="DomainModel.FK_Booking_Acco" FromRole="Acco" ToRole="Booking" />
+          <NavigationProperty Name="AccoSpecialOffers" Relationship="DomainModel.FK_SpecialOffer_Acco" FromRole="Acco" ToRole="AccoSpecialOffer" />
+        </EntityType>
+        <Association Name="FK_Acco_AccoOwner">
+          <End Type="DomainModel.AccoOwner" Role="AccoOwner" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoOwner">
+              <PropertyRef Name="AccoOwnerId" />
+            </Principal>
+            <Dependent Role="Acco">
+              <PropertyRef Name="AccoOwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acco_AccoPayPattern">
+          <End Type="DomainModel.AccoPayPattern" Role="AccoPayPattern" Multiplicity="0..1" />
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoPayPattern">
+              <PropertyRef Name="AccoPayPatternId" />
+            </Principal>
+            <Dependent Role="Acco">
+              <PropertyRef Name="DefaultPayPatternId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acco_AccoRent">
+          <End Type="DomainModel.AccoRent" Role="AccoRent" Multiplicity="0..1" />
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccoRent">
+              <PropertyRef Name="AccoRentId" />
+            </Principal>
+            <Dependent Role="Acco">
+              <PropertyRef Name="BaseRentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acco_Country">
+          <End Type="DomainModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Acco">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoAddition_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoAddition" Role="AccoAddition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoAddition">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoAttachment_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1" />
+          <End Type="DomainModel.AccoAttachment" Role="AccoAttachment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoAttachment">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoCancelCondition_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoCancelCondition" Role="AccoCancelCondition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoCancelCondition">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoDescription_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoDescription" Role="AccoDescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoDescription">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoNotification_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1" />
+          <End Type="DomainModel.AccoNotification" Role="AccoNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoNotification">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoPayPattern_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoPayPattern" Role="AccoPayPattern" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoPayPattern">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoReminder_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoReminder" Role="AccoReminder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoReminder">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoRent_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoRent" Role="AccoRent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoRent">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccoSeason_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoSeason" Role="AccoSeason" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoSeason">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SpecialOffer_Acco">
+          <End Type="DomainModel.Acco" Role="Acco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DomainModel.AccoSpecialOffer" Role="AccoSpecialOffer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acco">
+              <PropertyRef Name="AccoId" />
+            </Principal>
+            <Dependent Role="AccoSpecialOffer">
+              <PropertyRef Name="AccoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="AccoBookingEntities">
+          <EntitySetMapping Name="AccoAdditions">
+            <EntityTypeMapping TypeName="DomainModel.AccoAddition">
+              <MappingFragment StoreEntitySet="AccoAddition">
+                <ScalarProperty Name="IsPaidFromDeposit" ColumnName="IsPaidFromDeposit" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="IsDefaultBooked" ColumnName="IsDefaultBooked" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoAdditionId" ColumnName="AccoAdditionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoAdditionDescriptions">
+            <EntityTypeMapping TypeName="DomainModel.AccoAdditionDescription">
+              <MappingFragment StoreEntitySet="AccoAdditionDescription">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="AccoAdditionId" ColumnName="AccoAdditionId" />
+                <ScalarProperty Name="AccoAdditionDescriptionId" ColumnName="AccoAdditionDescriptionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoCancelConditions">
+            <EntityTypeMapping TypeName="DomainModel.AccoCancelCondition">
+              <MappingFragment StoreEntitySet="AccoCancelCondition">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="RentPercentageToPay" ColumnName="RentPercentageToPay" />
+                <ScalarProperty Name="DaysBeforeArrival" ColumnName="DaysBeforeArrival" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoCancelConditionId" ColumnName="AccoCancelConditionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoNotifications">
+            <EntityTypeMapping TypeName="DomainModel.AccoNotification">
+              <MappingFragment StoreEntitySet="AccoNotification">
+                <ScalarProperty Name="DaystoExpire" ColumnName="DaystoExpire" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsNotified" ColumnName="IsNotified" />
+                <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+                <ScalarProperty Name="NoticationType" ColumnName="NoticationType" />
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+                <ScalarProperty Name="AccoOwnerId" ColumnName="AccoOwnerId" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoNotificationId" ColumnName="AccoNotificationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoOwners">
+            <EntityTypeMapping TypeName="DomainModel.AccoOwner">
+              <MappingFragment StoreEntitySet="AccoOwner">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="PublicBankAccount" ColumnName="PublicBankAccount" />
+                <ScalarProperty Name="PublicBank" ColumnName="PublicBank" />
+                <ScalarProperty Name="PublicCountryId" ColumnName="PublicCountryId" />
+                <ScalarProperty Name="PublicAddress3" ColumnName="PublicAddress3" />
+                <ScalarProperty Name="PublicAddress2" ColumnName="PublicAddress2" />
+                <ScalarProperty Name="PublicAddress1" ColumnName="PublicAddress1" />
+                <ScalarProperty Name="PublicPhone" ColumnName="PublicPhone" />
+                <ScalarProperty Name="PublicEmail" ColumnName="PublicEmail" />
+                <ScalarProperty Name="PublicName" ColumnName="PublicName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="AccoOwnerId" ColumnName="AccoOwnerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoPayPatterns">
+            <EntityTypeMapping TypeName="DomainModel.AccoPayPattern">
+              <MappingFragment StoreEntitySet="AccoPayPattern">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="DaysBeforeArrival" ColumnName="DaysBeforeArrival" />
+                <ScalarProperty Name="IsDepositInLastPayment" ColumnName="IsDepositInLastPayment" />
+                <ScalarProperty Name="IsAdditionInLastPayment" ColumnName="IsAdditionInLastPayment" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoPayPatternId" ColumnName="AccoPayPatternId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoPayPatternPayments">
+            <EntityTypeMapping TypeName="DomainModel.AccoPayPatternPayment">
+              <MappingFragment StoreEntitySet="AccoPayPatternPayment">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="PaymentPercentage" ColumnName="PaymentPercentage" />
+                <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+                <ScalarProperty Name="DaysToPayBeforeArrival" ColumnName="DaysToPayBeforeArrival" />
+                <ScalarProperty Name="DaysToPayAfterBooking" ColumnName="DaysToPayAfterBooking" />
+                <ScalarProperty Name="AccoPayPatternId" ColumnName="AccoPayPatternId" />
+                <ScalarProperty Name="AccoPayPatternPaymentId" ColumnName="AccoPayPatternPaymentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoReminders">
+            <EntityTypeMapping TypeName="DomainModel.AccoReminder">
+              <MappingFragment StoreEntitySet="AccoReminder">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Offset" ColumnName="Offset" />
+                <ScalarProperty Name="Milestone" ColumnName="Milestone" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoReminderId" ColumnName="AccoReminderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoRents">
+            <EntityTypeMapping TypeName="DomainModel.AccoRent">
+              <MappingFragment StoreEntitySet="AccoRent">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="RentYear" ColumnName="RentYear" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="OptionalWeekExchangeDay" ColumnName="OptionalWeekExchangeDay" />
+                <ScalarProperty Name="WeekExchangeDay" ColumnName="WeekExchangeDay" />
+                <ScalarProperty Name="MinimalWeeks" ColumnName="MinimalWeeks" />
+                <ScalarProperty Name="RentPerWeek" ColumnName="RentPerWeek" />
+                <ScalarProperty Name="IsAvailablePerWeek" ColumnName="IsAvailablePerWeek" />
+                <ScalarProperty Name="RentPerMidweek" ColumnName="RentPerMidweek" />
+                <ScalarProperty Name="RentPerWeekend" ColumnName="RentPerWeekend" />
+                <ScalarProperty Name="IsAvailablePerWeekend" ColumnName="IsAvailablePerWeekend" />
+                <ScalarProperty Name="MinimalNights" ColumnName="MinimalNights" />
+                <ScalarProperty Name="RentPerNight" ColumnName="RentPerNight" />
+                <ScalarProperty Name="IsAvailablePerNight" ColumnName="IsAvailablePerNight" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoRentId" ColumnName="AccoRentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoSeasons">
+            <EntityTypeMapping TypeName="DomainModel.AccoSeason">
+              <MappingFragment StoreEntitySet="AccoSeason">
+                <ScalarProperty Name="AccoRentId" ColumnName="AccoRentId" />
+                <ScalarProperty Name="SeasonEnd" ColumnName="SeasonEnd" />
+                <ScalarProperty Name="SeasonStart" ColumnName="SeasonStart" />
+                <ScalarProperty Name="SeasonYear" ColumnName="SeasonYear" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoSeasonId" ColumnName="AccoSeasonId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoSpecialOffers">
+            <EntityTypeMapping TypeName="DomainModel.AccoSpecialOffer">
+              <MappingFragment StoreEntitySet="AccoSpecialOffer">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SpecialOfferEnd" ColumnName="SpecialOfferEnd" />
+                <ScalarProperty Name="SpecialOfferStart" ColumnName="SpecialOfferStart" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoSpecialOfferId" ColumnName="AccoSpecialOfferId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoTrustees">
+            <EntityTypeMapping TypeName="DomainModel.AccoTrustee">
+              <MappingFragment StoreEntitySet="AccoTrustee">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AccoOwnerId" ColumnName="AccoOwnerId" />
+                <ScalarProperty Name="AccoTrusteeId" ColumnName="AccoTrusteeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingAdditions">
+            <EntityTypeMapping TypeName="DomainModel.BookingAddition">
+              <MappingFragment StoreEntitySet="BookingAddition">
+                <ScalarProperty Name="IsPaidFromDeposit" ColumnName="IsPaidFromDeposit" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AccoAdditionId" ColumnName="AccoAdditionId" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+                <ScalarProperty Name="BookingAdditionId" ColumnName="BookingAdditionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingCancelConditions">
+            <EntityTypeMapping TypeName="DomainModel.BookingCancelCondition">
+              <MappingFragment StoreEntitySet="BookingCancelCondition">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="RentPercentageToPay" ColumnName="RentPercentageToPay" />
+                <ScalarProperty Name="DaysBeforArrival" ColumnName="DaysBeforArrival" />
+                <ScalarProperty Name="AccoCancelConditionId" ColumnName="AccoCancelConditionId" />
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+                <ScalarProperty Name="BookingCancelConditionId" ColumnName="BookingCancelConditionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingGuests">
+            <EntityTypeMapping TypeName="DomainModel.BookingGuest">
+              <MappingFragment StoreEntitySet="BookingGuest">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="IdentityDocument" ColumnName="IdentityDocument" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Address3" ColumnName="Address3" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+                <ScalarProperty Name="BookingGuestId" ColumnName="BookingGuestId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingPayments">
+            <EntityTypeMapping TypeName="DomainModel.BookingPayment">
+              <MappingFragment StoreEntitySet="BookingPayment">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Due" ColumnName="Due" />
+                <ScalarProperty Name="IsScheduledPayment" ColumnName="IsScheduledPayment" />
+                <ScalarProperty Name="IsPaymentByGuest" ColumnName="IsPaymentByGuest" />
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+                <ScalarProperty Name="BookingPaymentId" ColumnName="BookingPaymentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingReminders">
+            <EntityTypeMapping TypeName="DomainModel.BookingReminder">
+              <MappingFragment StoreEntitySet="BookingReminder">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Done" ColumnName="Done" />
+                <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+                <ScalarProperty Name="Due" ColumnName="Due" />
+                <ScalarProperty Name="IsDue" ColumnName="IsDue" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="Offset" ColumnName="Offset" />
+                <ScalarProperty Name="Milestone" ColumnName="Milestone" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AccoReminderId" ColumnName="AccoReminderId" />
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+                <ScalarProperty Name="BookingReminderId" ColumnName="BookingReminderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="DomainModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Languages">
+            <EntityTypeMapping TypeName="DomainModel.Language">
+              <MappingFragment StoreEntitySet="Language">
+                <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="IsBaseLanguage" ColumnName="IsBaseLanguage" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MailTemplates">
+            <EntityTypeMapping TypeName="DomainModel.MailTemplate">
+              <MappingFragment StoreEntitySet="MailTemplate">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="TemplateType" ColumnName="TemplateType" />
+                <ScalarProperty Name="MailContext" ColumnName="MailContext" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="MailTemplateId" ColumnName="MailTemplateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sequences">
+            <EntityTypeMapping TypeName="DomainModel.Sequence">
+              <MappingFragment StoreEntitySet="Sequence">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="CurrentId" ColumnName="CurrentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DomainModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemCodes">
+            <EntityTypeMapping TypeName="DomainModel.SystemCode">
+              <MappingFragment StoreEntitySet="SystemCode">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemGroups">
+            <EntityTypeMapping TypeName="DomainModel.SystemGroup">
+              <MappingFragment StoreEntitySet="SystemGroup">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencies">
+            <EntityTypeMapping TypeName="DomainModel.Currency">
+              <MappingFragment StoreEntitySet="Currency">
+                <ScalarProperty Name="CurrencySign" ColumnName="CurrencySign" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoDescriptions">
+            <EntityTypeMapping TypeName="DomainModel.AccoDescription">
+              <MappingFragment StoreEntitySet="AccoDescription">
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoDescriptionId" ColumnName="AccoDescriptionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bookings">
+            <EntityTypeMapping TypeName="DomainModel.Booking">
+              <MappingFragment StoreEntitySet="Booking">
+                <ScalarProperty Name="BookerLongitude" ColumnName="BookerLongitude" />
+                <ScalarProperty Name="BookerLatitude" ColumnName="BookerLatitude" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+                <ScalarProperty Name="HomeContact" ColumnName="HomeContact" />
+                <ScalarProperty Name="BookerBankAccount" ColumnName="BookerBankAccount" />
+                <ScalarProperty Name="BookerBank" ColumnName="BookerBank" />
+                <ScalarProperty Name="BookerCountryId" ColumnName="BookerCountryId" />
+                <ScalarProperty Name="BookerAddress3" ColumnName="BookerAddress3" />
+                <ScalarProperty Name="BookerAddress2" ColumnName="BookerAddress2" />
+                <ScalarProperty Name="BookerAddress1" ColumnName="BookerAddress1" />
+                <ScalarProperty Name="BookerMobile" ColumnName="BookerMobile" />
+                <ScalarProperty Name="BookerPhone" ColumnName="BookerPhone" />
+                <ScalarProperty Name="BookerEmail" ColumnName="BookerEmail" />
+                <ScalarProperty Name="BookerLanguageId" ColumnName="BookerLanguageId" />
+                <ScalarProperty Name="Booker" ColumnName="Booker" />
+                <ScalarProperty Name="BookingColor" ColumnName="BookingColor" />
+                <ScalarProperty Name="IsBlock" ColumnName="IsBlock" />
+                <ScalarProperty Name="DepartureElectricity" ColumnName="DepartureElectricity" />
+                <ScalarProperty Name="DepartureWater" ColumnName="DepartureWater" />
+                <ScalarProperty Name="DepartureGas" ColumnName="DepartureGas" />
+                <ScalarProperty Name="ArrivalElectricity" ColumnName="ArrivalElectricity" />
+                <ScalarProperty Name="ArrivalWater" ColumnName="ArrivalWater" />
+                <ScalarProperty Name="ArrivalGas" ColumnName="ArrivalGas" />
+                <ScalarProperty Name="IsAmountExactlyScheduled" ColumnName="IsAmountExactlyScheduled" />
+                <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+                <ScalarProperty Name="StatusUpdate" ColumnName="StatusUpdate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="CancelAdministrationCosts" ColumnName="CancelAdministrationCosts" />
+                <ScalarProperty Name="DaysToPayDepositBackAfterDeparture" ColumnName="DaysToPayDepositBackAfterDeparture" />
+                <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+                <ScalarProperty Name="Rent" ColumnName="Rent" />
+                <ScalarProperty Name="Usage" ColumnName="Usage" />
+                <ScalarProperty Name="Additions" ColumnName="Additions" />
+                <ScalarProperty Name="Pets" ColumnName="Pets" />
+                <ScalarProperty Name="Children" ColumnName="Children" />
+                <ScalarProperty Name="Adults" ColumnName="Adults" />
+                <ScalarProperty Name="Departure" ColumnName="Departure" />
+                <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+                <ScalarProperty Name="Confirmed" ColumnName="Confirmed" />
+                <ScalarProperty Name="IsBookedOnline" ColumnName="IsBookedOnline" />
+                <ScalarProperty Name="Booked" ColumnName="Booked" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccoAttachments">
+            <EntityTypeMapping TypeName="DomainModel.AccoAttachment">
+              <MappingFragment StoreEntitySet="AccoAttachment">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+                <ScalarProperty Name="AccoAttachmentId" ColumnName="AccoAttachmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accoes">
+            <EntityTypeMapping TypeName="DomainModel.Acco">
+              <MappingFragment StoreEntitySet="Acco">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="SendWeeklyReminders" ColumnName="SendWeeklyReminders" />
+                <ScalarProperty Name="BaseRentId" ColumnName="BaseRentId" />
+                <ScalarProperty Name="ColorOnline" ColumnName="ColorOnline" />
+                <ScalarProperty Name="ColorBlock" ColumnName="ColorBlock" />
+                <ScalarProperty Name="ColorOwner" ColumnName="ColorOwner" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="LicenceExpiration" ColumnName="LicenceExpiration" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CancelAdministrationCosts" ColumnName="CancelAdministrationCosts" />
+                <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+                <ScalarProperty Name="StartWeekdayCalendar" ColumnName="StartWeekdayCalendar" />
+                <ScalarProperty Name="DaysToExpire" ColumnName="DaysToExpire" />
+                <ScalarProperty Name="DepartureBefore" ColumnName="DepartureBefore" />
+                <ScalarProperty Name="ArriveAfter" ColumnName="ArriveAfter" />
+                <ScalarProperty Name="AccoType" ColumnName="AccoType" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="DaysToPayDepositBackAfterDeparture" ColumnName="DaysToPayDepositBackAfterDeparture" />
+                <ScalarProperty Name="OwnWebsite" ColumnName="OwnWebsite" />
+                <ScalarProperty Name="MapLocation" ColumnName="MapLocation" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="Address3" ColumnName="Address3" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="DefaultPeriodUnitId" ColumnName="DefaultPeriodUnitId" />
+                <ScalarProperty Name="DefaultPayPatternId" ColumnName="DefaultPayPatternId" />
+                <ScalarProperty Name="AccoOwnerId" ColumnName="AccoOwnerId" />
+                <ScalarProperty Name="DisplaySequence" ColumnName="DisplaySequence" />
+                <ScalarProperty Name="AccoId" ColumnName="AccoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

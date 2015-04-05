@@ -1,0 +1,87 @@
+﻿<UserControl
+  x:Class="AccoBooking.Views.Booking.BookingGuestSearchView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:common="http://accobooking.ideablade.com/common"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  d:DataContext="{Binding Source={StaticResource ViewModelLocator},
+                          Path=BookingGuestSearchViewModel}"
+  d:DesignHeight="410"
+  d:DesignWidth="600"
+  mc:Ignorable="d">
+  
+  <Grid
+    x:Name="LayoutRoot" 
+    Background="Transparent">
+    
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+        
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+        
+    <toolkit:BusyIndicator 
+      IsBusy="{Binding Busy.IsBusy}">
+      
+      <toolkit:BusyIndicator.BusyContent>
+        <TextBlock Text="{Binding Path=AccoBooking.mes_BUSY, 
+                                  Source={StaticResource AccoBookingResources}}" />
+      </toolkit:BusyIndicator.BusyContent>
+            
+      <c1:C1DataGrid
+        Margin="3"
+        MinHeight="200"
+        ItemsSource="{Binding Items}"
+        SelectedItem="{Binding CurrentItem, 
+                               Mode=TwoWay}"
+        common:DoubleClickEvent.AttachAction="DoubleClicked">
+
+        <c1:C1DataGrid.Columns>
+          
+          <c1:DataGridTextColumn 
+            Binding="{Binding Name, 
+                              Mode=OneWay}" 
+            Header="{Binding Path=AccoBooking.lab_NAME, 
+                             Source={StaticResource AccoBookingResources}}" 
+            Width="270"/>
+          
+          <c1:DataGridTextColumn 
+            Binding="{Binding Email, 
+                              Mode=OneWay}" 
+            Header="{Binding Path=AccoBooking.lab_EMAIL, 
+                             Source={StaticResource AccoBookingResources}}" 
+            Width="150" />
+          
+          <c1:DataGridTextColumn 
+            Binding="{Binding Phone, 
+                              Mode=OneWay,
+                              StringFormat=d}" 
+            Header="{Binding Path=AccoBooking.lab_PHONE, 
+                             Source={StaticResource AccoBookingResources}}" 
+            Width="100"/>
+          
+          <c1:DataGridTextColumn
+            Binding="{Binding Gender, 
+                              Mode=OneWay}" 
+            Header="{Binding Path=AccoBooking.lab_GENDER, 
+                             Source={StaticResource AccoBookingResources}}" 
+            Width="100"/>
+
+          <c1:DataGridDateTimeColumn
+            Format="d"
+            Binding="{Binding BirthDate, 
+                              Mode=OneWay}" 
+            Header="{Binding Path=AccoBooking.lab_BIRTHDATE, 
+                             Source={StaticResource AccoBookingResources}}" 
+            Width="100"/>
+
+        </c1:C1DataGrid.Columns>
+      </c1:C1DataGrid>
+    </toolkit:BusyIndicator>
+  </Grid>
+</UserControl>

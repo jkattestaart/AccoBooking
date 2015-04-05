@@ -1,0 +1,163 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.Acco.AccoPayPatternPaymentSummaryView"
+  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  d:DataContext="{Binding Source={StaticResource ViewModelLocator},
+                          Path=AccoPayPatternPaymentSummaryViewModel}"
+  d:DesignHeight="358"
+  d:DesignWidth="751"
+  mc:Ignorable="d" 
+  DataContext="{Binding}">
+
+  <Grid 
+    x:Name="LayoutRoot" 
+    Background="Transparent">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+
+    <sdk:Label
+      Grid.Row="0"
+      Content="{Binding Path=AccoBooking.lab_FIXED_AMOUNT, 
+                        Source={StaticResource AccoBookingResources}}"/>
+
+    <StackPanel
+      Grid.Row="0"
+      Grid.Column="1"
+      Orientation="Horizontal">
+
+      <c1:C1NumericBox
+        Width="100"
+        ShowButtons="True"
+        Increment="10"
+        Value="{Binding Entity.PaymentAmount,
+                        ValidatesOnDataErrors=True,
+                        ValidatesOnExceptions=True,
+                        Mode=TwoWay}"
+        />
+
+
+
+      <TextBlock  
+        Margin="10,3,3,3"
+        VerticalAlignment="Center"
+        Text="{Binding Entity.AccoPayPattern.Acco.CurrencyDescription}"
+        />
+
+    </StackPanel>
+
+
+    <sdk:Label  
+      Grid.Row="1"
+      Content="{Binding Path=AccoBooking.lab_RELATIVE_AMOUNT, 
+                        Source={StaticResource AccoBookingResources}}"
+      />
+
+    <StackPanel
+      Grid.Row="1"
+      Grid.Column="1" 
+      Orientation="Horizontal">
+
+      <c1:C1NumericBox
+        Width="100"
+        HorizontalAlignment="Left"
+        Format="N0"
+        ShowButtons="True"
+        Increment="10"
+        Value="{Binding Entity.PaymentPercentage,
+                        ValidatesOnDataErrors=True,
+                        ValidatesOnExceptions=True,
+                        Mode=TwoWay}"
+        />
+
+
+      <TextBlock   
+        Margin="10,3,3,3"
+        VerticalAlignment="Center"
+        Text="{Binding Path=AccoBooking.uni_PERCENTAGE, 
+                       Source={StaticResource AccoBookingResources}}"
+        />
+
+    </StackPanel>
+
+    <sdk:Label  
+      Margin="3,20,3,3"
+      Grid.Row="2"
+      Content="{Binding Path=AccoBooking.lab_AFTER_BOOKING, 
+                        Source={StaticResource AccoBookingResources}}"/>
+
+    <StackPanel
+      Grid.Row="2"
+      Grid.Column="1"
+      Margin="0,20,0,0"
+      Orientation="Horizontal">
+
+      <c1:C1NumericBox   
+        Width="100"
+        HorizontalAlignment="Left"
+        Format="N0"
+        ShowButtons="True"
+        Increment="7"
+        Value="{Binding Entity.DaysToPayAfterBooking,
+                        ValidatesOnDataErrors=True,
+                        ValidatesOnExceptions=True,
+                        Mode=TwoWay}"
+        />
+
+
+      <TextBlock  
+        Margin="10,3,3,3"
+        VerticalAlignment="Center"
+        Text="{Binding Path=AccoBooking.uni_DAYS, 
+                       Source={StaticResource AccoBookingResources}}"
+        />
+
+    </StackPanel>
+
+    <sdk:Label 
+      Grid.Row="3"
+      Content="{Binding Path=AccoBooking.lab_BEFORE_ARRIVAL, 
+                        Source={StaticResource AccoBookingResources}}"/>
+
+    <StackPanel
+      Grid.Row="3"
+      Grid.Column="1"
+      Orientation="Horizontal">
+
+      <c1:C1NumericBox   
+        Width="100"
+        HorizontalAlignment="Left"
+        Format="N0"
+        ShowButtons="True"
+        Increment="7"
+        Value="{Binding Entity.DaysToPayBeforeArrival,
+                        ValidatesOnDataErrors=True,
+                        ValidatesOnExceptions=True,
+                        Mode=TwoWay}"
+        />
+
+
+      <TextBlock  
+        Margin="10,3,3,3"
+        VerticalAlignment="Center"
+        Text="{Binding Path=AccoBooking.uni_DAYS, 
+                       Source={StaticResource AccoBookingResources}}"
+        />
+
+    </StackPanel>
+    
+  </Grid>
+</UserControl>

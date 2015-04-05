@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccoAvailablePeriod_Departure_Future" xml:space="preserve">
+    <value>The departure must be in the future</value>
+  </data>
+  <data name="AccoPayPatternPayment_Amount" xml:space="preserve">
+    <value>If the percentage is filled, the amount must be zero</value>
+  </data>
+  <data name="AccoPayPatternPayment_Days" xml:space="preserve">
+    <value>If the days after booking is filled, the days before arrival must be zero</value>
+  </data>
+  <data name="AccoPayPatternPayment_Days_Required" xml:space="preserve">
+    <value>The days after booking or the days before arrival is required</value>
+  </data>
+  <data name="AccoPayPatternPayment_Percentage_Required" xml:space="preserve">
+    <value>The percentage or the amount is required</value>
+  </data>
+  <data name="Acco_Login_Required" xml:space="preserve">
+    <value>Login is required</value>
+  </data>
+  <data name="Acco_Password" xml:space="preserve">
+    <value>Password does not meet requirements</value>
+  </data>
+  <data name="Acco_Password_Required" xml:space="preserve">
+    <value>Password is required</value>
+  </data>
+  <data name="Booking_Arrival" xml:space="preserve">
+    <value>The arrival must be before the departure</value>
+  </data>
+  <data name="Booking_Departure_Future" xml:space="preserve">
+    <value>The departure must be in the future</value>
+  </data>
+  <data name="Booking_Overlap" xml:space="preserve">
+    <value>Current booking overlaps with an existing booking</value>
+  </data>
+  <data name="Guest_EmailPhone_Required" xml:space="preserve">
+    <value>E-mail or phone must have a value</value>
+  </data>
+  <data name="Guest_Email_Format" xml:space="preserve">
+    <value>E-mail seems not correct</value>
+  </data>
+  <data name="MILESTONE_ARRIVAL" xml:space="preserve">
+    <value>Arrival</value>
+  </data>
+  <data name="MILESTONE_BOOKING" xml:space="preserve">
+    <value>Booking</value>
+  </data>
+  <data name="MILESTONE_DEPARTURE" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="MILESTONE_FIRST_PAYMENT" xml:space="preserve">
+    <value>First payment</value>
+  </data>
+  <data name="MILESTONE_LAST_PAYMENT" xml:space="preserve">
+    <value>Last payment</value>
+  </data>
+  <data name="MONTH_APRIL" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="MONTH_AUGUST" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="MONTH_DECEMBER" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="MONTH_FEBRUARY" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="MONTH_JANUARY" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="MONTH_JULY" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="MONTH_JUNE" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="MONTH_MARCH" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="MONTH_MAY" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="MONTH_NOVEMBER" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="MONTH_OCTOBER" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="MONTH_SEPTEMBER" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="Period_ArrivalWeekDay_Required" xml:space="preserve">
+    <value>Arrival weekday is required when period is weekbased</value>
+  </data>
+  <data name="UNIT_ADULT" xml:space="preserve">
+    <value>Adult</value>
+  </data>
+  <data name="UNIT_ADULT_PER_NIGHT" xml:space="preserve">
+    <value>Adult per night</value>
+  </data>
+  <data name="UNIT_BOOKING" xml:space="preserve">
+    <value>Booking</value>
+  </data>
+  <data name="UNIT_CHILD" xml:space="preserve">
+    <value>Child</value>
+  </data>
+  <data name="UNIT_CHILD_PER_NIGHT" xml:space="preserve">
+    <value>Child per night</value>
+  </data>
+  <data name="UNIT_NIGHT" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="UNIT_PERSON" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="UNIT_PERSON_PER_NIGHT" xml:space="preserve">
+    <value>Person per night</value>
+  </data>
+  <data name="UNIT_PET" xml:space="preserve">
+    <value>Pet</value>
+  </data>
+  <data name="UNIT_PET_PER_NIGHT" xml:space="preserve">
+    <value>Pet per night</value>
+  </data>
+  <data name="lab_BOOKING_EXPIRED" xml:space="preserve">
+    <value>booking expired</value>
+  </data>
+  <data name="lab_GUEST_PAYMENT_SCHEDULED" xml:space="preserve">
+    <value>Guest payment is scheduled</value>
+  </data>
+  <data name="lab_GUEST_PAYMENT_TOO_LATE" xml:space="preserve">
+    <value>Guest payment is too late</value>
+  </data>
+  <data name="lab_OWNER_PAYMENT_SCHEDULED" xml:space="preserve">
+    <value>Acco owner payment is scheduled</value>
+  </data>
+  <data name="lab_OWNER_PAYMENT_TOO_LATE" xml:space="preserve">
+    <value>Acco owner payment is too late</value>
+  </data>
+  <data name="lab_SCHEDULED" xml:space="preserve">
+    <value> is scheduled</value>
+  </data>
+  <data name="lab_TOO_LATE" xml:space="preserve">
+    <value> is too late</value>
+  </data>
+  <data name="WEEKDAY_FRIDAY" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="WEEKDAY_MONDAY" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="WEEKDAY_SATURDAY" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="WEEKDAY_SUNDAY" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="WEEKDAY_THURSDAY" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="WEEKDAY_TUESDAY" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="WEEKDAY_WEDNESDAY" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="lab_LICENSE_EXPIRES" xml:space="preserve">
+    <value>Your license expires</value>
+  </data>
+  <data name="lab_NOT_EXACTLY_SCHEDULED" xml:space="preserve">
+    <value>The booking amount is not exactly scheduled</value>
+  </data>
+  <data name="COUNTRY_IRELAND" xml:space="preserve">
+    <value>Ireland</value>
+  </data>
+  <data name="COUNTRY_AUSTRIA" xml:space="preserve">
+    <value>Austria</value>
+  </data>
+  <data name="COUNTRY_BELGIUM" xml:space="preserve">
+    <value>Belgium</value>
+  </data>
+  <data name="COUNTRY_DENMARK" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="COUNTRY_ENGLAND" xml:space="preserve">
+    <value>England</value>
+  </data>
+  <data name="COUNTRY_FRANCE" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="COUNTRY_GERMANY" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="COUNTRY_ITALY" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="COUNTRY_LUXEMBOURGH" xml:space="preserve">
+    <value>Luxembourgh</value>
+  </data>
+  <data name="COUNTRY_NETHERLANDS" xml:space="preserve">
+    <value>Netherlands</value>
+  </data>
+  <data name="COUNTRY_NORWAY" xml:space="preserve">
+    <value>Norway</value>
+  </data>
+  <data name="COUNTRY_SCOTLAND" xml:space="preserve">
+    <value>Scotland</value>
+  </data>
+  <data name="COUNTRY_SPAIN" xml:space="preserve">
+    <value>Spain</value>
+  </data>
+  <data name="COUNTRY_SWEDEN" xml:space="preserve">
+    <value>Sweden</value>
+  </data>
+  <data name="COUNTRY_SWITSERLAND" xml:space="preserve">
+    <value>Zwitserland</value>
+  </data>
+  <data name="COUNTRY_WALES" xml:space="preserve">
+    <value>Wales</value>
+  </data>
+  <data name="LANGUAGE_DUTCH" xml:space="preserve">
+    <value>Dutch</value>
+  </data>
+  <data name="LANGUAGE_ENGLISH" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LANGUAGE_FRENCH" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="LANGUAGE_GERMAN" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="PERIODUNIT_MIDWEEK" xml:space="preserve">
+    <value>Midweek</value>
+  </data>
+  <data name="PERIODUNIT_WEEK" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="PERIODUNIT_WEEKEND" xml:space="preserve">
+    <value>Weekend</value>
+  </data>
+  <data name="BOOKINGSTATUS_CANCELLED" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="BOOKINGSTATUS_CLOSED" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="BOOKINGSTATUS_CONFIRMED" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="BOOKINGSTATUS_EXPIRED" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="BOOKINGSTATUS_PAID" xml:space="preserve">
+    <value>Paid</value>
+  </data>
+  <data name="BOOKINGSTATUS_RESERVED" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="Booking_Adults" xml:space="preserve">
+    <value>Number of adults must be greater than or equal to zero</value>
+  </data>
+  <data name="Booking_Children" xml:space="preserve">
+    <value>Number of children must be greater than or equal to zero</value>
+  </data>
+  <data name="Booking_Pets" xml:space="preserve">
+    <value>Number of pets must be greater than or equal to zero</value>
+  </data>
+  <data name="UNIT_GASM3" xml:space="preserve">
+    <value>m3 gas</value>
+  </data>
+  <data name="UNIT_KWH" xml:space="preserve">
+    <value>KWh</value>
+  </data>
+  <data name="UNIT_WATER_M3" xml:space="preserve">
+    <value>m3 water</value>
+  </data>
+  <data name="AccoSeason_SeasonOverlap" xml:space="preserve">
+    <value>Season may not overlap another</value>
+  </data>
+  <data name="AccoSeason_SeasonStart_SeasonEnd" xml:space="preserve">
+    <value>Season start must before end</value>
+  </data>
+  <data name="AccoSeason_SeasonYear_RentYear" xml:space="preserve">
+    <value>Season rent must be in seasonyear</value>
+  </data>
+  <data name="AccoSeason_Season_Year" xml:space="preserve">
+    <value>Season start and end must be in season year</value>
+  </data>
+  <data name="PERIODUNIT_NIGHT" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="AccoPayPatternPayment_Total100" xml:space="preserve">
+    <value>Total payments must be 100%</value>
+  </data>
+  <data name="GENDER_FEMALE" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="GENDER_MALE" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="GENDER_UNKNOWN" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="email_NOTIFICATION_BODY" xml:space="preserve">
+    <value>The following notifiations are available. 
+Go to  www.accobooking.nl to amend the booking reminders ....</value>
+  </data>
+  <data name="email_NOTIFICATION_CREATED_ON" xml:space="preserve">
+    <value>Created on:</value>
+  </data>
+  <data name="email_NOTIFICATION_FROM" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="email_NOTIFICATION_OWNER_NAME" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="email_NOTIFICATION_SUBJECT" xml:space="preserve">
+    <value>AccoBooking notifications</value>
+  </data>
+  <data name="email_NOTIFICATION_TO" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="lab_ACCO" xml:space="preserve">
+    <value>Accommodation</value>
+  </data>
+  <data name="lab_BOOKER" xml:space="preserve">
+    <value>Booker</value>
+  </data>
+  <data name="lab_CONTEXT" xml:space="preserve">
+    <value>Context</value>
+  </data>
+  <data name="lab_DESCRIPTION" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lab_DUE" xml:space="preserve">
+    <value>Due date</value>
+  </data>
+  <data name="PROVIDER_GMAIL" xml:space="preserve">
+    <value>Gmail</value>
+  </data>
+  <data name="PROVIDER_LIVE" xml:space="preserve">
+    <value>Live Mail</value>
+  </data>
+  <data name="PROVIDER_YAHOO" xml:space="preserve">
+    <value>Yahoo</value>
+  </data>
+  <data name="ACCOTYPE_APARTMENT" xml:space="preserve">
+    <value>Apartment</value>
+  </data>
+  <data name="ACCOTYPE_CHALET" xml:space="preserve">
+    <value>Chalet</value>
+  </data>
+  <data name="ACCOTYPE_HOLIDAYHOME" xml:space="preserve">
+    <value>Holiday Home</value>
+  </data>
+  <data name="ACCOTYPE_PENTHOUSE" xml:space="preserve">
+    <value>Penthouse</value>
+  </data>
+  <data name="ACCOTYPE_STUDIO" xml:space="preserve">
+    <value>Studio</value>
+  </data>
+  <data name="ACCOTYPE_VILLA" xml:space="preserve">
+    <value>Villa</value>
+  </data>
+  <data name="CURRENCY_CHF" xml:space="preserve">
+    <value>Switzerland Franc</value>
+  </data>
+  <data name="CURRENCY_DKK" xml:space="preserve">
+    <value>Danish Krone</value>
+  </data>
+  <data name="CURRENCY_EURO" xml:space="preserve">
+    <value>Euro</value>
+  </data>
+  <data name="CURRENCY_GBP" xml:space="preserve">
+    <value>Pound</value>
+  </data>
+  <data name="CURRENCY_NOK" xml:space="preserve">
+    <value>Norway Krone</value>
+  </data>
+  <data name="CURRENCY_SEK" xml:space="preserve">
+    <value>Swedish Krone</value>
+  </data>
+  <data name="CURRENCY_USD" xml:space="preserve">
+    <value>Dollar</value>
+  </data>
+  <data name="MAILTEMPLATE_ARRIVAL" xml:space="preserve">
+    <value>Arrival</value>
+  </data>
+  <data name="MAILTEMPLATE_CANCELLATION" xml:space="preserve">
+    <value>Cancellation</value>
+  </data>
+  <data name="MAILTEMPLATE_CONFIRMATION" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="MAILTEMPLATE_DEPARTURE" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="MAILTEMPLATE_PAYMENTRECEIVED" xml:space="preserve">
+    <value>Payment received</value>
+  </data>
+  <data name="MAILTEMPLATE_PAYMENTREMINDER" xml:space="preserve">
+    <value>Payment reminder</value>
+  </data>
+  <data name="MAILTEMPLATE_PERIODAVAILABLE" xml:space="preserve">
+    <value>Period available</value>
+  </data>
+  <data name="MAILTEMPLATE_RESERVATION" xml:space="preserve">
+    <value>Reservation</value>
+  </data>
+  <data name="AccoSeason_AccoRent_Required" xml:space="preserve">
+    <value>Rent is required</value>
+  </data>
+</root>

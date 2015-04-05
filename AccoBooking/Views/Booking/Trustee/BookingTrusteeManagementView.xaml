@@ -1,0 +1,62 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.Booking.BookingTrusteeManagementView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:common="http://accobooking.ideablade.com/common"
+  mc:Ignorable="d"
+  d:DesignHeight="300" 
+  d:DesignWidth="400">
+
+  <UserControl.Resources>
+    <common:BoolToVisibilityConverter x:Key="VisibilityConverter"/>
+  </UserControl.Resources>
+
+  <ScrollViewer
+    BorderThickness="0"
+    HorizontalScrollBarVisibility="Disabled"
+    VerticalScrollBarVisibility="Auto">
+
+    <Grid
+      x:Name="LayoutRoot"
+      Background="Transparent">
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+
+      <TextBlock
+        Grid.Row="0"
+        HorizontalAlignment="Left"
+        FontSize="24"
+        Text="{Binding Path=AccoBooking.tit_SEARCH_BOOKING, 
+                       Source={StaticResource AccoBookingResources}}"
+        Visibility="{Binding IsSearchActive, 
+                     Converter={StaticResource VisibilityConverter}}"/>
+
+      <ContentControl
+        x:Name="Toolbar"
+        Grid.Row="1"
+        Margin="3" />
+
+      <ContentControl 
+        x:Name="ActiveItem"
+        Grid.Row="2"
+        Margin="3" />
+
+      <ContentControl 
+        x:Name="BottomToolbar"
+        Grid.Row="3"
+        Margin="3" />
+
+    </Grid>
+  </ScrollViewer>
+</UserControl>

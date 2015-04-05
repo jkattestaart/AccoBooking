@@ -1,0 +1,246 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+    xmlns:common="http://accobooking.ideablade.com/common"
+    x:Class="AccoBooking.Views.LicenseTermsView"
+    d:DesignHeight="519"
+    d:DesignWidth="799"
+    mc:Ignorable="d">
+
+  <ScrollViewer
+    BorderThickness="0"
+    HorizontalScrollBarVisibility="Disabled"
+    VerticalScrollBarVisibility="Auto">
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="50" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="50" />
+      </Grid.ColumnDefinitions>
+
+      <StackPanel
+        Grid.Column="1"
+        HorizontalAlignment="Left"
+        Orientation="Vertical">
+
+        <TextBlock
+        FontSize="26"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_01, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_01_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_02, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_02_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_03, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_03_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_04, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_04_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_05, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_05_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_06, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_06_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_07, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_07_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_08, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_08_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_09, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_09_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_10, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_10_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_11, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_11_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_12, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_12_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_13, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_13_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_14, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_14_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_15, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_15_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_16, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_16_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_17, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_17_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,10,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_18, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <TextBlock
+        Margin="0,2,0,0"
+        TextWrapping="Wrap"
+        Text="{Binding Path=AccoBooking.pub_LICENSETERMS_18_body, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+      </StackPanel>
+    </Grid>
+  </ScrollViewer>
+</UserControl>

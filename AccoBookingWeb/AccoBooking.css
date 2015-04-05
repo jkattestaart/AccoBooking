@@ -1,0 +1,31 @@
+﻿.Body {
+  background-color: #FEFAF6;
+  font-family: Tahoma;
+  font-size: 13px;
+  color: #4C2B2F;
+}
+
+.Container {
+  width: 100%;
+  background-color: #FEF5DD;
+  margin: auto;
+}
+
+.Video {
+  margin: 5px;
+  float: left;
+}
+
+.Header {
+  min-height: 25px;
+  padding: 5px 20px 5px 20px;
+  margin: 5px;
+  background-color: #FFEFC3;
+}
+
+.Paragraph {
+  min-height: 25px;
+  padding: 5px 20px 5px 20px;
+  margin:5px;
+  background-color: #FEF5DD;
+}

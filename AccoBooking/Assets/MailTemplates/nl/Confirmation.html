@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>
+    %acco description% boekingsbevestiging
+  </title>
+
+  <style>
+    body {
+      font-family: Tahoma;
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+    div {
+      padding-left: 7px;
+      padding-top: 7px;
+      padding-right: 7px;
+      padding-bottom: 7px;
+    }
+
+    h2 {
+      padding-left: 7px;
+      padding-top: 7px;
+      padding-right: 7px;
+      padding-bottom: 7px;
+    }
+
+    h3 {
+      padding-left: 7px;
+      padding-top: 7px;
+      padding-right: 7px;
+      padding-bottom: 2px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    td {
+      padding-left: 7px;
+      padding-top: 0px;
+      padding-right: 7px;
+      padding-bottom: 0px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h2>
+    Boekingsbevestiging
+  </h2>
+
+  <!--  Gast -->
+
+  <div>
+    <br />
+    %guest name%<br />
+    %guest address 1%<br />
+    %guest address 2%<br />
+    %guest address 3%<br />
+    %guest country%<br />
+    <br />
+    Bedankt voor uw reservering van %acco type description%  %acco description% in %acco location%.<br />
+    <br />
+  </div>
+
+  <!--  Aankomst, vertrek, prijs -->
+
+  <table>
+    <tr>
+      <td style="text-align: right">
+        Aankomst:
+      </td>
+      <td style="text-align: right">
+        %arrival%
+      </td>
+      <td>
+        %arrive after%
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        Vertrek:
+      </td>
+      <td style="text-align: right">
+        %departure%
+      </td>
+      <td>
+        %departure before%
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        Huur:
+      </td>
+      <td style="text-align: right">
+        %rent%
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        Borg:
+      </td>
+      <td style="text-align: right">
+        %deposit%
+      </td>
+    </tr>
+  </table>
+
+  <!--  Volwassenen, kinderen en huisdieren -->
+
+  <h3>
+    <br />
+    %acco description% is gereserveerd voor:<br />
+  </h3>
+
+  <table>
+    <tr>
+      <td style="text-align: right">
+        %adults%
+      </td>
+      <td>
+        volwassenen
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        %children%
+      </td>
+      <td>
+        kinderen
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        %pets%
+      </td>
+      <td>
+        huisdieren
+      </td>
+    </tr>
+  </table>
+
+  <!--  Extra's -->
+
+  <h3>
+    <br />
+    Extra's:<br />
+  </h3>
+
+  <table>
+    <tr>
+      <td>
+        %addition description 1%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %addition amount 1%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        %addition description 2%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %addition amount 2%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        %addition description 3%
+        &nbsp;
+      </td>
+      <td style ="text-align: right">
+        %addition amount 3%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        %addition description 4%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %addition amount 4%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        %addition description 5%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %addition amount 5%
+        &nbsp;
+      </td>
+    </tr>
+  </table>
+
+  <!--  Extra's die met de borg verrekend worden -->
+
+  <h3>
+    <br />
+    Extra's die achteraf met de borg verrekend worden:<br />
+  </h3>
+
+  <table>
+    <tr>
+      <td>
+        %deposit addition description 1%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %deposit addition price 1%
+        &nbsp;
+      </td>
+      <td>
+        %deposit addition unit 1%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        %deposit addition description 2%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %deposit addition price 2%
+        &nbsp;
+      </td>
+      <td>
+        %deposit addition unit 2%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        %deposit addition description 3%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %deposit addition price 3%
+        &nbsp;
+      </td>
+      <td>
+        %deposit addition unit 3%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        %deposit addition description 4%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %deposit addition price 4%
+        &nbsp;
+      </td>
+      <td>
+        %deposit addition unit 4%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        %deposit addition description 5%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %deposit addition price 5%
+        &nbsp;
+      </td>
+      <td>
+        %deposit addition unit 5%
+        &nbsp;
+      </td>
+    </tr>
+  </table>
+
+  <!--  Door de gast te betalen -->
+
+  <h3>
+    <br />
+    Ik reken op de volgende betalingen:<br />
+  </h3>
+
+  <table>
+    <tr>
+      <td style="text-align: right">
+        %pay due scheduled guest 1%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount scheduled guest 1%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        %pay due scheduled guest 2%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount scheduled guest 2%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        %pay due scheduled guest 3%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount scheduled guest 3%
+        &nbsp;
+      </td>
+    </tr>
+  </table>
+
+  <!--  Reeds ontvangen betalingen -->
+
+  <h3>
+    <br />
+    Op dit moment heb ik de volgende betalingen ontvangen:<br />
+  </h3>
+
+  <table>
+    <tr>
+      <td style="text-align: right">
+        %pay due paid guest 1%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount paid guest 1%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        %pay due paid guest 2%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount paid guest 2%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        %pay due paid guest 3%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount paid guest 3%
+        &nbsp;
+      </td>
+    </tr>
+  </table>
+  <div>
+    <br />
+    Ongeveer een week voor aankomst stuur ik u de code van de sleutelkluis.<br />
+    <br />
+    %owner name% <br />
+    %owner address 1% <br />
+    %owner address 2% <br />
+    %owner address 3% <br />
+    %owner country% <br />
+    <br />
+    %own website% <br />
+    <br />
+    %owner bank% <br />
+    %owner bank account% <br />
+    <br />
+    Adres %acco description%: <br />
+    %acco address 1% <br />
+    %acco address 2% <br />
+    %acco address 3% <br />
+    %acco country% <br />
+    <br />
+    <a href="%acco map location%">%acco description% op de kaart</a>
+    <br />
+  </div>
+</body>
+</html>

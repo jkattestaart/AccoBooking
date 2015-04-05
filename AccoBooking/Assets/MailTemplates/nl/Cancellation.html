@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>
+    %acco description% geannuleerd
+  </title>
+
+  <style>
+    body {
+      font-family: Tahoma;
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+    div {
+      padding-left: 7px;
+      padding-top: 7px;
+      padding-right: 7px;
+      padding-bottom: 7px;
+    }
+
+    h2 {
+      padding-left: 7px;
+      padding-top: 7px;
+      padding-right: 7px;
+      padding-bottom: 7px;
+    }
+
+    h3 {
+      padding-left: 7px;
+      padding-top: 7px;
+      padding-right: 7px;
+      padding-bottom: 2px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    td {
+      padding-left: 7px;
+      padding-top: 0px;
+      padding-right: 7px;
+      padding-bottom: 0px;
+    }
+  </style>
+
+</head>
+<body>
+  <div>
+    Beste %guest name%,<br />
+    <br />
+    Helaas is uw boeking van %acco type description% %acco description% in %acco location% van %arrival% tot %departure% geannuleerd.<br />
+    Door het moment van annuleren moet u van de totale huur van %rent% nog %cancel rent amount% betalen.<br />
+    Verder worden %cancel administration costs% annuleringskosten in rekening gebracht.<br />
+  </div>
+
+  <!--  Reeds ontvangen betalingen -->
+
+  <h3>
+    <br />
+    Ik heb van u de volgende betalingen ontvangen: <br />
+  </h3>
+
+  <table>
+    <tr>
+      <td style="text-align: right">
+        %pay due paid guest 1%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount paid guest 1%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        %pay due paid guest 2%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount paid guest 2%
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        %pay due paid guest 3%
+        &nbsp;
+      </td>
+      <td style="text-align: right">
+        %pay amount paid guest 3%
+        &nbsp;
+      </td>
+    </tr>
+  </table>
+
+  <div>
+    <br />
+    Morgen zal ik %total refund% naar bank %guest bank% en rekening %guest bank account% overschrijven.<br />
+    <br />
+    Met vriendelijke groet,<br />
+    %owner name%<br />
+    %own website%<br />
+  </div>
+</body>
+</html>
+

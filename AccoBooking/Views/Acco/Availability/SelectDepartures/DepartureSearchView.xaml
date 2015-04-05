@@ -1,0 +1,130 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.Acco.DepartureSearchView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+  xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  xmlns:common="http://accobooking.ideablade.com/common"
+  d:DataContext="{Binding Source={StaticResource ViewModelLocator},
+                          Path=AccoAvailablePeriodSearchViewModel}"
+  d:DesignHeight="600"
+  d:DesignWidth="700"
+  mc:Ignorable="d">
+
+  <Grid 
+    x:Name="LayoutRoot" 
+    Background="Transparent">
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <!--<StackPanel
+      HorizontalAlignment="Left"
+      Grid.Row="0"
+      Orientation="Horizontal">
+      
+      
+      <sdk:Label
+        HorizontalAlignment="Left"
+        Margin="3"
+        Content="{Binding Path=AccoBooking.lab_CURRENT_ARRIVAL, 
+                          Source={StaticResource AccoBookingResources}}"/>
+    
+      <c1:C1DatePicker 
+        HorizontalAlignment="Left"
+        Width="110"
+        Margin="5,3,3,3"
+        SelectedDate="{Binding Arrival, 
+                               Mode=TwoWay}"/>
+    </StackPanel>-->
+
+    <ContentControl 
+      Grid.Row="1"
+      x:Name="Calender"/>
+    
+    <toolkit:BusyIndicator 
+      Grid.Row="2" 
+      Grid.Column="0" 
+      IsBusy="{Binding Busy.IsBusy}" 
+      Grid.ColumnSpan="3">
+
+      <toolkit:BusyIndicator.BusyContent>
+        <TextBlock Text="{Binding Path=AccoBooking.mes_BUSY, 
+                                  Source={StaticResource AccoBookingResources}}" />
+      </toolkit:BusyIndicator.BusyContent>
+
+      <c1:C1DataGrid
+        Margin="3"
+        MinHeight="200"
+        ItemsSource="{Binding Items}"
+        SelectedItem="{Binding CurrentItem, 
+                               Mode=TwoWay}">
+        <!-- common:DoubleClickEvent.AttachAction="DoubleClicked" -->
+        
+        <c1:C1DataGrid.Columns>
+          <c1:DataGridDateTimeColumn 
+                        Binding="{Binding Arrival, 
+                                          Mode=OneWay,
+                                          StringFormat=d}" 
+                        Header="{Binding Path=AccoBooking.lab_ARRIVAL, 
+                                         Source={StaticResource AccoBookingResources}}" 
+                        Width="110"/>
+
+          <c1:DataGridTextColumn 
+                        Binding="{Binding ArrivalWeekDay, 
+                                          Mode=OneWay}"
+                        Width="110"/>
+
+          <c1:DataGridDateTimeColumn 
+                        Binding="{Binding Departure, 
+                                          Mode=OneWay,
+                                          StringFormat=d}" 
+                        Header="{Binding Path=AccoBooking.lab_DEPARTURE, 
+                                         Source={StaticResource AccoBookingResources}}" 
+                        Width="110"/>
+
+          <c1:DataGridTextColumn 
+                        Binding="{Binding DepartureWeekDay, 
+                                          Mode=OneWay}" 
+                        Width="110"/>
+
+          <c1:DataGridNumericColumn 
+                        Binding="{Binding Nights, 
+                                          Mode=OneWay}" 
+                        Format="N0"
+                        Header="{Binding Path=AccoBooking.lab_NIGHTS, 
+                                         Source={StaticResource AccoBookingResources}}" 
+                        Width="70"/>
+
+          <c1:DataGridTextColumn 
+                        Binding="{Binding PeriodUnit, 
+                                          Mode=OneWay}" 
+                        Header="{Binding Path=AccoBooking.lab_PERIOD, 
+                                         Source={StaticResource AccoBookingResources}}" 
+                        Width="110"/>
+
+          <c1:DataGridNumericColumn 
+                        Binding="{Binding Rent, 
+                                          Mode=OneWay}" 
+                        Format="N2"
+                        Header="{Binding Path=AccoBooking.lab_RENT, 
+                                         Source={StaticResource AccoBookingResources}}" 
+                        Width="110"/>
+
+        </c1:C1DataGrid.Columns>
+
+      </c1:C1DataGrid>
+
+    </toolkit:BusyIndicator>
+  </Grid>
+</UserControl>

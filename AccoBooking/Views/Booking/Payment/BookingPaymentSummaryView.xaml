@@ -1,0 +1,386 @@
+﻿<UserControl 
+  x:Class="AccoBooking.Views.Booking.BookingPaymentSummaryView"
+  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:common="http://accobooking.ideablade.com/common"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+
+  d:DataContext="{Binding Source={StaticResource ViewModelLocator},
+                          Path=BookingPaymentSummaryViewModel}"
+  d:DesignHeight="500"
+  d:DesignWidth="900"
+  mc:Ignorable="d">
+
+  <UserControl.Resources>
+    <common:InverseBooleanConverter x:Key="InverseBoolean"/>
+  </UserControl.Resources>
+
+  <toolkit:BusyIndicator 
+    IsBusy="{Binding Busy.IsBusy}">
+
+    <toolkit:BusyIndicator.BusyContent>
+      <TextBlock Text="{Binding Path=AccoBooking.mes_BUSY, 
+                                Source={StaticResource AccoBookingResources}}" />
+    </toolkit:BusyIndicator.BusyContent>
+
+    <StackPanel 
+    Orientation="Vertical"
+    Background="Transparent">
+
+      <Grid 
+      x:Name="LayoutRoot" 
+      Background="Transparent"
+      Margin="0,10,0,0">
+
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <sdk:Label
+          Grid.Row="0"
+          Grid.Column="0"
+          Content="{Binding Path=AccoBooking.lab_RENT, 
+                            Source={StaticResource AccoBookingResources}}"
+          />
+
+        <StackPanel
+          Grid.Row="0"
+          Grid.Column="1"
+          HorizontalAlignment="Left"
+          Orientation="Horizontal">
+
+          <c1:C1NumericBox 
+            Width="100"
+            ShowButtons="True"
+            Increment="10"
+            Format="N2"
+            IsReadOnly="{Binding IsReadOnly}"
+            Value="{Binding Path=Entity.Rent,
+                            ValidatesOnDataErrors=True, 
+                            ValidatesOnExceptions=True, 
+                            UpdateSourceTrigger=PropertyChanged, 
+                            Mode=TwoWay}"
+            />
+
+          <TextBlock
+            Margin="12,3,3,3"
+            Text="{Binding Entity.Acco.CurrencyDescription}" 
+            />
+        </StackPanel>
+
+        <sdk:Label 
+          Grid.Row="1" 
+          Grid.Column="0"
+          Content="{Binding Path=AccoBooking.lab_ADDITIONS, 
+                            Source={StaticResource AccoBookingResources}}" 
+          />
+
+        <c1:C1NumericBox 
+          Grid.Row="1" 
+          Grid.Column="1"
+          IsReadOnly="True"
+          Width="85"
+          HorizontalAlignment="Left"
+          ShowButtons="False"
+          Format="N2"
+          Value="{Binding Path=Entity.Additions,
+                          ValidatesOnDataErrors=True, 
+                          ValidatesOnExceptions=True, 
+                          UpdateSourceTrigger=PropertyChanged, 
+                          Mode=TwoWay}"
+          />
+
+        <sdk:Label 
+          Grid.Row="2"
+          Grid.Column="0"
+          Content="{Binding Path=AccoBooking.lab_DEPOSIT, 
+                            Source={StaticResource AccoBookingResources}}" 
+          />
+
+        <c1:C1NumericBox 
+          Grid.Row="2"
+          Grid.Column="1" 
+          Width="100"
+          ShowButtons="True"
+          HorizontalAlignment="Left"
+          Increment="10"
+          Format="N2"
+          IsReadOnly="{Binding IsReadOnly}"
+          Value="{Binding Path=Entity.Deposit,
+                          ValidatesOnDataErrors=True, 
+                          ValidatesOnExceptions=True, 
+                          UpdateSourceTrigger=PropertyChanged, 
+                          Mode=TwoWay}"
+          />
+
+        <sdk:Label
+          Grid.Row="0"
+          Grid.Column="2"
+          Content="{Binding Path=AccoBooking.lab_TOTAL, 
+                            Source={StaticResource AccoBookingResources}}" 
+          />
+
+        <c1:C1NumericBox 
+          Grid.Row="0" 
+          Grid.Column="3"
+          Width="85"
+          HorizontalAlignment="Left"
+          IsReadOnly="True"
+          ShowButtons="False"
+          Format="N2"
+          Value="{Binding Path=Entity.SubTotal,
+                          ValidatesOnDataErrors=True, 
+                          ValidatesOnExceptions=True, 
+                          UpdateSourceTrigger=PropertyChanged, 
+                          Mode=TwoWay}"
+          />
+
+        <sdk:Label 
+          Grid.Row="1"
+          Grid.Column="2"
+          Content="{Binding Path=AccoBooking.lab_TOTAL_PLUS_DEPOSIT, 
+                            Source={StaticResource AccoBookingResources}}" 
+          />
+
+        <c1:C1NumericBox
+          Grid.Row="1" 
+          Grid.Column="3"
+          IsReadOnly="True"
+          Width="85"
+          HorizontalAlignment="Left"
+          ShowButtons="False"
+          Format="N2"
+          Value="{Binding Path=Entity.Total,
+                          ValidatesOnDataErrors=True, 
+                          ValidatesOnExceptions=True, 
+                          UpdateSourceTrigger=PropertyChanged, 
+                          Mode=TwoWay}"
+          />
+
+        <sdk:Label
+          Grid.Column="2"
+          Grid.Row="2"
+          Content="{Binding Path=AccoBooking.lab_CORRECTION,
+                            Source={StaticResource AccoBookingResources}}" 
+          />
+
+        <c1:C1NumericBox 
+          Grid.Column="3"
+          Grid.Row="2"
+        	HorizontalAlignment="Stretch"
+        	IsReadOnly="True"
+        	ShowButtons="False"
+        	Format="N2"
+        	Value="{Binding Entity.Usage, Mode=TwoWay, 
+                          UpdateSourceTrigger=PropertyChanged, 
+                          ValidatesOnDataErrors=True, 
+                          ValidatesOnExceptions=True}" 
+          />
+
+        <StackPanel 
+          Grid.Row="0"
+          Grid.Column="4"
+          HorizontalAlignment="Right"
+          Orientation="Horizontal">
+
+          <sdk:Label 
+            Content="{Binding Path=AccoBooking.lab_PAY_PATTERN, 
+                              Source={StaticResource AccoBookingResources}}" 
+            Margin="13,3,3,3"
+            />
+
+          <ContentControl 
+            x:Name="AccoPayPatternList"
+            MinHeight="24"
+            MinWidth="100"
+            Margin="3"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center"
+            IsEnabled="{Binding IsReadOnly, 
+                                Converter={StaticResource InverseBoolean}}"
+            />
+
+          <c1:C1ToolbarButton 
+            x:Name="ApplyPattern" 
+            Content="{Binding Path=AccoBooking.but_APPLY_PATTERN, 
+                              Source={StaticResource AccoBookingResources}}" 
+            Margin="3" 
+            Width="100"
+            VerticalAlignment="Center"
+            IsEnabled="{Binding IsReadOnly, 
+                                Converter={StaticResource InverseBoolean}}"
+            />
+        </StackPanel>
+
+        <sdk:Label 
+          x:Name ="PaymentRemark"
+          Foreground="Red"
+          FontWeight="Bold"
+          Grid.Column="1" 
+          Grid.Row="3"
+          Grid.ColumnSpan="5"
+          HorizontalAlignment="Stretch"
+          />
+
+      </Grid>
+
+      <Grid 
+      Background="Transparent">
+
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="500*" />
+          <ColumnDefinition Width="500*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+        Grid.Row="0"
+        Grid.Column="0"
+        Margin="0,20,0,0"
+        FontSize="18"
+        HorizontalAlignment="Left"
+        Text="{Binding Path=AccoBooking.lab_SCHEDULED_FOR_GUEST, 
+                       Source={StaticResource AccoBookingResources}}"/>
+
+        <Rectangle
+        Grid.Row="1"
+        Grid.Column="0"
+        Stroke="#FF4C2B2F"
+        StrokeThickness="1"
+        Opacity="0.5"
+        RadiusX="2"
+        RadiusY="2"
+        Width="400"
+        Height="1"
+        Margin="0,0,0,10"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"/>
+
+        <ContentControl
+        Grid.Row="1"
+        Grid.Column="0"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        x:Name="ScheduledPaymentGuestList"/>
+
+        <TextBlock
+        Grid.Row="0"
+        Grid.Column="1"
+        Margin="20,20,0,0"
+        FontSize="18"
+        HorizontalAlignment="Left" 
+        Text="{Binding Path=AccoBooking.lab_PAID_BY_GUEST, 
+                       Source={StaticResource AccoBookingResources}}"/>
+
+        <Rectangle
+        Grid.Row="1"
+        Grid.Column="1"
+        Stroke="#FF4C2B2F"
+        StrokeThickness="1"
+        Opacity="0.5"
+        RadiusX="2"
+        RadiusY="2"
+        Width="400"
+        Height="1"
+        Margin="20,0,0,10"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top" />
+
+        <ContentControl 
+        Grid.Row="1" 
+        Grid.Column="1"
+        Margin="20,0,0,0"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        x:Name="PaymentGuestList" />
+
+        <TextBlock
+        Grid.Row="2"
+        Grid.Column="0"
+        Margin="0,20,0,0"
+        FontSize="18"
+        HorizontalAlignment="Left" 
+        Text="{Binding Path=AccoBooking.lab_SCHEDULED_FOR_OWNER, 
+                       Source={StaticResource AccoBookingResources}}" />
+
+        <Rectangle
+        Grid.Row="3"
+        Grid.Column="0"
+        Stroke="#FF4C2B2F"
+        StrokeThickness="1"
+        Opacity="0.5"
+        RadiusX="2"
+        RadiusY="2"
+        Width="400"
+        Height="1"
+        Margin="0,0,0,10"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top" />
+
+        <ContentControl
+        Grid.Row="3"
+        Grid.Column="0"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        x:Name="ScheduledPaymentOwnerList" />
+
+        <TextBlock
+        Grid.Row="2"
+        Grid.Column="1"
+        Margin="20,20,0,0"
+        FontSize="18"
+        HorizontalAlignment="Left" 
+        Text="{Binding Path=AccoBooking.lab_PAID_BY_OWNER, 
+                       Source={StaticResource AccoBookingResources}}"/>
+
+        <Rectangle
+        Grid.Row="3"
+        Grid.Column="1"
+        Stroke="#FF4C2B2F"
+        StrokeThickness="1"
+        Opacity="0.5"
+        RadiusX="2"
+        RadiusY="2"
+        Width="400"
+        Height="1"
+        Margin="20,0,0,10"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top" />
+
+        <ContentControl 
+        Grid.Row="3"
+        Grid.Column="1"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Margin="20,0,0,0"
+        x:Name="PaymentOwnerList" />
+
+      </Grid>
+
+    </StackPanel>
+
+  </toolkit:BusyIndicator>
+
+</UserControl>
